@@ -1,0 +1,75 @@
+\fancyhead[C]{Physics 6A Lab \rule[-1ex]{0pt}{0pt}\(\mid\) Experiment 1}
+
+\vspace{-5ex}\part*{Heart Rate Meter}
+
+\subsection*{APPARATUS}
+
+\vspace{-0.5ex}
+\vphantom{.}
+\squishlist
+\item Computer and Pasco interface
+\item Heart rate sensor
+\squishend
+
+\subsection*{INTRODUCTION}
+
+This is a short experiment designed to introduce you to computer acquisition of data and the Pasco Science Workshop with its Data Studio control program.  It is not solely a physics experiment, but also an exercise to acquaint you with the equipment that will be used for ``real'' labs.  If you are already familiar with computers, then this experiment will probably take less than an hour; if not, you should use any remaining time to practice with the computer.
+
+\subsection*{COMPUTER EXPERIMENTS}
+
+Many experiments in the Physics 6A lab series utilize a desktop computer to acquire and analyze data.  Most students entering UCLA are already familiar with the basic Windows operations of clicking and dragging with a mouse, pulling down menus, scrolling and resizing windows, and so forth.  If you are not familiar with these operations, then consider this experiment a practice session.
+
+It is likely that the computer has already been turned on when you enter the lab.  If not, when you turn it on, it will take a minute or two for the system to ``boot up''.  In the entire Physics 6 lab series, two basic programs are used: Data Studio (which controls an interface box to which various experimental sensors can be connected) and the spreadsheet program Microsoft Excel (which allows you to analyze and graph data).  After the computer is booted up, you should see shortcut icons for these two programs on the desktop.
+
+\subsection*{SCIENTIFIC CALCULATOR}
+
+You may also have occasion to use an on-screen calculator while working on experiments.  Bring up the calculator by clicking on the ``Start'' menu, go to ``Programs'', then to ``Accessories'', and finally to ``Calculator''.  When the calculator is displayed, pull down the ``View'' menu to ``Scientific'', so that the type of calculator on the screen changes to scientific.  If you have any difficulty bringing up the scientific calculator, ask your TA for assistance.  You should be able to access the scientific calculator quickly at any time during the next three quarters of labs.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp1/6A-Exp1_fig1.jpg} \end{center}
+
+\subsection*{THE PASCO INTERFACE}
+
+The Pasco Science Workshop system consists of an interface box controlled by the Data Studio computer program, and a variety of different sensors that can measure distances and velocities by echo ranging (via a sonic ranger) or by motion of a smart pulley; as well as by voltage, heart rate, temperature, pressure, light intensity, magnetic fields, and many other physical quantities.  Newer interfaces plug into a USB port of the computer, and have inputs for four digital channels and three analog channels.  The interface can measure several quantities simultaneously and also has a built-in signal generator which can be controlled to produce 0 -- 5 volt signals of DC, AC, and several other different wave forms.  The software with the interface permits you to display and analyze the results in a number of different forms: digital meter, analog meter, graph, table, oscilloscope, and so forth.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp1/6a_exp1_sensorbcak.jpg} \end{center}
+
+\subsection*{PROCEDURE}
+
+The terms in bold lettering below are basic computer operations with which you will need to be familiar by the end of this first experiment.  If you have any difficulty with these operations, ask your TA; perhaps your lab partner can also help you.  The partner less familiar with computers should perform most of the operations for this experiment.  For the remaining experiments in the Physics 6 lab series, each partner should plan on performing half of the computer operations and half of the experimental setups and adjustments.  Your TA has been instructed to intervene if he or she notices one partner doing a disproportionate share of either task.
+
+The heart rate sensor consists of a small box with a multiple pin connector and a clip that attaches onto your ear lobe.  The sensor measures the flow of blood through the lobe.  As the heart forces blood through the vessels in the ear lobe, the light transmittance of the lobe is changed.  The sensor monitors this light with a phototransistor.
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Plug the heart rate sensor into analog channel A, and turn on the signal interface.  On the computer screen, \textbf{double-click } on the Data Studio icon to bring up the program.  The illustration below shows the screen when Data Studio is first loaded.  There is an ``Experiment Setup'' window at the upper right and a list of sensors to the left of the interface box.  On the left side of the screen is a column with ``Data'' at the top, followed by a list of possible ways to display data.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp1/6A-Exp1_fig3.jpg} \end{center}
+
+\item \textbf{Scroll} the list of sensors until you see the heart rate sensor with the red heart icon, and \textbf{double-click } on it.  A symbol of the sensor will appear in the picture of the interface box to the right, connected to digital channel A (see figure below).  Certain kinds of sensors (such as photogates) are digital, while others (such as voltage-measuring devices) are analog.  In general, when you double-click on a sensor, Data Studio will show it connected to the first available plug, whether digital or analog.  Your hardware sensor must be plugged into this channel.  To remove a sensor on the screen, click on the sensor to select it, and hit the ``Delete'' key.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp1/6A-Exp1-fig4_new.jpg} \end{center}
+
+\item From the ``Displays'' column at the lower left of the screen, \textbf{drag} the ``3.14 Digits'' symbol to the heart symbol in the experimental window.  A digits window appears.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp1/6A-Exp1_fig5.jpg} \end{center}
+
+\item \textbf{Drag} the digits window to a clear area of the screen below.  The window states ``No Data Selected''.  From the ``Data'' column, \textbf{drag} the ``Heart Rate, Channel A (beats/min)'' to the digits window.
+
+\item You are now ready to check your heart rate.  Clip the heart sensor to your ear lobe.  (The newer sensor boxes also show your heart rate with an LED display on the sensor box.)  To see your heart rate in the digits window, \textbf{click} ``Start'' on the top tool bar.  Observe the data for about one minute, and then \textbf{click} ``Stop''.  You should see your resting heart rate (55 -- 70 beats per minute for a typical person).  The figure changes slightly every few seconds.  If you do not see a clear, reasonable rate, try repositioning the ear clip or attaching it to your other ear.  As a last resort, ask your TA for help.
+
+\item To see the sensor voltage produced by your heartbeat, \textbf{drag} a graph symbol to the heart symbol on the Science Workshop.  A graph with ``No Data Selected'' appears.  \textbf{Drag} the graph to a clear area of the screen.  From the data column on the left, \textbf{drag} ``Voltage, Channel A (V)'' to the \(y\)-axis of the graph.  The \(x\)-axis changes automatically to measure time.  If you have already taken a data run to measure your heart rate with the digits window, you will see the voltage output data of the heart rate meter as a series of pulses.
+
+\item To observe your heart pulses in real time, \textbf{click} ``Start'' on the top tool bar (with the heart rate sensor still clipped to your ear).  You will see new data taken in real time plotted in a different color on the graph.  Again, if you do not see clear pulses, try repositioning the ear clip or attaching it to your other ear.  \textbf{Click} ``Stop'' when you are finished.
+
+\item When the graph and digits windows are positioned clearly on the screen, and you have some clear data for your heart rate and sensor voltage, ask your TA to check you off.  Congratulations!  You have now finished the first experiment.
+
+\end{enumerate}
+
+\subsection*{ADDITIONAL CREDIT: RAISING AND LOWERING YOUR HEART RATE (2 mills)}
+
+Throughout the lab sessions, you will have opportunities to earn ``mills'', or tenths of a point, which are added to your final lab score.  You can earn up to 20 mills, or two points.  (There may be opportunities to earn more than 20 mills, but only at your TA's discretion.)  This additional credit assignment is worth two mills, but first, be sure you and your lab partner are both familiar with the Windows computer operations described above.
+
+The objective of this section is to raise your heart rate to a moderately high value by exercising, and then to produce a graph of heart rate as a function of time as the heart relaxes back to its resting mode.  Before proceeding with the instructions below, be sure you have clicked ``Stop'' if the machine is still monitoring your heartbeat.
+
+Close the graph window, and drag a new graph to the symbol for the heart rate sensor.  Position the graph in a clear area of the screen.  This time, drag ``Heart Rate, Channel A (beats/min)'' to the \(y\)-axis of the graph.  If you have previously recorded data sets, they will be graphed in different colors.  You can delete any data sets by selecting their names in the box on the graph, and clicking the red ``X'' in the graph tool bar or hitting the ``Delete'' key.
+
+The sensor will not record an accurate heart rate when you are moving around.  You will need to take off the sensor, exercise, and then hook yourself back up.  Raise your heart rate to 140 beats per minute or higher by doing jumping jacks in position, or by going out and running around the building.  \ul{Do not perform the exercise if you have a health problem.  Have your lab partner or another volunteer do it.}  After exercising, reattach the sensor, and click ``Start'' to record your heart rate as a function of time.  Remain as still as possible while the recording is made --- say, for five minutes (or 300 seconds).  Click ``Stop'' when you are finished.
+
+Your graph should show a relatively smooth, decreasing heart rate from 140 beats per minute down toward your resting rate.  If you do not obtain a smooth graph, get some more exercise and try again.  Try to remain more still while recording, reposition the ear clip, or attach it to your other ear until you get a nice result.
+
+Delete all data sets from the graph except your best one.  Double-click on the graph to bring up the graph settings window.  Study this window for a few moments.  Note that you can use this control window to make many changes to the appearance of the graph, such as the scales of the axes, whether or not the data points are connected by a line, or even the thickness of the line that connects them.  Now add a title to the graph.  Now click the legend tab, type in a title for your graph (e.g., ``Heart Rate vs. Time'', and check the ``Show Legend Title'' box.  Close the graph settings window, and check that the legend is on the graph.  If the appearance of the graph is satisfactory, you can show this graph to your TA to collect two mills.  To keep the graph for you own records, you can pull down the ``File'' menu to ``Print'', and release.  After a few moments, the printer should generate a hard copy of your graph.  Use the three-hole punch to punch this sheet, if you'd like.

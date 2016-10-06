@@ -1,0 +1,197 @@
+\fancyhead[C]{Physics 6A Lab \rule[-1ex]{0pt}{0pt}\(\mid\) Experiment 3}
+
+\vspace{-5ex}\part*{Newton's Second Law}
+
+\subsection*{APPARATUS}
+
+\noindent\textit{Shown in the picture below:}
+\squishlist
+\item Air track, smart-pulley mount, and smart pulley
+\item Small glider
+\item Mass holder for gliders
+\item 5-gram mass hanger and three 5-gram disks
+\squishend
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp3/IMG_5514_web.jpg} \end{center}
+\noindent\textit{Not shown in the picture above:}
+\squishlist
+\item Computer and Pasco interface
+\item Large glider
+\item Scale and weight set
+\item Photogate and picket fence
+\item Rag box for collecting picket fence
+\squishend
+
+\subsection*{INTRODUCTION}
+
+In this experiment, you will test Newton's Second Law by allowing a falling weight (i.e., a known force) to accelerate a glider of known mass along an air track.  A string connecting the falling weight to the glider passes over a smart pulley.
+
+The smart pulley has low friction and low inertia, and its rotation is monitored by an attached photogate.  One arm of the photogate emits a thin beam of infrared light which is detected by the other arm.  The computer discerns whether the beam strikes the detector or is blocked by a spoke in the pulley sheaf.  The small LED light in front of one arm illuminates when the beam is blocked.  By accurately timing the signals that arrive from the photogate, the computer is able to track the motion of any object linked to the pulley.
+\begin{center} \includegraphics*[width=0.45\textwidth]{imgs/6labs/6Alab/6Aexp3/6A_exp3_beamthrough.jpg} \includegraphics*[width=0.45\textwidth]{imgs/6labs/6Alab/6Aexp3/6A_exp3_photogate_block_wht.jpg} \end{center}
+
+\subsection*{THEORY}
+
+Consider a glider of mass \(M\) on a nearly frictionless air track.  This glider is attached to a small mass \(m\) by a string passing over a smart pulley.  The Earth exerts a downward force on the small mass which is equal in magnitude to its weight \(mg\).
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp3/6B-EXP3_glidertrack.jpg} \end{center}
+
+Reasoning somewhat intuitively, we can say that this gravitational force causes the entire system of mass \(M + m\) to accelerate.  Newton's Second Law can then be written as
+\begin{align} mg = (M + m)a. \label{6Aexp3_eqn_1} \end{align}
+More rigorously, let us draw free-body diagrams for each of the two masses.  The forces exerted on the small mass \(m\) are its weight \(mg\) (downward) and the tension \(T\) in the string (upward).  These two forces cause \(m\) to accelerate downward:
+\begin{center} \includegraphics*[width=0.3\textwidth]{imgs/6labs/6Alab/6Aexp3/IMG_043_sm.png} \end{center}
+\begin{align} \sum F_y = mg - T = ma. \label{6Aexp3_eqn_2} \end{align}
+Note that we have assigned a positive sign to quantities pointing in the (downward) direction of motion.
+
+The forces exerted on the glider of mass \(M\) are its weight \(Mg\) (downward), the normal force \(N\) from the track (upward), and the tension \(T\) in the string (rightward).  Since there is no motion in the vertical direction:
+\begin{center} \includegraphics*[width=0.3\textwidth]{imgs/6labs/6Alab/6Aexp3/IMG_044_sm.png} \end{center}
+\begin{align} \sum F_y = N - Mg = 0 \end{align}
+or
+\begin{align} N = Mg. \end{align}
+In the horizontal direction,
+\begin{align} \sum F_x = T = Ma. \label{6Aexp3_eqn_3} \end{align}
+The glider and small mass have the same magnitude of acceleration a since they are connected by a taut string (of negligible mass).  Adding Eqs. \ref{6Aexp3_eqn_2} and \ref{6Aexp3_eqn_3}, we obtain
+\begin{align} mg = (M + m)a \end{align}
+as postulated above.  Thus, the acceleration of the system is
+\begin{align} a = mg/(M+m). \label{6Aexp3_eqn_4} \end{align}
+
+If we wish to test Newton's Second Law, we might think of using different small masses \(m\) and checking whether the acceleration \(a\) is proportional to the gravitational force \(mg\).  Eq.~\ref{6Aexp3_eqn_4}, however, shows that \(a\) is not simply proportional to \(m\), since the denominator also depends on \(m\).  Thus, holding \(M\) constant while increasing \(m\) causes the \ul{total} mass of the system to increase.  On the other hand, if we add, say, three more small masses (each of mass \(m\)) to the glider and transfer them one at a time to the hanger (also of mass \(m\)), then the \ul{total} mass \(M + 4m\) of the system remains constant.  Hence, we can test whether the acceleration of the system is proportional to the gravitational force as it increases in magnitude from \(mg\) to \(2mg\), \(3mg\), and \(4mg\).  (Note that when using this method, you need to decide how many measurements to make before doing the experiment, and then add the corresponding masses to the glider.)
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp3/6A-EXP3transferglidersn_wht.jpg} \end{center}
+
+\subsection*{INITIAL SETUP}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Turn on the air track and level it by adjusting the leveling screw such that a glider on the track has no apparent tendency to move in either direction.  Since air tracks are often bowed in the middle, place the glider at several different positions on the track to verify that it is level.
+
+\item Turn on the signal interface and computer, plug the smart pulley into the interface (inserting the plug into digital channel 1), and call up Data Studio.
+
+\item From the list of sensors, double-click on ``Smart Pulley''.  Then double-click on the icon of the smart pulley connected to the picture of the interface, and under ``Mesurement'', select ``Position'', ``Velocity'', and ``Acceleration'', so that these measurements appear in the data list.
+
+\item Drag the graph icon to the motion sensor icon now below digital channel 1.  Use your knowledge from the last experiment to set up multiple graphs with separate plots of position, velocity, and acceleration, aligned vertically.  (If necessary, refer to instruction 7 in the ``Initial Setup'' section of Experiment 2.
+
+\item Using approximately 1.5 meters of thread, connect the 5-gram mass hanger to a glider.  Make sure the thread passes over the smart pulley so the hanger will accelerate a glider down the track.
+
+\end{enumerate}
+
+\subsection*{PROCEDURE}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Weigh each glider to obtain its mass, and record the values in the ``Data'' section.
+
+\item With the air-track blower off, set one glider on the track as far from the pulley as the thread allows.  Click ``Start'', and immediately turn on the air track so the glider begins to move.  Just before the hanger hits the floor or the glider reaches the end of the track, click ``Stop''.
+
+\item Check the graph window and use the ``Scale-to-fit'' button, if necessary, on the three plots.  Check that you are obtaining reasonable plots of the glider's position, velocity, and acceleration.  As usual, the acceleration graph may look ragged.  You can print these graphs out for your records.
+
+\includegraphics*{imgs/6labs/6Alab/6Aexp3/6A_exp3_ScaleToFit2.png} scale-to-fit button at top left of graph tool bar
+
+\item Use the ``smart cursor'' to estimate the acceleration, and read an ``eyeball'' value of acceleration directly from the graph.  Refer to instruction 8a in the ``Procedure'' section of Experiment 2 if you have forgotten how to do this.  Record this value in the ``Data'' section.  (To remove the smart cursor, click its icon again.)
+
+\item To obtain a more accurate value of the acceleration, you will need to fit a straight line to the velocity data.  Set up a separate velocity graph, and drag over the velocity data.  Use the ``Scale-to-fit'' button, if necessary, to get the data curve to fill the graph area.
+
+On this graph, drag a box around a section of data where the slope is approximately constant.  Click the \(\sum\) statistics button, pull down the menu to ``Linear'', and release.  This is the linear regression operation that fits a straight line to the data.  The slope of the velocity graph is equal to the acceleration.  Record this slope in the ``Data'' section.
+
+\item We will be recording and graphing data on an Excel spreadsheet.  Call up Excel on your computer.  When the program has booted up, you will see a menu bar with a set of icons above, and the spreadsheet cells in rows and columns below.  (When Excel is on the screen, Data Studio hides behind it.  You may move Data Studio to the front of the screen by clicking on it, if you can see it behind Excel, or by clicking on its name in the Windows tool bar, whose standard position is the bottom of the screen.)  Our plan is to record three trials of the acceleration for the accelerating mass, and then to calculate the average acceleration of the each of the three trials.  Accordingly, prepare your spreadsheet like the one illustrated below.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp3/6A_exp3_Excel_Spreadsheet1.png} \end{center}
+
+If you have not used a spreadsheet before, it consists of a sheet of cells labeled by the numbers on the left and the letters on the top.  You can enter numbers or text into the cells; the numbers can be manipulated mathematically later.  To make an entry into a cell, click on the cell, and begin typing.  The text appears on the menu line above, and you can edit it by deleting parts, or by dragging through and typing the corrected material.  There are at least four ways of entering typed material into a cell: clicking on the green check, hitting ``Enter'', pressing an arrow key to move to a nearby cell, or clicking on a new cell.
+
+\item Attach (or tape) three 5-gram masses to the small glider, such that only the 5-gram mass holder accelerates the glider.  Set the system into motion.  Obtain the acceleration as described in step 5, and record its value in your spreadsheet.  Perform a minimum of three trials.  (As data runs accumulate on your velocity graph, you can select run numbers in the box on the graph and delete them to see the current data more clearly.)
+
+\item Transfer one 5-gram mass from the glider to the mass holder, such that the holder and one 5-gram mass accelerate the glider.  Set the system into motion, obtain the acceleration, and record its value in your spreadsheet.  Perform a minimum of three trials.
+
+\item Transfer another 5-gram mass from the glider to the mass holder, such that the holder and two 5-gram masses accelerate the glider.  Set the system into motion, obtain the acceleration as before, and record its value in your spreadsheet.  Perform a minimum of three trials.
+
+\item Transfer the final 5-gram mass from the glider to the mass holder, such that the holder and all three 5-gram masses accelerate the glider.  Set the system into motion, obtain the acceleration as before, and record its value in your spreadsheet.  Perform a minimum of three trials.
+
+\item To calculate the average acceleration of the first three trials, in cell B7 of the Excel illustration above, type the material between the quotes, ``=Average(b4..b6)'', and click the green check in the tool bar (or hit ``Enter'').  The equals sign signals Excel to do a calculation.  This operation will average the numbers in cells B4, B5, and B6.  It does not matter that the B's are typed in lower case in the Average function.
+
+\item Now comes the great virtue of spreadsheets.  You do not need to type the Average function into the cells for the other trials.  Instead, position the cursor at the lower right corner of cell B7 (the one in which you just did the Average calculation), so that it turns into a lopsided square shape.  Now drag over cells C7, D7, and E7.  Excel automatically calculates the averages of the other trials with the proper cell references.  (By the way, if you were now to change one tf the values of the trial accelerations, Excel would automatically and instantly recalculated the average.)  Your spreadsheet should now look something like the illustration below:
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp3/6A_exp3_Excel_Spreadsheet2.png} \end{center}
+(Dragging the calculation across the cells is called the ``Fill Right'' operation.  There is also a ``Fill Down'' operation for dragging a calculation down a column.  Positioning the cursor at the corner of the cell is a short cut to these operations.  They can also be accessed from the ``Edit'' pull down menu.)
+
+\item In cell A8 of the illustration above, type ``Force (N)''.  In cell B8, type the expression between the quotes, ``=B3*9.8/1000''.  This will take the mass entry in cell B3, divide it by 1000 to convert to kilograms, and multiply by 9.8 to convert to newtons.  Then drag this calculation across the other three cells C8 -- E8 to calculate the force for each case.
+
+\item We will now have Excel chart this data.  First, if we leave the acceleration data above the force data, the acceleration will be plotted on the \(x\)-axis and the force on the \(y\)-axis.  Since we consider the force to be the independent variable in this experiment, we would prefer it the other way.  Accordingly:
+\squishlist
+\item Click the label ``7'' to select row 7,
+\item Pull ``Edit'' down to ``Copy'' (or simply hit CTRL+C, the control button and the C button together, to copy),
+\item Select row 9, and
+\item ``Paste Special'' the ``Values'' into row 9.
+\squishend
+
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp3/6A_exp3_Excel_Spreadsheet3.png} \end{center}
+(If you were to use ``Paste'' instead of ``Paste Special'', Excel would have copied the cell averaging formulas and averaged wrong numbers in row 9.)
+
+\item Now we chart:
+\squishlist
+\item Select the two rows of cells B8 through E9.
+\item In the ``Insert'' tab menu, select the ``Scatter'' option without connecting lines:
+\squishend
+\begin{center} \includegraphics*[width=0.8\textwidth]{imgs/6labs/6Alab/6Aexp3/6A_exp3_Excel_Spreadsheet4.png} \end{center}
+\squishlist
+\item After clicking on this line-less scatter option, the chart should appear.
+\item From here (and whenever the chart area is active or highlighted) you can work with the ``Chart Tools'', which are organized by the ``Design'', ``Layout'', and ``Format'' tabs.
+\item Within the ``Design'' tab, in the ``Chart Layouts'' area, click on the left-most (and upper-most) layout option.  This will place titles on the chart that you can edit or delete.
+\item Create your own title and labels for the axes.
+\squishend
+
+\item Now we fit a line to the data; Excel calls this a ``trendline''.  While the chart area is active or highlighted (click on the chart if you need to), select the ``Layout'' tab of the ``Chart Tools'' and click on ``Trendline'' in the ``Analysis'' area.  Select ``Linear Trendline''.  We want to find to find a numerical expression for this linear fit to the data: Again, click on ``Trendline'' but now select ``More Trendline Options...''.  In the pop-up window, make sure ``Linear'' is selected, and check the box beside ``Display Equation on chart''.  Click on ``Close''.  Since we are plotting \(a = F/m\), the slope of the equation (the factor multiplying \(x\)) is \(1/m\).  Calculate this experimental \(m\), enter it in the ``Data'' section, compare it to the value of \(m\) obtained by weighing the glider plus the 20 grams of small masses used to accelerate the glider \((M+4m)\), and calculate the experimental error.
+
+\item Show your results to your TA.  Afterwards you can print your Excel sheet with the chart, three-hole punch it if you like, and keep it for your records.
+
+\end{enumerate}
+
+\subsection*{DATA}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Mass of small glider = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Mass of large glider = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\setcounter{enumi}{4}
+\item ``Eyeball'' value of acceleration = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item Slope of velocity graph = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\setcounter{enumi}{16}
+\item Experimental mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Experimental error = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\begin{comment}
+\subsection*{QUESTIONS}
+\begin{enumerate}[start=11]
+\item How well do your experimental and theoretical results agree?  Is Newton's Second Law verified?
+
+\end{enumerate}
+\end{comment}
+
+\end{enumerate}
+
+There are two additional credit assignments.  You may wish to do the second shorter one first to take a break from the air track measurements.
+
+\subsection*{ADDITIONAL CREDIT PART 1: DIFFERENT MASS GLIDER (5 mills)}
+
+Repeat the entire experiment with the second glider, which has a different mass.  Complete another Excel sheet with the data and chart with equation.  Below the chart, type in the mass of the glider obtained experimentally from the slope, the mass obtained by weighing, and the experimental error.  Be sure your chart has a title and the axes are labeled.
+
+\begin{comment}
+\subsection*{ADDITIONAL CREDIT PART 2: DIFFERENT METHODS OF STARTING THE GLIDER (2 mills)}
+
+When the air pump is first turned on, there may be some friction between the track and the glider, since it takes a few moments for the pressure to reach its maximum value.  Try several runs in which the glider is released a few seconds after the maximum air pressure has been attained, and several runs in which air causes the glider to ``float'' up the track before it begins to accelerate downward.  Is there any systematic difference in the data obtained from the two methods?  Which method produces results that agree more closely with Newton's Second Law?  Explain what you are doing, and record your measurements and conclusions.
+\end{comment}
+
+\subsection*{ADDITIONAL CREDIT PART 2: FREE-FALLING PICKET FENCE (5 mills)}
+
+Here you will need a photogate, a picket fence, and a rag box to catch the falling fence.  The picket fence is a strip of clear plastic with evenly spaced black bars.  When the fence is dropped through a photogate, the light beam is interrupted by the bars; since the fence accelerates while falling, the bars interrupt the beam with increasing frequency.  The software calculates the distance fallen, as well as the corresponding velocity and acceleration.  This acceleration should be constant and equal in magnitude to \(g\).
+
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp3/exp_fig7_fx.jpg} \end{center}
+
+Double-click on ``Photogate Plus Picket Fence'' in the list of sensors, and insert the physical plug of the photogate into the appropriate digital channel of the interface.  Drag the graph icon to the picket fence icon in the steup picture, and set it to plot position, velocity, and acceleration as separate graphs aligned vertically.  Arrange the photogate in such a way that the falling picket fence will be caught by the rag box on the floor.
+
+Click ``Start'', drop the picket fence through the photogate, and click ``Stop''.  Since the entire motion occurs within a fraction of a second, you may not see much on the graph.  Expand the time scale using the ``Scale-to-fit'' button, and click the zoom box at the upper-right corner so the graph window fills the screen.  Again, the acceleration graph may look ragged.  Use the statistics button to find the mean value of the acceleration.  Record the magnitude of the acceleration due to gravity with experimental error below.  You can print your sheet of three graphs to keep for your records.
+
+Experimental \(g\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Experimental error = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+This short experiment illustrates the power of computer measurement.  It appears easy, but be sure you understand what is happening in the measurement and can explain the results to your TA.

@@ -1,0 +1,205 @@
+\fancyhead[C]{Physics 6A Lab \rule[-1ex]{0pt}{0pt}\(\mid\) Experiment 2}
+
+\vspace{-5ex}\part*{Kinematics}
+
+\subsection*{APPARATUS}
+
+\vspace{-0.5ex}
+\vphantom{.}
+\squishlist
+\item Computer and Pasco interface
+\item Motion sensor (sonic ranger)
+\item Air track, glider with reflector, block to tilt track
+\item Calipers to measure thickness of block
+\item Pendulum arrangement
+\squishend
+
+\subsection*{INTRODUCTION}
+
+In this experiment, you will produce position, velocity, and acceleration graphs of your own movements, as well as that of a glider on an air track, using a motion sensor.  A motion sensor (sometimes called a sonic ranger) measures the distances to objects by repeated reflection of ultrasonic sound pulses.  The software included with this device takes the first and second derivatives of the position measurements to calculate the velocity and acceleration, respectively.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp2/6A_exp2_set-up_new.jpg} \end{center}
+
+To determine distances, the motion sensor emits and receives ultrasound pulses at a frequency of approximately 50 kHz.  Since the speed of ultrasound in air at room temperature is known, the software calculates these distances by measuring the time required for the pulse to reflect from an object and return to the sensor.  This process is similar to how a bat ``sees'' using ultrasound, as well as how a Polaroid autofocus camera determines the distance to an object in order to focus properly.
+
+The ultrasonic sound emitted by the motion sensor spreads about 15{\degree} off axis.  Keep this in mind as you design your experiments.  The sensor does not work for objects closer than 0.4 meters.  (Some of the newer motion sensors have adjustable width beams and will measure objects as close as 15 centimeters.)
+
+The clicking noise made by the motion sensor is not ultrasound, but a by-product of the mechanism that produces the ultrasound.  Most people cannot hear the frequencies emitted by the sensor.  If you place your ear near the device, however, you may be able to ``feel'' the pressure pulse of sound against your eardrum.
+
+\subsection*{INITIAL SETUP}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Turn on the signal interface and computer, plug the motion sensor into the interface (inserting the yellow-banded plug into digital channel 1 and the other plug into digital channel 2), and call up Data Studio.
+
+\item Bring up Data Studio on your computer screen, scroll the list of sensors to the left of the interface picture to ``Motion Sensor'', and double-click on its icon.  The picture will now show that this particular sensor has two plugs: the yellow plug going into Channel 1, and the black plug going into Channel 2.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp2/6A-exp2_fig2_new.jpg} \end{center}
+
+\item From the ``Displays'' column at the lower left of the screen, drag a graph icon to the motion sensor icon now below digital channel 1.  Reposition the graph in a clear area of the screen.  From the ``Data'' column at the top left of the screen, drag ``Position, Channel 1 and 2 (m)'' to the \(y\)-axis of the graph.
+
+\item Click ``Start'' on the top tool bar to activate the motion sensor.  You should hear a series of rapid clicks.  Hold a book facing, and approximately 0.5 meter away from, the sensor.  (The sensor does not measure distances closer than 0.4 meter.)  Move the book to a distance of 1.5 meters from the sensor and then back to 0.5 meter, click ``Stop'', and observe the graph.  You may want to click the ``Scale to Fit'' button at the left end of the tool bar.  If you do not obtain a clean trace, try again, being careful to keep the book directly in front of the sensor.
+
+\item Drag the velocity data to the \(y\)-axis of the graph.  If you drag this data into the graph so that a dotted-line box appears around the \(y\)-axis, then the velocity plot will replace the position plot.  However, if you drag the velocity data to the left edge of the graph so that a dotted line appears around the entire inner boundary, then both plots will be shown on the graph.
+
+\item Drag the acceleration data to the \(y\)-axis of the graph.  Display all three plots (position, velocity, and acceleration) on this graph.
+
+\item Double-click on the graph area to bring up the ``Graph Settings'' window.  Click the layout tab; under ``Layering'', check ``One Graph, Multiple Y-scales''.  This option plots all three quantities on the same graph.  Bring up the graph layout again, and check ``Do Not Layer'' under ``Layering''.  The graphs are now plotted separately and aligned vertically.  You may want to experiment with the graph controls a bit.  We will be plotting many graphs in the Physics 6 series labs, and sometimes a portion of the additional credit requires obtaining the correct graph appearance.
+
+\end{enumerate}
+
+\subsection*{PROCEDURE}
+
+In steps 1 -- 5, you will need to move in a straight line away from the motion sensor for a distance of 2 meters.  Begin by removing any objects that may hamper your motion or otherwise reflect the signal from the sensor.  Arrange the computer monitor so you can see the screen while traveling backward, and be sure your path is clear.  Obtain a graph on the screen that shows only the position data.  (If necessary, delete your graph from above, start with a new graph, and drag over the position data.)
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Start approximately 0.5 meter from the motion sensor, click on ``Start'', and walk away steadily while holding a book facing the sensor.  Sketch the position-versus-time graph made by the computer in the ``Data'' section that follows in the lab manual.  To discard a data set, click on its run number on the graph to highlight it, hit delete, and click ``OK''.  Note that you can obtain several position curves in different colors on the same graph.
+
+\item How would you expect the graph in part 1 to change if you walked away from the sensor more rapidly?  First postulate an answer; then record and execute this motion.  Sketch the position-versus-time graph made by the computer in the ``Data'' section.
+
+\item In the ``Data'' section, sketch velocity-versus-time graphs based on the position graphs you depicted in parts 1 and 2.  Compare these with the actual velocity graphs made by the computer (which you can obtain by dragging the velocity data to the graph).
+
+\item Execute the motion described qualitatively by the position-versus-time graph shown below.  (That is, move in such a way that you produce a computer graph like the one below.)  Ask your TA to check it.
+\begin{center} \includegraphics*{imgs/6labs/6Alab/6Aexp2/exp_2_fig2_fx.jpg} \end{center}
+
+\item Obtain a velocity graph on the screen, and move in such a way that you produce a computer graph described qualitatively by the velocity-versus-time graph shown below.  Ask your TA to check it.  You may find the velocity graph more difficult to reproduce than the position graph.  Have each lab partner attempt the motion about five times, and display the best result.  If you are not able to obtain the approximate shape, ask your TA to demonstrate, and try to repeat the motion.
+\begin{center} \includegraphics*{imgs/6labs/6Alab/6Aexp2/exp2_fig3_fx.jpg} \end{center}
+
+\end{enumerate}
+
+In steps 6 -- 9, you will use an air track.
+
+\begin{enumerate}[start=6]
+
+\item Turn on the air track and level it by adjusting the leveling screw such that a glider on the track has no apparent tendency to move in either direction.  Since air tracks are often bowed in the middle, place the glider at several different positions on the track to verify that it is as level as possible.  Attach a reflector to the glider.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp2/6A-EXP2_gilder.jpg} \end{center}
+
+Arrange the sensor so it points slightly downward and can follow the glider along the entire length of track, as shown below.  Place your eye at the position you want the sensor to point.  Look into its reflective face, and adjust the sensor until you see your reflected image.  The sensor is now directed at your eye position.
+\begin{center} \includegraphics*[width=0.8\textwidth]{imgs/6labs/6Alab/6Aexp2/exp2_fig5fx_2.jpg} \end{center}
+
+Tilt the end of the track up by placing the small block under the leveling screw.  Give the glider a small hand push up the track.  The glider should slow as it moves up, stop momentarily before reaching the top end, and then coast back down the track.  After experimenting with several trials, predict the position, velocity, and acceleration of the glider as it moves along the track.
+
+Now set your computer to produce all three graphs aligned vertically.  Record the motion of the glider moving up, slowing, stopping, and moving back down.
+
+\begin{center}
+\begin{tabular}{|p{14cm}|}
+\hline\tstrut
+Practice the attitude that you are going to make the experiment work well and produce a good position graph.  If your initial graphs are not clean, adjust the position and direction of the motion sensor, adjust the tilt of the reflector on the glider, etc., until you get a good data set.  (Your acceleration graph may still look ragged.)  When you have a graph with clean data on the screen, compare this with your predictions.  You can print it out to keep for your records.  \bstrut\\
+\hline
+\end{tabular}
+\end{center}
+
+\item Using the Vernier caliper (see instructions below), measure the height \(h\) of the block which tilts the track and the distance \(D\) between the track supports.  The sine of the tilt angle \(\alpha\) is equal to \(h/D\); knowledge of \(h\) and \(D\) allows you to determine \(\alpha\).  As the glider moves along the track, Newton's Second Law predicts that its acceleration should be constant and equal in magnitude to \(g\sin\alpha\).  Calculate the value of this acceleration.
+
+\item Acceleration graphs often look ragged, as small errors accumulate when the software takes the second derivative of the position data.  We will use four different methods for extracting a value of the acceleration, and in the process gain experience using the tools provided by Data Studio for analyzing graphs.  Obtain a separate acceleration graph by dragging over another graph.  Using the following methods, determine the acceleration of the glider as it slides along the track:
+
+\begin{enumerate}[label=\alph*.]
+
+\item Use the ``smart tool'' to estimate the acceleration, and read an ``eyeball'' value of acceleration directly from the graph.  It will probably help to use either the ``Zoom Select'' feature in the graph tool bar or the ``Graph Settings'' window to reset the axis scale to a range such as \(\pm\) 0.5 m/s\(^{2}\).  If your tool does not show enough significant figures for the \(y\) value of the acceleration, then double-click on the acceleration data in the ``Data'' column, choose the ``Y Variable'' tab, and reset the display precision to 4.  You will also note that the smart tool ``snaps to grid''.  Bring up the ``Graph Settings'' window, click ``Tools'', and reset the ``Data Point Gravity'' to 1.  This will permit you to position the smart tool more accurately.  Record the eyeball value of acceleration in the ``Data'' section.  (To remove the smart tool, click its icon again.)
+
+\includegraphics*{imgs/6labs/6Alab/6Aexp2/button_1_sm.jpg} Smart tool in the graph tool bar
+
+\item On the acceleration graph, drag a box around a good section of data, and click the \(\sum\) statistics button in the graph tool bar to find their mean value.  You may need to check ``Mean'' in the right column of this icon.  Record this value in the ``Data'' section.
+
+\includegraphics*{imgs/6labs/6Alab/6Aexp2/button2_sm.jpg} Show selected statistics in tool bar
+
+\item The slope of the velocity graph is, of course, the acceleration.  Obtain a separate velocity graph, and use the slope tool.  First, bring up the ``Graph Settings'' window, and set the slope tool interval to 20.  (This means that it will average the slope using 20 data points rather than just the first nearby points to which it may have been set originally.)  Move the slope tool to a good section of velocity data, and record the slope in the ``Data'' section.
+
+\includegraphics*{imgs/6labs/6Alab/6Aexp2/button3_sm.jpg} Slope tool in graph tool bar
+
+\item Finally, fit a line to the velocity data.  Select the entire section of good velocity data, click the curve fit tool, and select ``Linear''.  In the ``Linear Fit'' box that appears on the graph, the slope is again the acceleration.  Record this value in your data section.
+
+\includegraphics*{imgs/6labs/6Alab/6Aexp2/button4_sm.jpg} Curve fit tool in graph too bar
+
+\end{enumerate}
+
+\item Calculate the percentage error between each experimental result \(r_{\textrm{exp}}\) obtained in part 8 and the theoretical value \(r_{\textrm{th}}\) determined in part 7:
+
+percentage error = \( (100\%) \times \left(\mid r_{\textrm{exp}} - r_{\textrm{th}} \mid\right) / r_{\textrm{th}} . \)
+
+The absolute value is taken because we are not interested in the sign of the difference.  Typical experimental accuracies in an undergraduate lab range from 3 -- 5\%, although some quantities can be measured much more accurately (and some much less!).
+
+\end{enumerate}
+
+\subsection*{VERNIER CALIPER}
+
+The \textbf{Vernier caliper} is designed to provide a highly precise measurement of length.  The numbers in parentheses refer to those found in the figure below.
+\begin{center} \includegraphics*[width=0.65\textwidth]{imgs/6labs/6Alab/6Aexp2/6A-EXP2-fig7_webtext.jpg} \end{center}
+
+The \textbf{outside jaws} (1) are used to measure around the exterior of an object.  The \textbf{inside jaws} (2) are used to measure inside the holes of an object.  The \textbf{depth gauge} (3) is used to measure the depth of holes.
+
+The \textbf{Vernier} (4) is used to divide further the \textbf{metric scale} (5) or the \textbf{English scale} (6) down to 0.01 centimeter or 1/128 inch, respectively.  Its operation is described in detail below.
+
+The \textbf{thumbwheel} (7) is used to open and close the jaws.
+
+The \textbf{locking screw} (8) is used to lock the jaws in position.
+
+The \textbf{Vernier} is a device used for estimating fractional parts of distances between two adjacent divisions on a \textbf{scale}.  The \textbf{Vernier scale} subdivides each \textbf{main scale} division into as many parts as there are divisions on the scale.
+
+The \textbf{Vernier} and \textbf{main scales} are placed in contact with each other.  The \textbf{main scale} is read to the nearest number of whole divisions, while the zero on the \textbf{Vernier scale} serves as the index (i.e., the line on the extreme left).  One should then estimate the fractional part of the \textbf{main scale} reading as a check of the more accurate reading to be made with the aid of the \textbf{Vernier scale}.
+
+The \textbf{metric scale} is divided into tenths of a centimeter (i.e., millimeters).  The \textbf{Vernier scale} is divided into 10 divisions, thus representing hundredths of a centimeter.  \ul{At any given setting, the marks on the \textbf{Vernier} and \textbf{main scales} coincide at only one point.}  The mark on the \textbf{Vernier scale} which coincides most closely with a corresponding mark on the \textbf{main scale} represents the Vernier reading.  The figure below should help clarify this.
+\begin{center} \includegraphics*[width=0.5\textwidth]{imgs/6labs/6Alab/6Aexp2/caliper_alt_2.jpg} \end{center}
+
+\subsection*{DATA}
+
+The numbers below refer to steps in the ``Procedure'' section.  Use one page of graph paper provided at the end of the workbook for all three graphs below.
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Sketch the position graph made by the computer using the graph paper at the end of this workbook.
+
+\item Sketch the position graph made by the computer using the same sheet of graph paper.
+
+\item Sketch the predicted velocity graphs using the same sheet of graph paper.
+
+\setcounter{enumi}{8}
+\item ``Eyeball'' value of acceleration = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Mean value of acceleration = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Slope of velocity graph using slope tool = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Slope of velocity graph using curve fit = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\begin{center}
+\begin{tabular}{|p{14cm}|}
+\hline\tstrut
+Always record units with your results.  \bstrut\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{comment} Always record units with your results. \end{comment}
+
+\end{enumerate}
+
+\subsection*{CALCULATIONS}
+
+\begin{enumerate}[start=7]
+
+\item \(g\sin\alpha\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\setcounter{enumi}{9}
+\item Percentage error for ``eyeball'' value of acceleration = \ul{~~~~~~~~~~~~~~~}
+
+Percentage error for mean value of acceleration = \ul{~~~~~~~~~~~~~~~}
+
+Percentage error for slope tool on velocity graph = \ul{~~~~~~~~~~~~~~~}
+
+Percentage error for curve fit on velocity graph = \ul{~~~~~~~~~~~~~~~}
+
+\end{enumerate}
+
+\subsection*{QUESTIONS}
+
+\begin{enumerate}[label=\alph*.]
+
+\item What does calculus tell us about the relationship between the position and velocity graphs?
+
+\item Suppose you were able to arrange the motion sensor to measure and plot the position, velocity, and acceleration of a ball thrown vertically upward into the air.  Neglecting air resistance, how would these graphs compare with those of the glider experiment?  Elucidate any differences.
+
+\end{enumerate}
+
+\subsection*{ADDITIONAL CREDIT: PENDULUM MOTION (3 mills)}
+
+Arrange the motion sensor to track a swinging pendulum.  For a pendulum bob, use a block with a flat side facing the sensor.  Set the pendulum into motion with small-amplitude oscillations, carefully positioning and aligning the sensor so it tracks this motion and produces smooth curves.  Display a graph showing position, velocity, and acceleration as separate functions of time (all aligned vertically), be prepared to discuss which mathematical function describes each graph, as well as how the graphs are related, and ask the TA to check your work.  You may print out your graphs to keep for your records.

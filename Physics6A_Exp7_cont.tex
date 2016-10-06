@@ -1,0 +1,299 @@
+\fancyhead[C]{Physics 6A Lab \rule[-1ex]{0pt}{0pt}\(\mid\) Experiment 7}
+
+\vspace{-5ex}\part*{Rotation and Gyroscopic Precession}
+
+\subsection*{APPARATUS}
+
+\noindent\textit{Shown in the picture below:}
+\squishlist
+\item Pasco gyro assembly with rotation sensor on base
+\item Support rod and clamp for gyro
+\squishend
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-EXP7_fig3text_scaled_fix_pdf.jpg} \end{center}
+\noindent\textit{Not shown in the picture above:}
+\squishlist
+\item Rotator with movable weights on stand with rotation sensor
+\item Vernier calipers
+\item Pan balance to weigh add-on weight
+\item Meter stick
+\item Weight hanger and weights
+\item Digistrobe
+\item String to spin wheel
+\item Computer and Science Workshop Interface
+\squishend
+
+\subsection*{NOTE TO INSTRUCTORS}
+
+This experiment consists of two parts.  Part 1 is a relatively straightforward measurement of the angular acceleration produced by different torques on an apparatus with variable rotational inertia.  Part 2 involves the measurement of a gyroscope's precession as a function of its rotational inertia and rotational angular velocity, and requires somewhat more experimental ingenuity.
+
+Most students cannot complete these two parts in one lab session, so you should choose which part you would like them to perform.  The default option (in which you do not express a preference) is part 1.  Another option, which you would need to choose at the beginning of the quarter in conjunction with the other instructors, is to reduce the ``Biceps'' experiment to one week by omitting parts 1 -- 4 and to allow two weeks for this ``Rotation'' experiment.
+
+\subsection*{TORQUE AND ROTATIONAL INERTIA}
+
+We are all aware that a massive wheel has rotational inertia.  In other words, it is hard to start the wheel rotating; and, once moving, the wheel tends to continue rotating and is hard to stop.  These effects are independent of friction; it is hard to start a wheel rotating even if its bearings are nearly frictionless.  \textit{Rotational inertia} is a measure of this resistance to rotational acceleration, just as inertia is a measure of resistance to linear acceleration.
+
+Automobile piston engines use a \textit{flywheel} for this very purpose.  The gasoline explosions in the piston chambers deliver jerk-like forces to the rotating crankshaft, but the large rotational inertia of the flywheel on the crankshaft smooths out the otherwise jerky rotational motion.
+
+We also have an intuitive idea of \textit{torque}, the tendency of a force to rotate a body.  To produce the maximum rotational acceleration, we want to push perpendicular to the rotation axis, and at as large a distance \(r\) from the rotation axis as possible.
+
+Consider a small mass m at a distance \(r\) from the rotation axis.  If a force \(\textbf{F}\) acts on it , the linear acceleration of the mass around the circle will be \(a = F_{\perp}/m\), where \(F_{\perp}\) is the component of \(F\) perpendicular to the radius arm.  The angular velocity \(\omega = v/r\) of the mass is increasing, but the angular acceleration \(\alpha = a/r\) is constant.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/r_g_diagram1_fix.jpg} \end{center}
+Multiply each side of the equation \(F_{\perp} = ma\) by \(r\), and manipulate the \(r\)'s:
+\begin{align} rF_{\perp} = mr^2 a/r = mr^2\alpha, \end{align}
+or
+\begin{align} \textrm{torque} = \tau = I\alpha. \end{align}
+
+We recognize the torque \(\tau = rF_{\perp}\) in vector form \(\boldsymbol{\tau} = \textbf{r}\times\textbf{F}\).  The rotational inertia \(I\) is equal to \(mr^2\) for a small particle of mass \(m\).  For an assembly of small particles, each of mass \(m_i\), we sum to get the rotational inertia:
+\begin{align} I = \sum m_i\,{r_i}^2. \label{6Aexp7_eqn_2} \end{align}
+And if the mass distribution is continuous, we integrate:
+\begin{align} I = \int r^2\,\textrm{d}m. \end{align}
+
+We can continue to define the rotational analogs to linear motion.  For example, the \textit{angular momentum} \(L\) is
+\begin{align} L = I\omega, \label{6Aexp7_eqn_3} \end{align}
+in analogy to
+\begin{align} p = mv, \end{align}
+and the \textit{rotational kinetic energy} is
+\begin{align} \textrm{rotational } KE = (1/2)I\omega^2, \label{6Aexp7_eqn_4} \end{align}
+in analogy to
+\begin{align} \textrm{translational } KE = (1/2)mv^2. \end{align}
+
+Linear momentum \(p = mv\) is conserved in the absence of external forces.  Likewise, angular momentum \(L = I\omega\) is conserved in the absence of external torques.  One interesting difference between rotational motion and linear motion is that; since rotational inertia depends on the positions of the masses, it is easy to change the rotational inertia ``on the fly'', so to speak.  A spinning ballerina, ice skater, or star with a large rotational inertia \(I\) and small angular velocity \(\omega\) can increase the angular velocity of spin by pulling mass in to reduce the rotational inertia: the ballerina and ice skater by pulling in their arms and legs, and the star by collapsing smaller by gravity.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/6A_exp7_ConservAngMom.jpg} \end{center}
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/r_m.jpg} \end{center}
+
+\begin{comment}
+
+WORKS:
+
+<div style="font-size: 500\%;">
+\[ \boldsymbol{I}\omega = I\boldsymbol{\omega}. \]
+</div>
+
+DOESN'T WORK:
+
+<div style="font-size: 200\%;">
+\[ I\begin{footnotesize}\omega\end{footnotesize} = \begin{footnotesize}I\end{footnotesize}\omega\begin{footnotesize}.\end{footnotesize} \]
+</div>
+
+<div style="font-size: 200\%;">
+\[ I\text{\begin{footnotesize}\omega\end{footnotesize}} = \text{\begin{footnotesize}I\end{footnotesize}}\omega\text{\begin{footnotesize}.\end{footnotesize}} \]
+</div>
+
+<div style="font-size: 200\%;">
+\[ I\textrm{\begin{footnotesize}\omega\end{footnotesize}} = \textrm{\begin{footnotesize}I\end{footnotesize}}\omega\textrm{\begin{footnotesize}.\end{footnotesize}} \]
+</div>
+
+\begin{align} \boldsymbol{I}\omega = I\boldsymbol{\omega}. \end{align}
+
+\begin{align} \text{\begin{Huge}\(I\)\end{Huge}}\omega = I\text{\begin{Huge}\(\omega\)\end{Huge}}. \end{align}
+\begin{align} \textrm{\begin{Huge}\(I\)\end{Huge}}\omega = I\textrm{\begin{Huge}\(\omega\)\end{Huge}}. \end{align}
+
+\begin{align} \text{\Large\(I\)}\omega = I\text{\Large\(\omega\)}. \end{align}
+\begin{align} \textrm{\Large\(I\)}\omega = I\textrm{\Large\(\omega\)}. \end{align}
+
+\[ \text{\Large\(I\)}\omega = I\text{\Large\(\omega\)}. \]
+\[ \textrm{\Large\(I\)}\omega = I\textrm{\Large\(\omega\)}. \]
+
+\begin{align} <em style="font-size: 200\%;">I</em>\omega = I<em style="font-size: 200\%;">\omega</em>. \end{align}
+\begin{align} <em style="font-size: 200\%">I</em>\omega = I<em style="font-size: 200\%">\omega</em>. \end{align}
+
+\begin{align} \text{<em style="font-size: 200\%;">I</em>}\omega = I\text{<em style="font-size: 200\%;">\omega</em>}. \end{align}
+\begin{align} \textrm{<em style="font-size: 200\%">I</em>}\omega = I\textrm{<em style="font-size: 200\%">\omega</em>}. \end{align}
+
+\begin{align} \resizebox{!}{3cm}{I}\omega = I\resizebox{!}{3cm}{\omega}. \end{align}
+
+\end{comment}
+
+\subsection*{PRECESSION}
+
+A common lecture demonstration of gyroscopic precession is to hang a bicycle wheel by one end of its axle.  If the bicycle wheel is not spinning, it flops down.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/precession_sm3.jpg} \end{center}
+But if the wheel is spinning, it doesn't fall.  Instead it \textit{precesses} around: its axle rotates in a horizontal plane.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/untitled.png} \end{center}
+We are all familiar with the example of a precessing toy top.  The spinning Earth also precesses around.  Its axis is now pointing toward the North Star in the sky, but over time the axis slowly swings around, making a complete revolution in 26,000 years.
+\begin{center} \includegraphics*[width=0.2\textwidth]{imgs/6labs/6Alab/6Aexp7/6a-exp7_fig2.png} \end{center}
+\begin{center} \includegraphics*[width=0.2\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-exp7_fig3-Copy.png} \end{center}
+A necessary condition for precession is a torque aligned in a different direction from the spin.  In the case of the bicycle wheel and the toy top, gravity acts downward on the center of mass so the torque is in a horizontal direction.  In the case of the Earth's precession, the gravitational force from the Moon is acting on the equatorial bulge of the Earth to align the equatorial bulge with the plane of the Moon's orbit.  We are particularly interested in the case when the torque is perpendicular to the spin axis.
+
+Let's try to understand precession in general.  Consider linear motion first.  If an object is at rest, and a force acts on it, the force will increase the speed of the object in the direction of the force.
+\begin{center} \includegraphics*[width=1.0\textwidth]{imgs/6labs/6Alab/6Aexp7/object_at_rest_sm.png} \end{center}
+But if the object is already moving and the force acts perpendicular to the motion, the speed will not be changed.  Instead the force will curve the velocity around, producing uniform circular motion if the force is always perpendicular to the velocity.
+\begin{center} \includegraphics*[width=0.9\textwidth]{imgs/6labs/6Alab/6Aexp7/object_w_velocity_sm.png} \end{center}
+Something similar happens with rotational motion.  When the wheel is \ul{not} spinning, the torque from the weight produces an angular velocity about the torque axis, in this case the \(y\)-axis.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-exp7_fig4.png} \end{center}
+But if the wheel is already spinning, it has spin (angular velocity) about the \(x\)-axis. The torque of the weight adds some spin about the \(y\)-axis, perpendicular to the original spin.  The resulting spin axis is turned a little in the \(xy\)-plane.  The torque doesn't change the value of the spin; instead it ``curves'' the spin.  (Again, note that here the torque axis is perpendicular to the spin axis.  This need not be true in general, but we are considering this simplified case.)
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/6A_exp7_TorquedSpinningWheel.png} \end{center}
+Mathematically,
+\begin{align} \boldsymbol{\tau} = \textrm{d}\textbf{L}/\textrm{d}t, \label{6Aexp7_eqn_5} \end{align}
+which is the rotational analog of
+\begin{align} \textbf{F} = \textrm{d}\textbf{p}/\textrm{d}t. \end{align}
+
+To keep the ideas clear, we will call the angular velocity of the spinning object itself its \textit{spin} \(\omega\), and the turning around of the spin axis the \textit{precession} angular velocity \(\Omega\).  The angular momentum \(\textbf{L}\) of the spin is \(L = I\omega\), where \(\omega\) is the angular velocity of the spin, and \(I\) is the rotational inertia of the wheel.
+
+Thus, in a time \(\Delta t\), the torque produces a change in the angular momentum of the spin given by
+\begin{align} \Delta L = \tau\Delta t. \label{6Aexp7_eqn_6} \end{align}
+But for small changes in the angle \(\phi\) of \(L\), \(\Delta L = L\Delta\phi\).
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/circle_equation_sm.png} \end{center}
+Thus,
+\begin{align} \Delta L = L\Delta\phi = \tau\Delta t. \label{6Aexp7_eqn_7} \end{align}
+The angular velocity of precession \(\Omega = \Delta\phi/\Delta t = \tau/L\), the last equality following from the equation above.  Since \(L =  I\omega\), we have finally
+\begin{align} \Omega = \tau/I\omega. \label{6Aexp7_eqn_8} \end{align}
+This then is our basic equation relating the precession angular velocity to the rotational inertia, spin, and torque.
+
+We have shown that precession can be understood from the principles of rotational motion, torque, rotational inertia, angular momentum, etc., and we have even derived the equation for the magnitude of the precession above.  But these concepts must be based on the simpler principles of force and acceleration.  Let's see if we can understand precession from just the concepts of force and acceleration.
+
+When the gyro bicycle wheel is in the hanging position, the torque exerted by gravity exerts an outward force on the top half of the wheel, and an inward force on the bottom half of the wheel --- forces that would make the wheel flop over if it were not spinning.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/6a-sxp7-fig7.png} \end{center}
+Now look at a small piece of the wheel as it spins.  As the piece comes over the top half of the wheel, the outward force on it grows to a maximum at the top, and decreases to zero at the far side position.  Then, the force becomes negative, and grows to a maximum pointing inward at the bottom position, and decreases to zero again at the near side position.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/6a-exp7-fig8.png} \end{center}
+
+Measure the angular position of this small piece of the wheel with zero angle \(\theta = \omega t\) at the top position, increasing to \(\pi/2\) radians at the far side position, etc.  We can represent the force on the small piece then as
+\begin{align} F = F_0\cos\omega t. \label{6Aexp7_eqn_9} \end{align}
+According to Newton's Second Law, the acceleration is proportional to the force:
+\begin{align} a = a_0\cos\omega t. \label{6Aexp7_eqn_10} \end{align}
+But, how does the small piece actually move?  Its velocity is the integral of \(a\), \(v = \int a\,\textrm{d}t\), and the integral of \(\cos\omega t\) is proportional to \(\sin\omega t\).
+\begin{align} v = v_0\sin\omega t. \label{6Aexp7_eqn_11} \end{align}
+The velocity reaches a maximum pointing outward at the far side position, is zero at the top and bottom, and is maximum pointing inward (negative) at the near side position.
+\begin{center} \includegraphics*[width=0.4\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-exp7_fig9.png} \end{center}
+Thus, the forces from the torque don't push the wheel down; they push it around!
+
+Finally, if we integrate the velocity, we should get the distance the wheel element moves:
+\begin{align} x = \int v\,\textrm{d}t = \int v_0\sin(\omega t)\,\textrm{d}t = -(v_0/\omega)\cos\omega t = -x_0\cos\omega t. \label{6Aexp7_eqn_12} \end{align}
+This equation suggests that the wheel element is moving opposite the force on it: \(F = F_0\cos\omega t\).  In other words, the wheel element should be moving inward at the top of the turn, while the force is outward.  Can this possibly be true?
+
+Indeed it can!  Study the top views of the wheel as it is precessing around.  The wheel element is just coming over the top of the wheel:
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/diagaram1_sm.png} \end{center}
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/diagram2_sm.png} \end{center}
+So you see the wheel element actually does move inward at the top while the force is outward.  In fact, the force must be in the outward direction to produce the curved path of the wheel element in the horizontal plane, just as an inward force produces uniform circular motion.  Similarly, at the bottom of the wheel, the inward force on the wheel element from the torque causes it to curve inward.
+
+\subsection*{PROCEDURE FOR ROTATION}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item You have a rotator device connected to a rotary motion sensor.  The rotator device has movable masses on a rod.  On the other end of the rotational motion sensor is a pulley with two wheels of different diameter.  Plug the yellow plug of the rotational sensor into \#1 digital channel of the Science Workshop interface, and the black plug into \#2 channel.  In the setup window of Data Studio, double-click on the rotary motion sensor.  Now double-click on the rotary motion sensor connected to the Science Workshop in the picture, click the measurements tab, and check the box for angular acceleration.  Drag a graph over to the rotary motion sensor, and set it to read angular acceleration.  Ready a falling weight with string wound around one of the drums, click ``Start'', let the weight fall (spinning up the rotator), and check that you are getting readings of angular acceleration.  To record a value of the acceleration below, you can select an area of the chart, and use the statistics button to get a mean value of the acceleration.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/IMG_5643_pdf.jpg} \end{center}
+
+\item Remove the rod and mass assembly from the sensor, and separately weigh the masses and the rod (without its screw), and the pulley wheel.  Measure the diameters of the two pulley wheels with the Vernier calipers, and convert to radii in meters.  Record the information below.
+
+Mass of movable weights in kilograms = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Mass of rod without screw = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Mass of pulley wheel = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Radius of small pulley in meters = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Radius of large pulley in meters = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\begin{center}
+\begin{tabular}{|p{14cm}|}
+\hline\tstrut
+\ul{Warning}: In rotational experiments it is especially important to keep mass units (as in rotational inertia) and force units (as in torque) clearly distinguished.  \bstrut\\
+\hline
+\end{tabular}
+\end{center}
+
+\item According to the textbook, the rotational inertia of a rod of mass \(m\) and length \(l\) about an axis perpendicular to the rod and through its center is \((1/12)ml^2\).  Calculate the rotational inertia of the rod.  Does it make any difference that the rod is hollow?
+
+\(I\) of rod in kg\(\cdot\)m\(^{2}\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item From the mass of the pulley wheel and its volume (which you can calculate from the radii of the two parts), you can calculate its density.  From this you can calculate the rotational inertia of the pulley wheel.  You may have to do some estimating.
+
+\(I\) of pulley wheel in kg\(\cdot\)m\(^{2}\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item Do a trial experimental run in which the masses on the rotator are at the ends of the rod so that the rotational inertia is large.  Use 100 -- 200 g on the weight hanger and wind the string around the smaller pulley wheel.  (This should be the smallest angular acceleration case.)  Notice that the angular acceleration on the graph quickly jumps up and reaches an approximately constant value.  You can select an area of this nearly constant value, and use the statistics button to get its mean value for the ``measured angular acceleration'' in the table below.  Now do a trial experimental run in which the masses on the rotator are close to the center so that the rotational inertia is small.  Use 100 -- 200 g on the weight hanger and wind the string around the larger pulley wheel so that the torque will spin the rotator up to high speed.  (This should be the largest angular acceleration case.)  On the graph, notice that the acceleration quickly reaches a peak, and then falls off with time.  Why isn't the of acceleration constant in this case?  Where on the acceleration curve should you average the values of acceleration to get a good result to compare with the predicted acceleration?  How can you adjust the apparatus or experimental parameters to get a better result for the small rotational inertia case?
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item Using masses of 50 -- 200 grams, hook the string on the pulley pin, wind the string around the pulley, and let the mass fall while you measure the rotational acceleration on the computer.  Do three experimental trials for each case, and average them to find the rotational acceleration.
+
+Do four cases: two different positions of the masses on the rod (as close to the center as possible, and as far out as possible), and two different pulley sizes.  Compute the rotational inertia of the rod with masses (add the effects of the rods, the pulley wheel, and the masses), the torque, the predicted rotational acceleration, and the experimental error, and fill in the table below.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-exp7_fig11_sm2.png} \end{center}
+
+When you add the rotational inertias of the rod, masses, and pulley wheel to get the rotational inertia of the entire rotating assembly, are you leaving out anything?
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\end{enumerate}
+
+\subsection*{PROCEDURE FOR GYROSCOPE}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item We want to check the precession, equation \ref{6Aexp7_eqn_8}, \(\Omega = \tau/I\omega\).  Study your gyroscope for a moment.  As you rotate the arm for precession, the rotary motion sensor at the base should move freely.  (If not, adjust the screws that hold the sensor.)  The rotary sensor from the first part of the experiment may still be set up on Data Studio.  Unplug this rotary sensor and delete all the sensors and data.  (Or quit Data Studio, and open it up new.)  Plug the rotary sensor of the gyro precession into the Science Workshop interface, and drag a digits window to the rotary motion sensor symbol, and set it to measure the rotational angular velocity \(\Omega\).  (You may have to double-click on the icon of the rotary motion sensor connected to the Science Workshop, and check the ``Angular Velocity Ch 1 \& 2 (ras/s)'' box.)
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-EXP7_fig3_scaled.jpg} \end{center}
+Check that you can get a reading of \(\Omega\) from the computer.  Notice that the angular velocity reading in the digits window jumps around, making it difficult to get a definite reading.
+
+Drag a graph window to the rotation sensor, and set to it read angular velocity.  Note that the reading on the graph also jumps around a little also as the gyro arm turns; but after you record the data, you can can select an area of the graph, and use the statistics button to get a mean value for the angular velocity.
+
+\item We will be measuring the angular velocity \(\omega\) of the gyro wheel with the Digistrobe.  The Digistrobe meter reads in rpm, revolutions per minute.  You will need to convert this to radians per second.  Determine the conversion factor \(f\) in \(\omega = f\times\textrm{(rpm reading)}\).
+
+\(f\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item Insert the gyro arm support rod and clamp the rod as shown.
+\begin{center} \includegraphics*[width=0.45\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-EXP-fig3_tex_fix_fi_pdf.jpg} \includegraphics*[width=0.45\textwidth]{imgs/6labs/6Alab/6Aexp7/IMG_5656_pdf.jpg} \end{center}
+Wind a string around the gyro wheel pulley, and pull it off to spin up the wheel.
+
+Turn on the Digistrobe, face it toward the spinning wheel, and adjust the flash rate until the mark on the wheel is stopped.
+
+Now think for a few moments.  If the strobe is flashing at the rate the wheel is rotating, the mark will, of course, appear stationary.  However, if the strobe were flashing at half the rotation rate (or a third, quarter, etc.), the mark would also appear stationary.  On the other hand, if the strobe were flashing at twice the rotation rate, you would see two marks, half a revolution apart.
+\begin{center} \includegraphics*[width=0.8\textwidth]{imgs/6labs/6Alab/6Aexp7/strobing2.png} \end{center}
+Given these pieces of information, how will you determine the actual rotation rate from the strobe rate?  (Write a brief answer below.)
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item We need the rotational inertia \(I\) of the wheel.  With the apparatus still clamped as above, arrange a known weight to fall through a measured distance \(h\) to accelerate the wheel.  We leave the exact arrangement up to you.  Measure the final velocity of the wheel with the strobe, and calculate the rotational inertia of the wheel from
+\begin{align} (1/2)I\omega^2 = mgh. \end{align}
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-EXP7-fig5_pdf.jpg} \end{center}
+Be sure to keep your force and mass units straight.  Make several trials until you have the strobe rate approximately correct, and need only to adjust it slightly just after the weights fall.  Record \(I\) below.
+
+\(I\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item We need the tipping torque \(\tau\).  Unclamp the gyro arm.  The counterweight arm has a large and small weight.  Adjust the positions of these weights so that the gyro arm is exactly balanced in the horizontal position.  The small weight can be used to fine tune the balance.  To produce the turning torque, you will attach the small add-on weight to the front of the gyro wheel.  Weigh this add-on weight (in newtons!), and measure the distance of its center from the axis of rotation.  From these measurements you can calculate the torque.
+
+\(\tau\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/6A-EXP7-fig6_text_pdf.jpg} \end{center}
+
+\item Now we are ready to precess!  Spin up the wheel with a piece of string.  Help the gyro start precessing with the arm horizontal by moving it along in the correct direction at the correct speed, and then release gently.  Measure \(\Omega\) on the computer, and \(\omega\) with the strobe.
+
+\(\omega\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+measured \(\Omega\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+calculated \(\Omega = \tau/I\omega\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+percentage error = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\end{enumerate}
+
+\subsection*{NUTATION}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Spin up the wheel to high speed using the string.  With the add-on weight producing a tipping torque, hold the shaft horizontally, and release suddenly.  The gyroscope undergoes nutation, as in pattern A below.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/6a-exp7-fig17_fix2.jpg} \end{center}
+
+\item Start again with a smaller torque (just shift the counterweights a little), and with the wheel spinning and arm starting absolutely horizontally (supported by your finger), and then release suddenly.  (Use the angle scale on the gyro support to determine the 90{\degree} horizontal position).  When the gyro is precessing and the nutation motion is damping out, the wheel end of the arm is somewhat below the horizontal position (read the angle scale).  (After several precession revolutions, the nutation may be almost completely damped out with the gyro still precessing at a tilted angle.  It may take a little experimentation with the torque and wheel speed to produce this situation.)  Can you think of a general physics principle explaining why the gyro arm must be tilted down while the gyro is precessing when started from a horizontal position with sudden release?  Answer below with brief explanation.
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+In fact, there is yet another very general physics principle explaining why the gyro arm must be tilted down during precession if it is released from the horizontal position.  Answer below with brief explanation.
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\end{enumerate}
+
+\subsection*{ADDITIONAL CREDIT (3 mills)}
+
+Perform the precession measurement three times with three significantly different \(\omega\)'s, and fill in the table below.  Each lab partner must do this separately, doing the computer work him/herself, while directing the other lab partner to assist with the measurements.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp7/6a-exp7-fig18.png} \end{center}

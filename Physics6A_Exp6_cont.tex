@@ -1,0 +1,385 @@
+\fancyhead[C]{Physics 6A Lab \rule[-1ex]{0pt}{0pt}\(\mid\) Experiment 6}
+
+\vspace{-5ex}\part*{Biceps Muscle Model}
+
+\subsection*{APPARATUS}
+
+\vspace{-0.5ex}
+\vphantom{.}
+\squishlist
+\item Biceps model
+\item Large mass hanger with four 1-kg masses
+\item Small mass hanger for ``hand'' end of forearm bar with five 100-g masses
+\item Meter stick
+\item Centimeter ruler
+\item Weighing scales
+\squishend
+
+\subsection*{INTRODUCTION}
+
+In this experiment, you will use a mechanical model to measure the force exerted by the biceps muscle on a human forearm, as well as the force of compression on the upper-arm (humerus) bone when the arm lifts a weight.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/6a-exp6_fig1_text_fix.jpg} \end{center}
+
+Two tension-compression gauges are employed to determine the compression of the humerus bone and the tension in the biceps muscle as various weights are placed in the ``hand'' (i.e., hung from the end of the forearm).  The point at which the biceps muscle connects to the forearm can be changed, and the effects arising from different attachment points can be studied.
+
+Note that the gauge readings are in kilograms or pounds.  In the metric system, a kilogram is a unit of mass, not of force.  Nevertheless, many force scales (such as the gauges in this experiment and the metric scales for weighing people) read in kilograms.  Near the Earth's surface, force in newtons is equal to mass in kilograms multiplied by the gravitational acceleration \(g\) = 9.8 m/s\(^{2}\).  \ul{In this experiment, we ignore the distinction between force and mass, and record ``force'' in kilograms.}
+
+\subsection*{THEORY}
+
+Below is a free-body diagram showing all the forces exerted on the forearm bar.  According to the Laws of Statics (i.e., Newton's First Law and the lever rule), the net force on the stationary bar must be zero, and the net torque on the bar must also be zero.  The ``hand'' end of the bar can be moved up and down, compressing and extending the gauges.  Before taking measurements, always adjust the elbow attachment point on the upper-arm gauge so the bar is horizontal.  This makes the ensuing analysis simple.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/6A_6_arm.jpg} \end{center}
+
+The forces acting on the forearm are its weight \(W\) (which points downward and may be assumed to act on the forearm's center-of-gravity), the weight of the ``hand'' \(H\) (which points downward), the force from the biceps muscle \(B\) (which pulls upward on the forearm at a small angle \(\alpha\) with respect to the \ul{vertical}), and the force from the humerus bone \(A\) (which pushes downward on the elbow).  Since the biceps force has a small horizontal component of magnitude \(B\sin\alpha\) directed toward the elbow, the upper-arm gauge must push back in the opposite direction with a horizontal force of magnitude \(P\), so that the net force in the horizontal direction is zero:
+\begin{align} \sum F_x = B \sin \alpha - P = 0.  \end{align}
+Furthermore, since the net force in the vertical direction is zero, Newton's First Law can be written as
+\begin{align} \sum F_y = B\cos\alpha - H - W - A = 0 \end{align}
+or
+\begin{align} B\cos\alpha = H + W + A. \label{6Aexp6_eqn_1} \end{align}
+
+If we choose the elbow joint as the pivot about which torques are calculated, then the forces \(A\) and \(P\) do not contribute to the torque about this pivot because their moment arms are zero.  (In other words, the lines of action for \(A\) and \(P\) pass through the elbow joint.)  The force \(H\) acts at a perpendicular distance \(R\) from the pivot, so its moment arm is \(R\).  The force \(W\) acts at a perpendicular distance \(R/2\) from the pivot, so its moment arm is \(R/2\).  The component of \(B\) \ul{perpendicular to the forearm} --- \(B\cos\alpha\) --- acts at a perpendicular distance \(r\) from the pivot, so its moment arm is \(r\).  Since the net torque about the elbow joint is zero, the lever rule can be written as
+\begin{align} \sum\tau = (H)(R)  + (W)(R/2) - (B\cos\alpha) (r)  = 0  \end{align}
+or
+\begin{align} B \cos \alpha = (H + W/2) R/r. \label{6Aexp6_eqn_2} \end{align}
+Thus, the magnitude of the biceps force is
+\begin{align} B = (H + W/2) R/(r\cos\alpha). \label{6Aexp6_eqn_3} \end{align}
+Note that if we plot \(B\) as a function of \(H\) while keeping \(R\), \(r\), and \(\alpha\) constant, then we will obtain a linear graph.  On the other hand, if we keep \(H\) constant while varying \(r\), then we must plot \(B\) as a function of \(R/(r\cos\alpha)\) to obtain a linear graph.
+
+The magnitude of the humerus force can now be obtained from Eqs. \ref{6Aexp6_eqn_1} and \ref{6Aexp6_eqn_2}:
+\begin{align} A = B\cos\alpha - H - W  \\
+                      = (H + W/2) R/r - H - W  \\
+                      = (R/r-1)H + (R/2r-1)W.  \label{6Aexp6_eqn_4} \end{align}
+
+\subsection*{PROCEDURE}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Remove the forearm bar completely.  The biceps tension-compression gauge is now suspended vertically so you can hang masses from it.  Use the small keeper ring with the thumbscrew on the short right-angle section to prevent the masses from falling off.  Notice that you can zero the scale by rotating the knurled ring at the top of the gauge.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/6A-EXP6_knurled_ring_web_1.jpg} \end{center}
+
+\item Hang one to four 1-kg masses from the gauge in increments of 1 kg.  How accurately could the scale be read if there were no friction in the gauge?  Record this estimate in the ``Data'' section.
+
+\item With the heavier masses, there may be some friction in the gauge which brings it to rest over a small interval of readings.  Move the mass hanger up and down near its equilibrium position, and record the maximum and minimum readings at which the pointer sticks.  The average of these two values is a good estimate of the ``true'' mass, and their difference is a good estimate of the experimental error.  Record the actual mass, maximum mass, minimum mass, average (``true'') mass, and difference in mass (``error'') in the ``Data'' section.  State whether you observe any systematic error in the scale (i.e., whether the scale is off by a constant ratio).
+
+\item Repeat parts 2 and 3 with the upper-arm tension-compression gauge.  Notice that the upper-arm gauge has a stiffer spring and a different scale than the biceps gauge.  To hang masses from this gauge, you will need to invert the apparatus in its holding clamps.  You may also need to rotate the gauge in the clamps so you can see its readings.  Have your lab partner hold the biceps gauge out of the way, or tie it back with a piece of string.  Adjust the knurled ring on the upper-arm gauge so the scale reads zero.  Perform the same set of measurements as in parts 2 and 3, and record your results in the ``Data'' section.
+
+\item Measure the distance between the elbow hole and each of the five biceps attachment holes, as well as the distance between the elbow hole and the mass hanger hole at the ``hand'' end of the forearm bar.  Record these values in the ``Data'' section.
+
+\item Measure the mass of the forearm bar without the upper-arm attachment piece, and record this value in the ``Data'' section.
+
+\item Adjust the knurled rings of the gauges so they read zero with no weight attached.  Arrange the apparatus as shown in Figure 1, with the biceps gauge attached to the farthest hole from the elbow, which is approximately 12 cm from the hole through which the upper-arm gauge passes.  When clamping the forearm gauge, make sure the pointer can move freely through its range and is not obstructed by the clamp jaws.  Use the small keeper ring with the thumbscrew on the short right-angle section to retain the biceps gauge in position.  Attaching the 50-g mass hanger to the end of the forearm bar, add masses in increments of 100 g up to 550 g, and record the readings of the two gauges in the ``Data'' section.  As you change the masses in the ``hand,'' adjust the position of the upper-arm attachment point at the ``elbow'' so the bar comes to rest in a horizontal position.  You may need to push up forcefully on the bar when using the heavier masses, compressing the upper-arm gauge before tightening the attachment.
+
+If you find that there seems to be an unusual amount of friction in your scale readings, check that the scales are not twisted in their clamps.  All persons doing experiments in the real world soon realize that nature can be difficult, and not everything works as it is supposed to or according to the simple instructions.  This principle has been canonized in variations of Murphy's Law: ``If anything can go wrong, it will,'' ``Nature sides with the hidden flaw,'' etc.  Throughout this lab series, you will often need to use common sense and resort to your own ingenuity to get through the parts that don't seem to work quite right.  Ask your TA for assistance when necessary, but first try to solve the problem yourself.  Gradually, you will learn to proceed with confidence that you are doing to make the experiments work and yield good data.
+
+\item With a total mass of 150 g hanging from the end of the forearm bar, take readings with the biceps gauge attached to the various holes, which are approximately 3, 4, 6, 8, and 12 cm from the elbow.  Each time you adjust to a new position, make sure the bar is horizontal.  For certain biceps attachment positions (e.g., 3 and 4 cm from the elbow), you may find it necessary to move the elbow attachment point a considerable distance along the upper-arm gauge rod, forcefully compressing the gauge to keep the bar horizontal.
+
+\item Make a neat graph of the biceps force \(B\) as a function of the hand weight \(H\) in the ``Data'' section.  Label the axes with units.  Add error bars (which show the uncertainty associated with any measurement, as depicted below), and construct the straight line predicted by Eq.~\ref{6Aexp6_eqn_3}.  Also, make a neat graph of the humerus force \(A\) as a function of the hand weight \(H\).  You may plot this data on the same graph.  Add error bars, and construct the straight line predicted by Eq.~\ref{6Aexp6_eqn_4}.  Labels the two curves, and title the graph.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/Error_bar_fixed.jpg} \end{center}
+
+\item Make a neat graph of the biceps force \(B\) as a function of \(R/(r\cos\alpha)\) for the various hole positions \(r\) in the ``Data'' section.  Obtain the angle \(\alpha\) from \(\tan\alpha = x/y\) (you already know the value of \(x\), but will need to extend the lines of the gauge rods to determine the value of \(y\)).  Note that the variables \(B\) and \(R/(r\cos\alpha)\) are chosen so the plot will be linear.  Label the vertical axis with units, and note that the horizontal axis is dimensionless.  Add error bars, and construct the straight line predicted by Eq.~\ref{6Aexp6_eqn_3}.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/6a_6_7_DIAGRAM_fixalpha.jpg} \end{center}
+
+\end{enumerate}
+
+\subsection*{DATA}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item \ul{Biceps tension-compression gauge with one 1-kg mass}
+
+Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Biceps tension-compression gauge with two 1-kg masses}
+
+Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Biceps tension-compression gauge with three 1-kg masses}
+
+Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Biceps tension-compression gauge with four 1-kg masses}
+
+Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item \ul{Upper-arm tension-compression gauge with one 1-kg mass}
+
+Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Upper-arm tension-compression gauge with two 1-kg masses}
+
+Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Upper-arm tension-compression gauge with three 1-kg masses}
+
+Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Upper-arm tension-compression gauge with four 1-kg masses}
+
+Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item Distance between elbow hole and:
+
+First biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Second biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Third biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Fourth biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Fifth biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Mass hanger hole at ``hand'' end = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item Mass of forearm bar = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item \ul{Biceps attached 12 cm from elbow, with total mass of 150 g}
+
+Biceps tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Upper-arm tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Biceps attached 12 cm from elbow, with total mass of 250 g}
+
+Biceps tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Upper-arm tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Biceps attached 12 cm from elbow, with total mass of 350 g}
+
+Biceps tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Upper-arm tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Biceps attached 12 cm from elbow, with total mass of 450 g}
+
+Biceps tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Upper-arm tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\ul{Biceps attached 12 cm from elbow, with total mass of 550 g}
+
+Biceps tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Upper-arm tension-compression gauge:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item \ul{Total mass of 150 g in ``hand''}
+
+Biceps attached 3 cm from elbow:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Biceps attached 4 cm from elbow:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Biceps attached 6 cm from elbow:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Biceps attached 8 cm from elbow:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Biceps attached 12 cm from elbow:
+
+Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item Plot the graph of the biceps force B as a function of the hand weight \(H\), as well as the graph of the humerus force \(A\) as a function of the hand weight \(H\), using one page of graph paper at the end of this workbook.  Remember to label the curves, title the graphs, and add error bars to your data points.
+
+\item Plot the graph of the biceps force \(B\) as a function of \(R/(r\cos\alpha)\) using one page of graph paper at the end of this workbook.  Remember to label the curve, title the graph, and add error bars to your data points.
+
+\end{enumerate}
+
+QUESTIONS
+
+\begin{enumerate}[label=\alph*.]
+
+\item What is the largest value of \(P\) (the horizontal force exerted by the upper-arm tension-compression gauge) that would have arisen in your measurements?
+
+\item People who ``work out'' regularly with weights can ``curl'' 25 to 50 or more pounds with one hand (i.e., they can take the weight in one hand held horizontally and raise it to their shoulder).  The actual biceps muscle attachment point is approximately 5 cm from the elbow.  How large a force would the biceps muscle be exerting when one ``curls'' 50 pounds?
+
+\end{enumerate}

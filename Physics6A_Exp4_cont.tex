@@ -1,0 +1,132 @@
+\fancyhead[C]{Physics 6A Lab \rule[-1ex]{0pt}{0pt}\(\mid\) Experiment 4}
+
+\vspace{-5ex}\part*{Conservation of Energy}
+
+\subsection*{APPARATUS}
+
+\noindent\textit{Shown in the diagram and picture below (both with a top-down view):}
+\squishlist
+\item Air track, springs and bracket, thread, glider
+\item Smart pulley and mount
+\item Dumb pulley (on the same mount)
+\squishend
+\begin{center} \includegraphics*[width=0.8\textwidth]{imgs/6labs/6Alab/6Aexp4/6A_exp4_fig1_fx.jpg} \end{center}
+\begin{center} \includegraphics*[width=0.8\textwidth]{imgs/6labs/6Alab/6Aexp4/6A_EXP4-fig2a_pdf.jpg} \end{center}
+\noindent\textit{Not shown in the images above:}
+\squishlist
+\item Computer and Pasco interface
+\item Scale and weight set
+\item Mass hanger
+\squishend
+
+\begin{comment}
+\subsection*{INTRODUCTION}
+\end{comment}
+
+\subsection*{THEORY}
+
+In this experiment, you will test the Law of Energy Conservation by monitoring an oscillating air track glider connected to springs by a thread which passes over a smart pulley.
+
+Consider a glider of mass \(M\) on a nearly frictionless air track.  As the glider oscillates back and forth, there is a continuous exchange of mechanical energy between two forms: \ul{kinetic} energy contained in the moving glider, and \ul{potential} energy stored in the stretched or compressed springs.  The Law of Energy Conservation tells us that the \ul{total} mechanical energy of the system (i.e., the sum of the kinetic and potential terms) remains constant in time.  In reality, however, a small amount of mechanical energy may be lost to friction.
+
+\subsection*{INITIAL SETUP}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Turn on the air track and level it by adjusting the leveling screw such that a glider on the track has no apparent tendency to move in either direction.  Since air tracks are often bowed in the middle, place the glider at several different positions on the track to verify that it is level.
+
+\item Weigh the glider to obtain its mass, and record this value in the ``Data'' section.
+
+\item Assemble the springs, glider, smart pulley, and thread as shown in the figure below.  One spring is attached to a bracket at the end of air track and to one end of the glider.  The other end of the glider is attached to a second spring by a thread which passes over the smart pulley.  The second spring is then attached to the bracket.  The springs should be tensioned so that you can get an end-to-end glider motion over a distance of at least 40 cm without either spring being completely compressed.
+
+\item Mount a dumb pulley (which has low friction, but is not connected to the computer) on the same fixture that holds the smart pulley, albeit in a vertical plane.  Using a long piece of thread, connect the mass hanger to the glider.  Make sure the thread passes over the dumb pulley so that weights added to the hanger will displace the glider.
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp4/6A-exp4_fig1_fix.jpg} \end{center}
+
+\end{enumerate}
+
+\subsection*{PROCEDURE PART 1: MEASURING THE SPRING CONSTANT \(k\)}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Our first task is to measure \(k\), the force constant in \(F = -kx\) of a Hooke's Law spring.  Call up a blank Excel worksheet and prepare three columns to record the total mass in the hanger (including the mass of the hanger itself) in grams, its weight in newtons, and the position of the glider in meters.  In the mass column, type ``0'' and ``10'' in the first two cells.  Select these two cells, position the cursor at the lower left corner of the bottom cell until it turns into a lopsided square, and drag down the column to fill it with a series up to 60 grams.  The running yellow box shows how far the series continues.
+
+\item Fill down the next column with the force values.  Remember how to do this?  Type ``\url{=A3*9.8/1000}'' in the cell next to the mass value of zero, being sure to use the correct cell designation corresponding to your spreadsheet (where we typed ``\url{A3}'' above).  Then fill down the forces next to the masses.
+
+\item Now make the measurements.  Turn on the air blower, and help the glider come to equilibrium.  Add mases to the mass hanger, one at a time, and read the distance (in meters!) from the scale on the air track aligned with one corner of the glider.  On your spreadsheet, record the distance corresponding to the addition of each mass in the mass hanger.  Be sure that you use values corresponding to the entries in the mass column (including the mass of the hanger itself).  If you need to use different masses, change the mass entries; the forces will be recalculated instantly.
+
+\item When you have filled in the distance column next to the force column, chart these variables against each other in Excel, and find the slope.  Here is a reminder of how this is done:
+\squishlist
+\item Select the cells with numbers in the force and distance columns.
+\item In the ``Insert'' tab menu, select the ``Scatter'' option without connecting lines.  After clicking on this line-less scatter option, the chart should appear.
+\item Within the ``Design'' tab of the ``Chart Tools'', in the ``Chart Layouts'' area, click on the left-most (and upper-most) layout option.  This will place titles on the chart that you can edit or delete.
+\item Create your own title and labels for the axes.
+\item In the ``Layout'' tab of the ``Chart Tools'', click on ``Trendline'' in the ``Analysis'' area.  Select ``More Trendline Options...''.  In the pop-up window, make sure ``Linear'' is selected, and check the box beside ``Display Equation on chart''.  Click on ``Close''.
+\squishend
+Convince yourself that the slope is \(1/k\) and not \(k\).  Record the value of \(k\) in the ``Data'' section.
+
+\end{enumerate}
+
+\subsection*{PROCEDURE PART 2: PLOTTING ENERGIES}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item Unhook the mass hanger string. Hook up the smart pulley physically and virtually, in Data Studio.  Double-click on the smart pulley icon, and check ``Position'', ``Velocity'', and ``Acceleration''.  Arrange a graph to plot the position \(x\), the velocity \(v\), and the acceleration \(a\) as a stack of three plots on a single graph window.  With the air blower on, pull the glider out, click ``Start'', let the glider oscillate several times, and click ``Stop''.  The velocity and acceleration graphs resemble the sinusoidal oscillations of a simple harmonic oscillator, but the position graph consists of a series of S-shaped curves increasing in \(y\) value.  This shape results because the smart pulley does not distinguish between the forward and reverse directions of motion; it merely counts the number of times the spokes block the photosensor and records the result as positive distance.  Thus, each S-shaped curve on the position graph is produced as the oscillator moves from one endpoint of its motion to the other.
+
+\item Now prepare Data Studio to calculate the kinetic energy in real time.  Click the calculator button in the graph tool bar (or in the top tool bar).  In the equation area of the pop-up window, type ``\url{y = 0.5*m*v^2}'' (for \((1/2)mv^2\)).  You will be asked to define the variables \(m\) and \(v\) below.  Here \(m\) is a constant (the measured mass of the glider in kilograms), but \(v\) is a data measurement variable (the velocity, Ch. 1 (m/s)).  When you have finished defining \(m\) and \(v\), click ``Accept'' again.
+
+\item The kinetic energy calculation now appears in the ``Data'' column.  Drag it to a graph, and perform a run with the glider oscillating to check that you are obtaining reasonable-looking kinetic energy curves.  (The kinetic energy never quite goes to zero at the end points.)
+
+\item Calculating the potential energy with the smart pulley is trickier.  First, as demonstrated above, the pulley does not distinguish between forward and backward motion, so we can look at only the first half-oscillation.  Second, when we pull the glider out and ``Start'' the distance measurement, the software assigns zero to the first distance measurement.  However, we want to assign zero to the equilibrium position.  In other words, we want to calculate \(PE = (1/2)k(x-x_0)^2\), with \(x_0\) the equilibrium position.
+
+To accomplish this, record one full S-shaped curve of position: Move the glider away from its equilibrium position to a point where the smart-pulley LED just turns OFF.  Wiggle the glider back and forth to locate the ON/OFF transition point as precisely as you can.  If the LED is ON, then move away from equilibrium until the light turns OFF.  The photogate is now unblocked.  Within the first millimeter of motion, it will be blocked by a spoke, and the timing will begin.
+
+Have your partner click ``Start''; then release the glider.  Click ``Stop'' just after the glider has reached its maximum position on the other side of equilibrium.  Check your position graph, and repeat the experiment until you have a nice S-shaped curve containing 25 -- 30 data points with a few points from the next S-curve.
+
+\begin{center}
+\begin{tabular}{|p{14cm}|}
+\hline\tstrut
+If you are accumulating too many data runs, cluttering up your data column, set the top of the data column to ``By Run'', instead of ``By Measurement''.  Then delete any unneeded runs.  \bstrut\\
+\hline
+\end{tabular}
+\end{center}
+
+\item Layer a graph with position and velocity from your best run.  The velocity first swings through a minimum (near zero when the glider reaches the endpoint opposite where it was released.  Select the position values from \(t=0\) through this endpoint, and have Data Studio calculate the mean value of the position.  This is your \(x_0\) in \(PE = (1/2)k(x-x_0)^2\); record it in the ``Data'' section.
+
+\item Now click ``New'' in the calculator window again, and type in the equation ``\url{y2 = 0.5*k*(x-x0)^2}'', and define its variables \(k\), \(x\), and \(x0\) appropriately.  (You can change the name of the variable \(y2\) if you wish.)  Click ``Accept''.
+
+\item Finally, click ``New'' in the calculator window again, and type in the equation ``\url{y3 = P + K}''.  This is to be the total energy, so define \(P\) as the data measurement variable \(y2\) (the potential energy calculation) and \(K\) as the data measurement variable \(y\) (the kinetic energy calculation).
+
+\item These data calculations all appear in the ``Data'' column.  Get a new layered graph with your variables \(y\), \(y2\), and \(y3\) plotted on the \(y\)-axis, and time on the \(x\)-axis.  Title your graph and show it to your TA before printing it out.  Be prepared to comment to your TA on whether your graphs show reasonable data for the kinetic, potential, and total energies.
+
+\end{enumerate}
+
+\subsection*{DATA}
+
+\vphantom{.}
+\squishlist
+
+\item (Initial Setup, step 2) Mass of glider = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item (Procedure Part 1, step 4) Spring constant \(k\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\item (Procedure Part 2, step 5) Equilibrium position \(x_0\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+
+\squishend
+
+\subsection*{ADDITIONAL CREDIT PART 1 (5 mills)}
+
+This is a harder experiment to do well, requiring more careful experimental technique.  After you started, you may have found that you had not tensioned the springs enough to get 25 points on the S-shaped curve without compressing one of the springs.  Changing the spring tension may require remeasuring \(k\).  (Should \(k\) change significantly?)
+
+Repeat the experiment more carefully.  If necessary, retension the springs so you can get at least 25 points on the S-shaped curve for the half-oscillation, and remeasure \(k\) carefully.
+
+Averaging the distance values to obtain \(x_0\) may not be the best method of determining the true \(x_0\).  From studying your various measurements, what would be another method to obtain a value for \(x_0\)?  Does this agree with the averaging method?  Include this method in you repeat of the experiment, if you think it would improve the measurement of \(x_0\).  Print out the final results.
+
+Full additional credit for this assignment requires obtaining good \(PE\), \(KE\), and total \(E\) curves without significant assistance from your TA.  The total energy curve should be a nearly-level line, decreasing slightly through the motion owing to frictional losses.  Label your curves as in the illustration below.  Include an explanation of any improvements you made in the measuring techniques.
+
+\begin{center} \includegraphics*[width=0.7\textwidth]{imgs/6labs/6Alab/6Aexp4/exp4_last.png} \end{center}
+
+\subsection*{ADDITIONAL CREDIT PART 2 (2 mills)}
+
+The glider-spring system is a simple harmonic oscillator.  You will study the physics of such systems later in the course.   The frequency of oscillation is given by
+\begin{align} f = (1/2\pi)\sqrt{k/m}. \end{align}
+Devise a way to obtain the frequency of oscillation from your Data Studio measurements (or make new measurements), and use your values of \(k\) and \(m\) to check this formula.  Report the results with experimental error.
