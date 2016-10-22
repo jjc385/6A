@@ -1,5 +1,5 @@
 # 6A
-## Lab Manual Project
+Lab Manual Project
 
 ## Directory structure
 
