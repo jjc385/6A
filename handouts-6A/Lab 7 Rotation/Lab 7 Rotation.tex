@@ -1,0 +1,126 @@
+% Lab 7 Rotation
+
+\documentclass{article}
+\usepackage{textcomp}
+\textwidth=450pt
+\textheight=600pt
+\voffset=-50pt
+\hoffset=-50pt
+\pagestyle{empty}
+
+\begin{document}
+\part*{Lab 7 Rotation}
+TA: Chen-Hsuan Hsu\\
+\vspace{-0.3in}
+\section*{Theory}
+\begin{itemize}
+
+\item The rotational inertia of point mass $m$ is $I= m r^2$, where $r$ is the distance from the rotation axis. If the mass distribution is continuous, then \[I= \int r^2 dm.\]
+
+\item For example, the rotational inertia of a rod about an axis perpendicular to the rod and through its center is \[I_{rod}=(1/12)M_{rod}l_{rod}^2,\] where $M_{rod}$ is the mass of the rod and $l_{rod}$ is the Length of the rod.
+
+\end{itemize}
+
+\section*{Experimental Process}
+\subsection*{Procedure for Rotation}
+\begin{enumerate}
+
+\item You have a rotator device connected to a rotary motion sensor. The rotator device has movable masses on a rod. On the other end of the rotational motion sensor is a pulley with two wheels of different diameters. 
+
+Check if the plug of the rotational motion is linked to the interface. %Plug the yellow plug of the rotational motion sensor into CH 1, and the black plug into CH 2. 
+In Data Studio, connect to the rotary motion sensor. Now double click on the icon of rotary motion sensor, click the "Measurements" tab, and check the box for "Angular Acceleration" and change the unit to "(rad/s/s)". Drag a graph over to the rotary motion sensor, and set it to plot angular acceleration. 
+
+
+
+\item Remove the rod and mass assembly from the sensor, and weigh the masses, the rod (without its screw), and the pulley wheel. Measure the diameters of the two pulley wheels, and convert to radii in meters. Record the information below: \\
+Total mass of the two movable masses, $M_{mass}=\underline{~~~~~~~~~~~~~~~~~~~~}kg$.\\
+Mass of the rod without its screw, $M_{rod}=\underline{~~~~~~~~~~~~~~~~~~~~}kg$.\\
+Total mass of the pulley wheels, $M_{pulley}=\underline{~~~~~~~~~~~~~~~~~~~~}kg$.\\ 
+Radius of small pulley, $R_{small}=\underline{~~~~~~~~~~~~~~~~~~~~}m$.\\ 
+Radius of large pulley, $R_{large}=\underline{~~~~~~~~~~~~~~~~~~~~}m$.\\ 
+
+\item Measure the length of the rod, $l_{rod}=\underline{~~~~~~~~~~~~~~~~~~~~}m$.\\
+Calculate the rotational inertia of the rod, $I_{rod}=\frac{1}{12}M_{rod}l_{rod}^2=\underline{~~~~~~~~~~~~~~~~~}kg-m^2$.
+
+\item Calculate the rotational inertia of the pulley wheels, $I_{pulley}=\frac{1}{2}M_{pulley}(\frac{R_{small}^4+R_{large}^4}{R_{small}^2+R_{large}^2})=\underline{~~~~~~~~~~~~~~~~~~~~}kg-m^2$.
+
+\item Set the masses on the rotator at the ENDS of the rod. This is the case where you can create the largest total rotational inertia. Measure the distance from the center of a movable mass to the center of the rod. $d_{long}=\underline{~~~~~~~~~~~~~~~~~~~~}m$. Calculate the largest total rotational inertia, $I_1=I_{rod}+I_{pulley}+M_{mass}d_{long}^2$, and record your result in the chart below.
+
+Put 100g mass on the weight hanger (so totally $m_f=0.15kg$), and wind the string around the smaller pulley wheel. This should be the smallest angular acceleration case. Calculate the torque for this case, $\tau_1=R_{small}m_fg$, and the theoretical angular acceleration for this case, $\alpha_{th,1}=\tau_1/I_1$. Record your result in the chart below.
+
+\item Click \fbox{Start}, let the weight fall (spinning up the rotator), and click \fbox{Stop}. Notice that the angular acceleration on the graph quickly jumps up and reaches an approximately constant value. You can select an area of this nearly constant value and use \fbox{$\Sigma$} to find the mean value of angular acceleration. This is your experimental angular acceleration for the trial 1. Repeat two more times and obtain the average. Record your results.
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+               & Rotational      & Theoretical                 &       & Experimental & & \\
+ Torque        & Inertia, $I_1$  & Angular Acceleration,       & Trial & Angular Acceleration, & Average &Error \\
+ $\tau_1$, $(m-N)$& $(kg-m^2)$   &  $\alpha_{th,1}$  $(rad/s^2)$ &       &  $\alpha_{exp}$  $(rad/s^2)$&  &\\
+\hline
+& &  & 
+\begin{tabular}{c}
+1\\ 
+\hline 
+2\\ 
+\hline 
+3\\ 
+\end{tabular}
+& 
+\begin{tabular}{c}
+$\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}$ \\ 
+$\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}$ \\ 
+ \\ 
+\end{tabular}
+&  & \\
+\hline
+\end{tabular}
+
+\item Set the masses on the rotator close to the center of the rod. This is the case where you can create the smallest total rotational inertia. Measure the distance from the center of a mass to the center of the rod. $d_{short}=\underline{~~~~~~~~~~~~~~~~~~~~}m$. Calculate the smallest total rotational inertia, $I_2=I_{rod}+I_{pulley}+M_{mass}d_{short}^2$, and record your result in the chart below.
+
+Put 100g mass on the weight hanger (so totally $m_f=0.15kg$), and wind the string around the larger pulley wheel. This should be the largest angular acceleration case. Calculate the torque for this case, $\tau_2=R_{large}m_fg$, and the theoretical angular acceleration for this case, $\alpha_{th,2}=\tau_2/I_2$. Record your result in the chart below.
+
+\item Find the experimental angular acceleration for three trials. Obtain the average and record your results.
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+               & Rotational      & Theoretical                 &       & Experimental & & \\
+ Torque        & Inertia, $I_2$  & Angular Acceleration,       & Trial & Angular Acceleration, & Average &Error \\
+ $\tau_2$, $(m-N)$& $(kg-m^2)$   &  $\alpha_{th,2}$  $(rad/s^2)$ &       &  $\alpha_{exp}$  $(rad/s^2)$&  &\\
+\hline
+& &  & 
+\begin{tabular}{c}
+1\\ 
+\hline 
+2\\ 
+\hline 
+3\\ 
+\end{tabular}
+& 
+\begin{tabular}{c}
+$\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}$ \\ 
+$\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}$ \\ 
+ \\ 
+\end{tabular}
+&  & \\
+\hline
+\end{tabular}
+
+%\item Do a trial experimental run in which the masses on the rotator are at the ends of the rod so that the rotational inertia is large. Use 100-200 g on the weight hanger, and wind the string around the smaller pulley wheel. (This should be the smallest angular acceleration case.) Notice that the angular acceleration on the graph quickly jumps up and reaches an approximately constant value. You can select an area of this nearly constant value and use \fbox{$\Sigma$} to find the mean value for the "measured angular acceleration." $\alpha_{pre}=\underline{~~~~~~~~~~~~~~~~~~~~}rad/s^2$ \\
+%Now do a trial experimental run in which the masses on the rotator are close to the center so that the rotational inertia is small. Again, use 100-200 g on the weight hanger, and wind the string around the largest pulley wheel so that the torque will spin the rotator up to high speed. (This should be the largest angular acceleration case.) On the graph, notice that the acceleration quickly reaches a peak, and then falls off with time. Why is the acceleration NOT constant in this case? Where on the acceleration curve should you average the values to obtain a good result for comparison with the predicted acceleration? How can you adjust the experiment to get a better result for the small rotational inertia case? \\ \\ \\ \\ \\
+
+%\item For this step, using masses of 50-200 grams, hook the string on the pulley pin, wind the string around the pulley, and let the mass fall while you measure the rotational acceleration on the computer. Do three trials for each case, and average them to find the measured rotational acceleration, $\alpha_{meas}$.
+
+%Do four cases: two different positions of the masses on the rod (one close to the center, and one far out from the center.), and two different pulley sizes. Compute the rotational inertia of the rod with masses (remember to include effects of the rods, the pulley wheel, and the masses), the torque, the predicted rotational acceleration, and the experimental error, and fill in the table below:
+
+%When you compute the predicted rotational acceleration of the entire rotating assembly, are you leaving out anything? \\ \\ \\
+
+
+\end{enumerate}
+
+\subsection*{Precession of Gyroscope}
+\begin{enumerate}
+\item Skip this part. 
+\end{enumerate}
+
+
+
+\end{document} 

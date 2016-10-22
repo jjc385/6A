@@ -1,0 +1,112 @@
+% Lab 2 kinematics
+
+\documentclass{article}
+\usepackage{textcomp}
+\textwidth=450pt
+\textheight=650pt
+\voffset=-80pt
+\hoffset=-50pt
+\pagestyle{empty}
+
+\begin{document}
+\part*{Lab 2 Kinematics}
+TA: Chen-Hsuan Hsu\\
+\vspace{-0.3in}
+\section*{Introduction}
+\begin{itemize}
+\item In this lab, we will use a motion sensor to produce position, velocity, and acceleration graphs of a glider on an air track.  
+
+\end{itemize}
+
+\vspace{-0.3in}
+
+\section*{Experimental Process}
+
+\subsection*{Initial Setup}
+\begin{enumerate}
+\item Turn on the signal interface and computer, plug the yellow-banded plug into "CH 1" and the other plug into "CH 2".
+
+\item Bring up Data Studio, choose "Create Experiment," click on "CH1," and choose "Motion Sensor" by double clicking on it.
+
+\item From the lower left of the screen, drag a graph icon to the motion sensor icon. From the "Data" column at the top left of the screen, drag "Position Ch1 \& 2 (m)" over to the y-axis of the graph.
+
+%\item Click \fbox{Start} to activate the motion sensor. You should hear a series of rapid clicks. Hold a book facing the sensor. Move the book to a distance of 1.5m from the sensor, and then back to 0.5m, click \fbox{Stop}, and observe the graph. Use the \fbox{Scale to fit} button on the left end of the graph tool bar to rescale the graph. If you do not get a clean trace, try again.
+
+\item Drag the velocity data over the y-axis of the graph. You can either replace the position plot by the velocity data, or plot both position and velocity data on the same graph. Try to plot both data on the same graph.
+
+\item Drag the acceleration data over to the graph, and display all three plots on the graph.
+
+%\item Double click on the graph area to bring up the "Graph Settings" window. Click "Layout" tab; under "laying," select "One Graph, Multiple Y Scales." This option plots all three quantities on the same graph. Now bring up the graph layout again, and check "Do Not Layer." Now the graphs are plotted separately. We will be plotting many graphs in the Physics 6 series labs, so you may want to practice the graph control a bit. 
+
+
+\end{enumerate}
+
+\subsection*{Procedure}
+
+%In Step (1)-(5), you are asked to move in a straight line away from the motion sensor and plot a position-versus-time graph on the screen. However, this is unnecessary and we are going to skip these steps.
+
+
+%\item Start approximately 0.5 meters from the motion sensor, {\bf click} on \fbox{Start}, and walk away steadily while holding a book facing the sensor. Plot the position-versus-time graph using the graph plotting tool in Data Studio. If you want to discard a data set, click on the run number to highlight it, hit Delete, and click \fbox{OK}. Note that you can obtain several curves in different colors on the same graph.
+
+%\item How will the graph change if you walk away from the sensor more rapidly? Plot another position-versus-time graph in Data Studio, and sketch it below. 
+
+%\item In the space below, sketch velocity-versus-time graph base on the position graph you depicted in (1) and (2). (Remember velocity is the slope of position-versus-time graph.) Compare these with the actual velocity graphs made by the computer which you can obtain by dragging the velocity data over the graph.
+
+%\item Execute the motion described by the position-versus-time graph shown on page 12. 
+
+%\item Get a velocity graph on the screen and move such a way that you produce a computer graph by the velocity-versus-time graph shown on page 12. Try your best to obtain the result, and show it to your TA.
+
+We are going to skip step (1)-(5). In Step (6)-(9), you will use an air track and measure the motion of a glider on the air track. There are two gliders, and you can choose the one with less friction for the experiment.
+
+\begin{enumerate}
+\item[(6)] Turn on the air track and level it by adjusting the leveling screw. Place the glider at several different positions on the track to verify that it is as level as possible. Attach the larger reflector to the glider as on page 13.
+
+Arrange the sensor so it points slightly downward and can follow the glider along the entire track as shown on page 13. Place your eye at the position you want the sensor to point. Look into its reflective face, and adjust the sensor until you see your reflected image. The sensor is now directed at your eye position. Tilt the end of the track up by placing the small block under the leveling screw. Push the glider up the track, then click \fbox{Start} to record the motion of the glider moving up, slowing, and moving back down, and then click \fbox{Stop} before it hits the end of the air track. Notice that the glider should not touch the ends of the air track during the measurement.
+
+\item[(7)] Using a ruler (You do not need the Vernier caliper), measure the height $h$ of the block which tilts the track and the distance $D$ between the track support and the leveling screw. Record your results and calculate the theoretical acceleration: 
+$h = \underline{~~~~~~~~~~~~~~~}m$; $D = \underline{~~~~~~~~~~~~~~~}m$;
+$a_{th}=g\sin \alpha \simeq g \tan \alpha = g \times(h/D)=\underline{~~~~~~~~~~~~~~~}m/s^2$.
+
+\item[(8)] We will use four different methods for extracting a value for the acceleration, and in the process gain experience using the tools in Data Studio for analyzing graphs. Obtain a separate acceleration graph by dragging another graph icon over to the motion sensor icon. Using the following methods, determine the acceleration of the glider: 
+
+\begin{enumerate}
+\item On the acceleration graph, use "Smart tool" to estimate the acceleration and read an "eyeball" value of acceleration directly from the graph. $a_{eyeball}=\underline{~~~~~~~~~~~~~~~}m/s^2$
+
+\item On the acceleration graph, drag a box around a good section of data, and click \fbox{$\Sigma$} statistics button in the graph tool bar to find their mean value.
+$a_{mean}=\underline{~~~~~~~~~~~~~~~}m/s^2$
+
+\item The slope of the velocity graph is the acceleration. Obtain a separate velocity graph, and use the slope tool: First, bring up the "Graph settings" window by double clicking on the velocity graph, choose "Tools" tab, and set the "Slope Tool Interval" to 20. Click "Slope Tool" button on the tool bar of the graph window, and move the slope tool to a good section of velocity data, and record the slope:
+$Slope~of~Velocity=\underline{~~~~~~~~~~~~~~~}m/s^2$
+
+\item Finally, fit a line to the velocity data. Select the entire section of good velocity data, click the "Curve fit" tool, and select "Linear Fit." Record the slope: 
+$Fitted~Slope~of~Velocity=\underline{~~~~~~~~~~~~~~~}m/s^2$
+\end{enumerate}
+
+\item[(9)] Using the equation on page 15, calculate the percentage error between each experimental result $r_{exp}$ obtained above and the theoretical value $a_{th}$ obtained in (7):
+
+Percentage error for "eyeball" value of acceleration $=\underline{~~~~~~~~~~~~~~~}\% $ \\ 
+Percentage error for mean value of acceleration $=\underline{~~~~~~~~~~~~~~~}\%$ \\ 
+Percentage error for slope tool on velocity graph $=\underline{~~~~~~~~~~~~~~~}\% $ \\ 
+Percentage error for curve fit on velocity graph $=\underline{~~~~~~~~~~~~~~~}\% $
+
+
+\end{enumerate}
+
+
+\subsection*{Questions}
+Answer the following questions.
+
+\begin{enumerate}
+\item What does calculus tell us about the relationship between the position and the velocity graph? \\ \\ \\
+
+\item Suppose now we measure the motion of a ball thrown upward into the air. Neglect air resistance, how would the position, velocity, and acceleration graphs compare with those of the glider experiment? \\ \\ \\ \\ \\
+
+\end{enumerate}
+
+\subsection*{Additional Part: Pendulum Motion (3 mills)}
+Arrange the motion sensor to track a swinging pendulum. For a pendulum bob, use a block with a flat side facing the sensor. Set the pendulum into motion with small-amplitude oscillations, carefully positioning and aligning the sensor so it tracks this motion and produces smooth curves. Create a graph showing separately position, velocity, and acceleration as functions of time, and show it to your TA.
+
+
+
+
+\end{document} 
