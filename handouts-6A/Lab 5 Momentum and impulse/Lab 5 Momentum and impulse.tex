@@ -1,0 +1,96 @@
+% Lab 5 Momentum and impulse
+
+\documentclass{article}
+\usepackage{textcomp}
+\textwidth=450pt
+\textheight=650pt
+\voffset=-50pt
+\hoffset=-50pt
+\pagestyle{empty}
+
+\begin{document}
+\part*{Lab 5 Momentum and impulse}
+TA: Chen-Hsuan Hsu\\
+\vspace{-0.3in}
+
+\section*{Theory}
+\begin{itemize}
+\item Newton's second law tells us $F_{net}=ma$, where $F_{net}$ is the net force, $m$ is the mass of an object, and $a$ is acceleration. Using $a=dv/dt$ with the velocity $v$, we can rewrite the law as $F_{net}=mdv/dt$. If we generalize this law to the varying mass case, then we have $F_{net}=d(mv)/dt=dP/dt$, where $p=mv$ is the momentum of the object. Therefore,
+$\Delta P = \int F_{net} dt$, or
+\begin{equation} \label{eq}
+m (v_2-v_1) = \int F_{net} dt.
+\end{equation}
+
+\end{itemize}
+
+
+\section*{Experimental Process}
+\subsection*{Initial Setup: Calibrate the Force Sensor}
+
+\begin{enumerate}
+
+\item %Arrange the force sensor so that you can hang masses from it. 
+Link the force sensor to "Ch A." Double click on the force sensor icon, click "Measurement" tab, and check the box for "Voltage." The sensor will produce force readings, but we are going to ignore these and do our own calibration of the sensor, so we can convert the voltage readings to forces. %We will hang masses from the sensor, type in the force, and let the computer read the corresponding voltage. 
+When calibrating the force sensor, use the screw hook, and mount the sensor vertically downward on the horizontal bar of the ring stand.
+
+\item Click \fbox{Sampling Options} tab on the setup window, check the box "Keep data values only when commanded," and type in "mass" for name and "g" for units. Drag a table over to the force sensor, and drag the voltage data and mass values over to the table, so that you have two columns showing these data. We will convert the masses to forces later in Excel.
+
+\item Click \fbox{Start}. The "Start" button changes to \fbox{Keep}-and-\fbox{Stop} button as shown on page 43. Also, you will seethe running voltage reading in your table . With no mass hanging on the force sensor, push the "Tare" button on the sensor to zero the reading, and click \fbox{Keep}. You will prompted to enter the mass value (zero in this case). %Repeat this five times, so that you obtain five values of the voltage for the zero-mass case.
+
+\item Now add the 50-gram mass holder. %Repeat five times the procedure of pressing 
+Click \fbox{Keep} and enter a mass of \underline{-50} g. (The minus sign is because of the opposite direction.) Perform another 50-gram step, and then 100-gram steps up to a total of 500-grams. %, taking five voltage reading for each mass value. 
+Remember to type in MINUS signs for the mass values. Click the red \fbox{Stop} button when you are finished.
+
+\item Your table now contains a column of the voltage readings for corresponding masses. Call up an Excel worksheet, copy the voltage column of this table into column A of Excel. In column B, copy your mass values from Data Studio. In column C, %type in the mass series, just once for each mass value. In column D, 
+convert the mass values to force in Newtons; for example, you may type in "=(B2/1000*9.8)".
+%. In column E, take the average of the voltage readings for each mass. For example, you can use "=AVERAGE(A4:A8)" to average the values in cell A4 through A8. 
+
+\item %Copy the force values from column D and "Paste Special" (the values) into column F, 
+Select data in column A and C to plot the Force-versus-Voltage graph. Fit the data to obtain the equation for the trend line, write down the equation here: $\underline{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}$
+
+\end{enumerate}
+
+
+\subsection*{Procedure}
+
+\begin{enumerate}
+\item Level the air track carefully. Mount the force sensor horizontally on the vertical rod of the ring stand at the end of the track so glider bumper will strike the sensor as the glider move down the track. Replace the screw hook of the force sensor with the rubber bumper. Set up the photogate so the glider flag passes through the gate before the bumper strikes the sensor. (Please see the figures on page 44.)
+
+\item Weigh the glider, and record its mass in kg: $M=\underline{~~~~~~~~~~~~~~~~~~}kg$
+
+\item Measure the length of the glider flag, and record its length in m: $d=\underline{~~~~~~~~~~~~~~~~~~}m$
+
+\item We want to set up the photogate to measure the velocity of the glider. In \fbox{Sampling Options}, disengage "Keep data values only when commanded." Link the photogate to "Ch 1." Click "Setup Timers" tab. Under "Timing Consequence choices," choose "Blocked," and then "Unblocked." Pictures of a blocked and an unblocked gate should appear in the window. Click \fbox{Done} to close the timer window. Click \fbox{Calculate}, and type in "v=d/t". Click \fbox{Accept}, and define d as the length of the glider flag and t as a data measurement (timer 1). Click \fbox{Accept} again.
+
+\item Click the photogate icon, and in "Measurements" tab, check "State." Click \fbox{Sampling Options} and "Delayed Start" tab, check "Data Measurement." Set the first box to "State, Ch 1(V)." Set the next box to "Is Below." In the voltage text box, type in "4.9". Click \fbox{OK}.
+
+\item Double click the force sensor icon. Set the sampling rate to 2000 Hz. Drag a table over to the force sensor, and set it to read a column of voltages and a column of velocities. Get rid of the time measurement column by clicking the "Show time" button.
+
+\item Turn on the air track, and click \fbox{Start}. Push "Tare" button on the sensor. Send the glider down the track so it passes through the photogate, strikes and bounces off the sensor, and crosses the gate again. Click \fbox{Stop}. Your table should show a long list of force and voltage readings and two velocity readings at the top. 
+
+\item Drag a graph over the force sensor to plot Voltage-versus-time graph. You should see the impulse as page 46. To calculate the impulse, copy the voltage readings in the impulse area by pressing \fbox{Ctrl}+\fbox{C} and paste into a new Excel sheet. (See page 47.) In the next Excel column, use the calibration equation you obtained to convert the voltage to forces. 
+
+\item Since $\int F_{net} dt=\Delta t \Sigma F_i$, we can find impulse by summing over all forces and multiply it by $\Delta t=0.0005$(sec). In other words, you can type in something like "=0.0005*SUM(B2:B147)". The result will be the impulse for the first trial.
+
+\item To find the change in momentum, calculate $\Delta P =M v_1-M v_2=M(|v_1|+|v_2|)$.
+
+\item Repeat (7)-(10) and make totally three measurements with different glider speeds to check eq. (\ref{eq}). Record the three values of change in momentum and impulse in the following chart, as well as the percentage difference. 
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\#$ & $\Delta P$ (N/s)  & Impulse (N/s) & $\%$ difference \\
+\hline
+1   &   &   & \\
+\hline
+2   &   &   & \\
+\hline
+3  &   &   & \\
+\hline
+\end{tabular}
+
+
+\end{enumerate}
+
+\subsection*{Additional Part}
+Skip this part.
+\end{document} 

@@ -1,0 +1,97 @@
+% Lab 3 Newton's second law
+
+\documentclass{article}
+\usepackage{textcomp}
+\textwidth=450pt
+\textheight=680pt
+\voffset=-70pt
+\hoffset=-50pt
+\pagestyle{empty}
+
+\begin{document}
+\part*{Lab 3 Newton's Second Law}
+TA: Chen-Hsuan Hsu\\
+\vspace{-0.3in}
+\section*{Theoretical background}
+\begin{itemize}
+
+\item Consider a glider of mass $M$ on a frictionless air track. This glider is attached to a small mass $m$ by a string over a pulley as on page 22. Newton's second law tells us:
+\(
+F = mg = (M+m)a,
+\)
+where $F$ is the external force, which is gravity in this case, and $a$ is acceleration of the system. Therefore we have
+\[
+a = mg / (M+m).
+\]
+
+
+
+\end{itemize}
+
+\section*{Experimental Process}
+
+\subsection*{Initial Setup}
+\begin{enumerate}
+\item Turn on the air track and level it by adjusting the leveling screw as we did in lab 2. 
+
+\item Turn on the signal interface and computer, plug the smart pulley into channel 1, and call up Data Studio.
+
+\item In the Data Studio program, connect \fbox{CH 1} to "Smart Pulley." Then, double click the icon of the smart pulley, and under "Measurement" tab, select "Position," "Velocity," and "Acceleration," so that these measurements appear in the data list.
+
+\item Drag the graph icon to the motion sensor icon now below CH 1. Set up a graph with velocity versus time. 
+
+\end{enumerate}
+
+\subsection*{Procedure}
+
+\begin{enumerate}
+\item Weigh the two gliders and record its mass, $M_{large}=\underline{~~~~~~~~~~~~~}kg$, $M_{small}=\underline{~~~~~~~~~~~~~}kg$. 
+To use the balance, put the glider on the left plate and a mass on the right plate, and rotate the knob to balance it. The mass of the glider will be the sum of the mass and the reading on the scale. (Practice to weigh the two gliders, but we are going to use the large one only.)
+
+\item Using 1.5 meters of thread, connect the 5-gram mass hanger to the large glider. Make sure the thread passes over the smart pulley so that the hanger will accelerate the glider down the track.
+
+\item With the air-track blower off, set the glider with mass hanger attached on the track as far from the pulley as the thread allows. Turn on the air track so that the glider begins to move, and click \fbox{Start} immediately. Just before the hanger hits the floor or the glider reaches the end of the track, click \fbox{Stop}.
+
+\item Check the graph and use \fbox{Scale-to-Fit} button if necessary. (You can find out how the button looks like on page 25.)
+
+\item To obtain an experimental value for acceleration, you will need to fit a straight line to the velocity data. On the graph, choose a part of data where the slope is approximately constant. Click the \fbox{Fit} button, choose "linear fit." Record the slope: Slope$_{velocity}=\underline{~~~~~~~~~~~~~}m/s^2$
+
+\item Now you know how to find the acceleration for a trial. Our plan is to record three trials of the acceleration for a given accelerating mass, and then calculate the average value for the accelerating mass. In the lab, we are going to repeat the steps for four different accelerating mass. Create an Excel sheet as on page 26.
+ 
+\item First, attach (or taped) three 5-gram masses to the large glider, such that only one 5-gram holder accelerates the glider. Set the system into motion as in step (2). Obtain the acceleration from the slope of the velocity as in step (5), and record it in the spreadsheet. Perform three trials. 
+
+\item Transfer one 5-gram mass from the glider to the holder, such that one 5-gram mass and the holder accelerate the glider. Repeat step (7) for three trials.
+
+\item Transfer another 5-gram mass from the glider to the holder, such that two 5-gram masses and the holder accelerate the glider. Repeat step (7) for three trials.
+
+\item Transfer the final 5-gram mass from the glider to the holder, such that three 5-gram masses and the holder accelerate the glider. Repeat step (7) for three trials.
+
+\item Now, in Excel, the first three trials should be in cells B4, B5, and B6. You can easily calculate the average value of the first three trials by typing "=Average(B4:B6)" in cell B7. This operation will average the numbers in cells B4, B5, and B6. 
+
+\item Now, for other trials, you do not need to type the Average function again. Instead, position the cursor at the lower right corner of cell B7, so that it turns into a "+" sign. Now click the left button of the mouse and drag over cells C7, D7, E7. Excel automatically calculates the averages of the other trials with the proper cell reference. For example, now cell C7 comes "=Average(C4:C6)". Your spreadsheet should look like the one on page 27.
+
+{\bf (This step is really useful and you may need it for Physics 6 lab series in the future.)}
+
+\item In cell A8, type "Force(N)". In cell B8, type "=B3*9.8/1000". This will be calculated automatically and gives you the force due to the 5-gram holder. Again, drag the calculation across the other three cells C8-E8 to calculate the force for each case.
+
+\item Plot Force-versus-Acceleration graph using the chart function. Notice that 
+Force-versus-Acceleration graph means Force is on the y-axis and Acceleration is on x-axis. Select "XY (Scatter)" as the chart type.
+
+\item Now fit a line to the data. Excel calls this a "trendline." Click on the graph to select the data points. Pull the top "Chart" menu to "Add Trendline." In the pop-up window, select "Linear," and use "Options" tab to "Display equation on chart." Since we are plotting $F=ma$, the slope of the equation is $m_{exp}$. Record the experimental result: $m_{exp}=\underline{~~~~~~~~~~~~~}kg$. Also, we have the theoretical value of mass $m_{th}$ obtained by weighing the glider plus the 20 grams of small masses:
+$m_{th}=M_{large}+(0.005\times 4)=\underline{~~~~~~~~~~~~~}kg$. Compare these values and find the percentage error: \\ Percentage error $=\underline{~~~~~~~~~~~~~~~}\% $ 
+
+\end{enumerate}
+
+\subsection*{Additional Part 2: Free-Falling Picket Fence (5 mills)}
+Notice that we skip "additional credit part 1" on lab book page 29. Here you will need a photogate, a picket fence, and a rag box to catch the falling fence. The picket fence is a strip of clear plastic with evenly spaced black bars. When the fence is dropped through a photogate, the light beam is interrupted by the bars; since the fence accelerates while falling, the bars interrupt the beam with increasing frequency. The software calculates the distance fallen, as well as the corresponding velocity and acceleration. The acceleration here should be $g=9.8m/s^2$.
+
+\begin{enumerate}
+
+\item Double click on "Photogate Plus Picket Fence" in the list of sensors, and insert the plug of the photogate into "CH 2". Drag the graph icon to the picket icon, and set it to plot acceleration-versus-time graph. Arrange the photogate in such a way that the falling picket fence will be caught by the rag box on the floor. (See page 30)
+
+\item Click \fbox{Start}, drop the picket fence through the photogate, and click \fbox{Stop}. Since the entire motion is fast, you may not see much on the graph. Use "Scale-to-Fit" button to expand the scale. Use the \fbox{$\Sigma$} button to find mean value of the acceleration. Record the results and compare it with the theoretical value $g=9.8m/s^2$: $g_{exp}=\underline{~~~~~~~~~~~~~}m/s^2$, Percentage error $=\underline{~~~~~~~~~~~~~~~}\%$
+
+\end{enumerate}
+
+
+\end{document} 

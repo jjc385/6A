@@ -1,0 +1,85 @@
+% Lab 4 Conservation of energy
+
+\documentclass{article}
+\usepackage{textcomp}
+\textwidth=450pt
+\textheight=650pt
+\voffset=-70pt
+\hoffset=-50pt
+\pagestyle{empty}
+
+\begin{document}
+\part*{Lab 4 Conservation of Energy}
+TA: Chen-Hsuan Hsu\\
+\vspace{-0.3in}
+\section*{Theory}
+\begin{itemize}
+
+\item Consider an oscillating glider of mass $M$ on a nearly frictionless air track. The kinetic energy will be $(1/2)Mv^2$ and the potential energy will be $(1/2)kx^2$. The Law of Energy Conservation tells us the total mechanical energy of the system remains constant in time:
+\[
+(1/2)Mv^2+(1/2)kx^2=constant
+\]
+In reality, however, a small mount of mechanical energy may be lost to friction.
+
+\end{itemize}
+
+\section*{Experimental Process}
+
+\subsection*{Initial Setup}
+\begin{enumerate}
+
+\item Turn on the air track and adjust the level as we did in lab 2 and lab 3. 
+
+\item Weigh the glider and record its mass: $M=\underline{~~~~~~~~~~~~~~}kg$
+ 
+\item Assemble the springs, glider, smart pulley, and thread as shown in page 34. One spring is attached to a bracket at the end of the air track and to one end of the glider. The other end of the glider is attached by a second spring by a thread which passes over the smart pulley. The second spring is then attached to the bracket. 
+
+\item Mount a dumb pulley (which has low friction, but is not connected to the computer) on the same fixture that holds the smart pulley, albeit in a vertical plane. Using a long piece of thread, connect the mass hanger to the glider. Make sure the thread passes over the dumb pulley so that weighs added to the hanger will displace the glider.
+
+\end{enumerate}
+
+\subsection*{Procedure Part 1: Measuring the Spring Constant $k$}
+\begin{enumerate}
+
+\item We will measure the spring constant $k$ in $F=-kx$ of a Hooke's Law spring. Call up a blank Excel worksheet and prepare three columns to record the total mass in the hanger (including the mass of the hanger itself) in grams, its weight in Newtons, and the position of the glider in meters as shown in page 35. 
+
+\item For column B, you can type in the formula to calculate force from the mass data in column A. Remember we did this in lab 3? In cell B3, type "=A3*9.8/1000", then fill down the other cells in column B. 
+
+\item Now make the measurements: Turn on the air blower, and help the glider come to equilibrium. Add masses to the mass hanger so that total mass is 10, 20, ... 60g, and read the distance (in meters) from the scale on the air track. On the spreadsheet, record the distance corresponding to the entries in the mass column (including the mass of the hanger itself).  
+
+\item After filling in the distance column in column C, chart these variables in Excel, and find the slope, which is the spring constant. Record your results: $k=|Slope|=\underline{~~~~~~~~~~~~~~}N/m$.
+
+\end{enumerate}
+
+\subsection*{Procedure Part 2: Plotting Energy}
+\begin{enumerate}
+\item Unhook the mass hanger string. In Data Studio, hook up the smart pulley virtually and physically. Double click on the smart pulley icon, and check "Position," "Velocity." Arrange a graph to plot the position $x$ and the velocity $v$ on a single graph window. With the air blower on, pull the glider out, click \fbox{Start}, let the glider oscillate several times, and click \fbox{Stop}. The velocity graphs resembles the sinusoidal oscillations of a simple harmonic oscillator, but the position graph consists of a series of S-shaped curves increasing in y value. This is because the smart pulley does not distinguish between the forward and reverse directions of motion. 
+
+\item Now prepare Data Studio to calculate the kinetic energy in real time: Click the \fbox{Calculate} button in the top tool bar. In the equation area of the pop-up window, type "KE=0.5*M*v$\wedge$2" (for $(1/2)Mv^2$), and click \fbox{Accept}. You will be asked to define the variables M and v below. Here M is a constant, the mass you measured before, but v is a data measurement variable from your best run. (For example, "Velocity, CH 1 (m/s), run $\#$3"). Click \fbox{Properties} to set unit to "J". When you finish defining M and v, click \fbox{Accept} again.
+
+\item The kinetic energy calculation now appears in the "Data" column. Drag it to a new graph.
+
+\item Calculating potential energy with the smart pulley is trickier. First, as mentioned above, the pulley does not distinguish between forward and backward motion, so we can look only the first half oscillation. Second, when we pull the glider out and "Start" the distance measurement, the software assigns zero to the first distance measurement instead of the equilibrium position. In other words, we want $PE=(1/2)k(x-x_o)^2$, with $x_o$ the equilibrium position.
+
+%To accomplish this, record one full S-shaped curve of position: Move the glider away from its equilibrium position to a point where the smart pulley LED just turns OFF. Wiggle the glider back and forth to locate the ON/OFF transition point. The photogate is now unblocked. Within the first millimeter of motion, it will be blocked by a spoke, and the timing will begin.
+
+%Have your partner click \fbox{Start}; then release the glider. Click \fbox{Stop} just after the glider has reached its maximum position on the other side of equilibrium. Check your position graph, and repeat the experiment until you have a nice S-shaped curve containing 25-30 data points.
+
+First, check your position graph, and repeat the experiment until you have a nice S-shaped curve containing 15-20 data points.
+
+\item Layer a graph with position and velocity from your best run. In a half period, the VELOCITY first starts from a minimum (the endpoint), and then swings through a minimum (near zero) when the glider reaches the endpoint opposite where it was released. Select the POSITION data points between the two endpoints, and have Data Studio calculate the mean value of the position. This is your $x_o$; record it here: $x_o=\underline{~~~~~~~~~~~~~~}m$.
+
+\item Now click \fbox{Calculate} to bring up the calculator window, and click \fbox{New} to generate a new calculation. Type in the equation "PE=0.5*k*$(x-x_o)\wedge 2$", click \fbox{Accept}, and define its variables k, $x$, and $x_o$. Notice that k and $x_o$ are constants you already measured, and $x$ is the data measurement from your best run. Set the unit to be "J". Click \fbox{Accept}.
+
+\item Finally, click \fbox{New} in the calculator window, type in the equation "E=PE+KE". This is to be the total energy, so define PE as the data measurement variable PE and KE as the data measurement variable KE. Set the unit to be "J". Remember that you need to define the variables KE, PE, and E by your best run, e.g. run $\#$. 
+
+%\item These data calculation all appear in the "Data" column. Get a new layered graph with your variable KE, PE, E on the y-axis and time on the x-axis. 
+
+\end{enumerate}
+
+\subsection*{Additional Part 1 (5 mills)}
+Read page 38 for this part. Try to improve your data and adjust your graph so it looks like the one on page 38. In other words, all the KE, PE, and E data are shown in one single graph with the same $y$-axis.
+%Write down an explanation of any improvements you made.
+
+
+\end{document} 
