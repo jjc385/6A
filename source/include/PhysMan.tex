@@ -1,0 +1,89 @@
+% filename: PhysMan.tex
+
+%% FOR Sans Serif UNCOMMENT THE FOLLOWING TWO LINES
+%\usepackage[T1]{fontenc}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+%% (To get normal Serif font again, comment the two lines)
+
+
+%----------------------------------------------------------------
+% Attempts at changing the font to sans serif style
+%----------------------------------------------------------------
+
+% http://www.tug.dk/FontCatalogue/sansseriffonts.html
+
+%%\usepackage[light,math]{iwona}
+%%\usepackage[T1]{fontenc}
+
+%%\usepackage{cmbright}
+%%\usepackage[T1]{fontenc}
+
+% Works:
+%\usepackage[T1]{fontenc}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+%%\usepackage[default]{sourcesanspro}
+%%\usepackage[T1]{fontenc}
+
+
+
+%----------------------------------------------------------------
+% Other style options
+%----------------------------------------------------------------
+
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb} % Math symbols such as \boldsymbol
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\fancyfoot[C]{\thepage}
+
+\usepackage[noams,squaren,Gray]{SIunits} % Standardizes quantity and SI unit spacing
+\usepackage{soul} % for an underline macro that wraps
+ \setul{0.2ex}{.4pt}% underline 0.2ex below contents
+\usepackage{enumitem} % for enumerate options
+\usepackage{verbatim} % Allows display of almost any sequence of symbols, printed in typewriter font; and provides comment environment
+\usepackage[obeyspaces,spaces]{url} % Same as verbatim but allows line breaks and spaces
+\usepackage{parskip}
+ \setlength{\parindent}{0em}
+ \setlength{\parskip}{2.2ex}
+
+%\usepackage[compact]{titlesec}
+%\titlespacing{\section}{0pt}{*1ex}{*0.5ex}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*2.5}{*0.1}
+
+
+
+%----------------------------------------------------------------
+% Macros
+%----------------------------------------------------------------
+
+% Scientific Notation and Units
+% =============================
+
+% scientific notation without units
+\providecommand{\sn}[2]{ {#1} \mkern-1.5mu\times\mkern-3mu 10^{#2} }
+% scientific notation with units
+\providecommand{\snu}[3]{ \unit{\sn{#1}{#2}}{#3} }
+
+% create compact or ``squished'' lists with sublists:
+\newcommand{\squishlist}{
+   \vspace{-2.2ex}
+   \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}      \setlength{\parsep}{3pt}
+      \setlength{\topsep}{3pt}       \setlength{\partopsep}{0pt}
+      \setlength{\leftmargin}{1.5em} \setlength{\labelwidth}{1em}
+      \setlength{\labelsep}{0.5em} } }
+\newcommand{\squishend}{
+    \end{list}  }
+
+% struts for spacing in tabulars/tables
+\newcommand{\tstrut}{\rule{0pt}{2.5ex}}
+\newcommand{\bstrut}{\rule[-1ex]{0pt}{0pt}}
+\newcommand{\Tstrut}{\rule{0pt}{2.9ex}}
+\newcommand{\Bstrut}{\rule[-1.4ex]{0pt}{0pt}}
