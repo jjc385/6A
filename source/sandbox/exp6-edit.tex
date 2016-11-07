@@ -20,19 +20,33 @@
 
 
 \newcommand{\TODO}[2][inline,color=green!40]{{ \todo[#1]{#2} }}
-\newcommand{\TODOg}[2][inline]{{ \todo[color=green!40,#1]{#2} }}
-% Uncomment the following lines to compile document with no \TODO comments
-% \renewcommand{\TODO}[2][]{}
-% \renewcommand{\TODOg}[2][]{}
+\newcommand{\TODOg}[2][inline]{ \todo[color=green!40,#1]{#2} }
 
 %\newcommand{\question}[2][]{{ \bf #2 }}
-\newcommand{\question}[2][blue]{{ \textcolor{#1}{#2} }}
+\newcommand{\question}[2][blue]{\textcolor{#1}{#2}}
 
 %\newcommand{\qq}[2][]{{ \question }}
 
-\newcommand{\answer}[2][red]{{ \textcolor{#1}{#2} }}
+\newcommand{\answer}[2][red]{\textcolor{#1}{#2}}
 
 \newcommand{\action}[2][]{ #2 }
+
+%%	Decide whether to refer to vertical intercept (a) as such; 
+%%		(b) as $y$-intercept; or (c) as $B$-intercept.
+%\newcommand{\yint}[1][B]{$#1$-intercept }
+%\newcommand{\yint}[1][y]{$#1$-intercept }
+\newcommand{\yint}[1][]{vertical intercept }
+
+
+
+%% Compile controls
+%%		If the following lines are uncommented, the corresponding 
+%%		text features will be turned off.  Questions will be displayed
+%%		in normal font, while answers and todo notes will be turned off.
+
+%\renewcommand{\question}[2][]{#2}
+%\renewcommand{\answer}[2][]{}
+% \renewcommand{\TODO}[2][]{}
 
 \begin{document}
 
@@ -41,8 +55,24 @@
 
 \vspace{-5ex}
 \part*{Overhauled Bicep Lab}
+%\TODO{See outline and future work at end of document}
+\TODO{
+	LEGEND:\\
+	* [Black text] -- Regular text \\
+	* \question{Question or action the students need to take} \\
+	* \answer{Tip for TAs.  Will be removed from student verstion of the lab.}
+	\\
+	* [These green or orange boxes]
+	-- comments on what needs to be done, etc.  
+Not part of the lab for students.
+}
 
-\TODO{See outline and future work at end of document}
+%\TODO{Overall TODO list:  (In addition to items scattered throughout the text)
+%	\\
+%	* 
+%}
+
+
 
 
 \begin{comment}
@@ -114,17 +144,23 @@ each step, but this will be much more like doing science in the real world.
 
 
 \subsection*{Warm up}
-\subsubsection*{Warm up -- comments }
-\itemb
-	\item Assume students don't know anything about torque
+\TODO{
+	{\bf Comments on warm up:\\}
+%\renewcommand{\item}{*}
+	* Assume students don't know anything about torque
 		(it's very likely they won't know anything)
-	\item Give activity which guides them through torque
-	\item Possibly just take from open source tutorial
-	\item Ok, open source tutorial requires them to do experiment that we don't
-		have resources set up for (though we could relatively easily set them up)
-\iteme
+		\\
+	* Give activity which guides them through torque
+	\\
+	* Possibly just take from open source tutorial
+	\\
+	* Ok, open source tutorial requires them to do experiment that we don't
+		have resources set up for 
+		(though we could relatively easily set them up, 
+		especially in a future quarter)
+}
 
-\subsubsection*{Warm up problems}
+\subsubsection*{Warm up I:  Torque}
 
 \TODO{A lot of these problems can be taken with minimal modification
 	from the UMD open source 
@@ -162,22 +198,45 @@ each step, but this will be much more like doing science in the real world.
 		(positioned like bicep)
 \enume
 
-**Need to figure out how to introduce quantitative relations
-\itemb
-	\item $\tau \sim rF$ (for orthogonal force)
-	\item $\tau \sim rF\sin\theta$
-\iteme
-Ideally, we'd have a simple experiment for them to figure out.
-This is almost certainly possible for a future quarter. **
+\TODO{
+	Need to figure out how to introduce quantitative relations\\
+	* $\tau \sim rF$ (for orthogonal force) \\
+	* $\tau \sim rF\sin\theta$ \\
+}
+\TODO{
+Ideally, we'd have a simple mini-experiment for them to play with,
+to help this introduction to torque.
+This is almost certainly possible for a future quarter. 
+}
+
+\subsubsection*{Warm up II: The apparatus}
+Before we get into equations, take a moment to understand the equipment.  
+	Fill in the blanks on the diagram below, from among the following choices:
+	upper arm (humerus), elbow, forearm, hand, and biceps muscle.
+\TODO{TODO -- Block out the labels in the picture of the apparatus,
+	and replace with blanks -- 
+	similar to a diagram one might fill in for a biology
+	course.  Blanks include 
+	upper arm (humerus), elbow, forearm, hand, and biceps muscle.
+	Do something similar for extended free body diagram (?)
+}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]
+	{{/imgs/6labs/6Alab/6Aexp6/6a-exp6_fig1_text_fix.jpg}}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]
+	{{/imgs/6labs/6Alab/6Aexp6/6A_6_arm.jpg}}
+\end{figure}
 
 \subsection*{Procedure}
-\TODO{Do we want them to measure upper arm force at all?
-In the interests of time, likely not.}
 We wish to investigate some of the forces involved with weight lifting.
 Specifically, we'll examine the situation where you're holding a weight in your
 hand, with your forearm being held horizontal.
-We'll measure the forces experienced by both the biceps muscle
-and the upper arm.
+We'll measure the forces experienced the biceps muscle.
 
 If you'd like, imagine yourself as a 
 physical therapist or prostetic limb designer,
@@ -185,22 +244,23 @@ who wishes to combine physics with some
 general experimental design skills to determine 
 some of the forces involved in lifting objects.
 
-** Common sense warning about using reasonable values, 
-making sure to keep everything but the thing you're measuring constant, etc.**
+\TODO{TODO:  Common sense warning about using reasonable values, 
+making sure to keep everything but the thing you're measuring constant, etc.}
 
-** Discussion about which variables are relevant.  Answer -- forces, distances,
-angles. **
+%\TODO{ Discussion about which variables are relevant.  
+%Answer -- forces, distances, angles. 
+%Not sure whether to move this elsewhere}
 
-** Make sure to emphasize that we'll keep the forearm horizontal, 
-to simplify things. **
+\TODO{TODO: Make sure to emphasize that we'll keep the forearm horizontal, 
+to simplify things.}
 
-\begin{enumerate}[label=\bf{\arabic*.}]
+%\begin{enumerate}[label=\bf{\arabic*.}]
 
-\item
-Start by measuring the biceps force $B$ and the upper arm force $A$ 
-for some fixed weight $H$ being held in the hand.
+%\item
+\question{Start by measuring the biceps force $B$ 
+for some fixed weight $H$ being held in the hand.}
 
-Then devise and carry out a procedure for measuring the forces $B$ and $A$ for
+Then devise and carry out a procedure for measuring the forces $B$ for
 different weights $H$.  
 \question{Make sure to explicitly write out the steps of the procedure.}
 If you find you need to modify the procedure as you carry it out,
@@ -218,60 +278,99 @@ $y(t) = \bparen{10\,\mathrm{m}} +\bparen{4.9\,\mathrm{m/s^2}}t^2$
 is an example of an explicit formula 
 for $y$ as a function of $t$ (for a certain physical situation).}
 Make sure you specify the units of the quantities.
+\answer{The idea is that they need to realize to make a graph to do this.
+	Then they need to notice that the graph is linear,
+	so the `formula' is just the equation of a line.
+}
 
-\item
+%\item
 Choose a new value for $H$ -- one that you haven't measured yet,
 but that you are able to measure.  
 Before you measure $B$, 
 \question{use your model to predict the biceps force $B$ 
 for this new value of $H$.}
 
-** Ideally, first make a rough prediction of $B$ based only on neighboring data
-points, but I probably won't add this due to time. **
-
 Now use the apparatus to measure $B$ for this value of $H$.  
 \question{How does it compare to the prediction from your model?  }
 (Calculate the percent deviation.)
-If the two values don't precisely agree, do
+If the two values don't exactly agree, do
 you think this is okay?  
 \question{Do you think it tells us our model is wrong?}
 Why or why not?
 
-\end{enumerate}
+%\end{enumerate}
 
 
 
 \subsubsection*{Varying model parameters}
 \TODO{TODO: Expand this prompt}
-How does the bicep force change when we increase 
-each of the following parameters:
-\question{Fill in your own copy of the chart below, }
+Using a combination of your intuition for how your own arm works,
+and the knowledge of torque you developed in the warm up exercises,
+\question{predict how the bicep force change when we increase 
+each of the following parameters. }
+Fill in your own copy of the chart below, 
 answering with ``increases'', ``decreases'', 
-``stays constant'', or ``it depends''.
+``stays constant'', or ``something else''.  
+(If you choose something else, explain why you chose that.)
 \vspace{.5cm}
 \\
 %\begin{tabular}{c||c|c|c}
 \begin{tabular}{|c||c|c|c|}
 	\hline
 	Parameter change & Effect on $B$ & Effect of slope of graph &
-	Effect on $y$-intercept of graph \\ \hline \hline
+	Effect on \yint  of graph \\ \hline \hline
 	$\uparrow R$ 
 	& & & 
 	\\ \hline
 	$\uparrow r$ 
 	& & & \\ \hline
 	$\uparrow W$ 
-	& & & \\ \hline
-	$\uparrow \alpha$
+%	& & & \\ \hline
+%	$\uparrow \alpha$
 	& & & 
 	\\ \hline
 
 \end{tabular}
-\TODO{It will probably be difficult to describe what we mean by $\alpha$,
-	and why it's important.}
-\TODO{Consider having students come up with their own ideas of what parameters
-	to vary.  Maybe only provide 3 lines.  Note that they might have trouble
-	coming up with parameters other than $r$.  (Hopefully $r$ will be easy.)}
+%\TODO{It will probably be difficult to describe what we mean by $\alpha$,
+%	and why it's important.}
+\TODO{We're implicitly telling the students here that the data should be linear.
+	This is perhaps not ideal, 
+	but it makes questions like this one much less awkward and
+	much more straightforward.
+}
+\TODO{
+	Consider having students come up with their own ideas 
+	of what parameters to vary.  
+	Maybe only provide 3 lines.  
+	Note that they might have trouble
+	coming up with parameters other than $r$.  
+	(Hopefully $r$ will be easy.)
+}
+
+The way our apparatus is set up, 
+it's easy to change one of the parameter values in the left hand column 
+of the table above.  \question{Which value is this?  }
+Once you've determined what it is, 
+devise an experiment to 
+\question{determine the effect that increasing that parameter
+has on the biceps force $B$ as well as 
+on the slope and the \yint  of the graph.}
+\answer{They should choose a new value for $r$, then re-enact their procedure
+	to determine $B(H)$ for this new $r$ value.  It might be difficult for them
+	to realize that they don't want to find $B(r)$ 
+	-- doing so does answer the first question, 
+	but it doesn't tell them anything about the slope or the \yint .}
+	\TODO{ We might want to just tell them to vary $r$. }
+\TODO{
+%	A few things here:  
+%	(1) 
+	Subtlety: 
+	Changing $r$ changes $\alpha$ as well.  This might be worth a footnote
+		(or mills), but I won't lose any sleep over it, and it won't 
+		much affect the data.
+%	(2) We probably want to remove $\alpha$ from the chart above if we ask
+%	them to figure out which parameter to vary.
+}
 
 
 
@@ -290,8 +389,8 @@ For the same value of the weight $H$ in the hand,
 would the corresponding biceps force $B$ change? 
 In fact, it does: $B$ is larger for a larger value of $R$ 
 (assuming all other parameters are left the same).
-** Ideally ask them a question, to make sure they pay attention to this part.
-**
+\TODO{Ideally ask them a question, to make sure they pay attention to
+this part.}
 
 In reality, you probably want a model of the biceps force that is valid 
 beyond your specific apparatus.  
@@ -339,12 +438,18 @@ provide you with the formula, which is as follows:
 	B = \paren{ H + \frac{W}{2} }\frac{R}{r\cos\alpha}
 \end{equation*}
 
+\begin{comment}
+{{{
 Given this theoretical model, 
 can you determine what the theory predicts the coefficients appearing in
 your formula for $B$ vs $H$ should be?  
+Hopefully, you noticed your data plot of $B$ vs $H$ was linear.
+It turns out, we can use the theoretical model to predict what the slope and
+\yint  of that graph should be.
 \question{First write your answer in terms of symbols} 
 (i.e., variables) only;
-\question{then, plug in the values for those variables} from your apparatus, 
+\question{then, plug in the values for those variables} 
+according to your apparatus, 
 to determine the theoretical model coefficients.
 How do these theoretical coefficients compare to your experimental model
 coefficients?  
@@ -357,36 +462,40 @@ Now, we'll look at the predictions the theoretical model makes on your data
 itself.  
 (This may seem similar to the previous step,
 but there's actually a subtle difference.)
+}}}
+\end{comment}
 Hopefully, you noticed your data plot of $B$ vs $H$ was linear.
-It turns out, we can use the theoretical model to predict what the slope and
-$y$-intercept of that graph should be.
+Now that we have this theoretical model, 
+we can use it to predict what the slope and \yint of your graph should be.
 First, use the theoretical model to 
-\question{predict the slope and $y$-intercept 
-of your graph in terms of symbols only.}
+\question{predict the slope and \yint  
+of your graph in terms of symbols} (i.e., variables) only.
 Next, \question{plug in the actual parameter values 
-from your experimental apparatus}
-to get a numerical value for these parameters (with units!).
+that correspond to your experimental apparatus}
+to get a numerical value for these theoretical coefficients (with units!).
 \question{How does this prediction compare 
-with your actual slope and $y$-intercept?}
-
-\TODO{Probably want to avoid making them do the same steps twice...}
+with your actual slope and \yint ?}
 
 \question{Do the theoretical predictions above agree 
 with the predictions you recorded in the chart above},
 regarding how the bicep force and linear equation parameters change when
 increasing certain apparatus parameters?
 
+\begin{comment}
 You probably noticed some similarities between the previous steps.
 Why do they seem so similar?  
 Is there a relationship between the model parameters
-and the slope and $y$-intercept of your graph?
+and the slope and \yint  of your graph?
 \answer{Since this is a linear model, the model parameters are precisely
-	the slope and the $y$-intercept of the graph.}
+	the slope and the \yint  of the graph.}
+\end{comment}
 
 
 
 
+\begin{comment}
 \section*{Outline}
+{{{
 
 Outline of steps up to this point so far
 \itemb
@@ -397,7 +506,7 @@ Outline of steps up to this point so far
 		\subitem Short exercise with torque?  Maybe intuitive `if we increase
 		$r$, what happens to bicep force?'
 		\TODOg[]{TODO}
-	\item Measure bicep force (and upper arm force) as a function of weight in
+	\item Measure bicep force as a function of weight in
 		hand.  Extrapolate equation from graph.
 	\item Use the model for $B$ vs $H$ to make a prediction for a new value,
 		and test the prediction.
@@ -423,6 +532,8 @@ Remaining steps
 
 \TODO{Note:  It's difficult to tell how much time this will take students, but
 it's likely this is far too much content already.}
+}}}
+\end{comment}
 
 
 
