@@ -16,13 +16,22 @@
 %    urlcolor=cyan,
 }
 
-\usepackage{color}
-\usepackage{xspace}
+\usepackage{color}		% Text color
+\usepackage{xspace}  	% Space at end of macros
 
 
-\newcommand{\TODO}[2][inline,color=green!40]{{ \todo[#1]{#2} }}
-\newcommand{\TODOg}[2][inline]{ \todo[color=green!40,#1]{#2} }
-
+%\newcommand{\TODO}[2][inline,color=green!40]{{ \todo[#1]{#2} }}
+\newcommand{\TODO}[2][inline,color=green!40,caption={}]{{ \todo[#1]{#2} }}
+%\newcommand{\TODOdefaultNotColor}{inline,caption={}}
+%\newcommand{\TODOdefaultColor}{color=green!40}
+%\newcommand{\TODO}[2][\TODOdefaultNotColor,color=green!40]
+%	{{\todo[#1]{#2}}}
+%\newcommand{\TODOg}[2][\TODOdefaultNotColor]{ \todo[color=green!40,#1]{#2} }
+\newcommand{\TODOg}[2][inline,caption={}]{ \todo[color=green!40,#1]{#2} }
+\newcommand{\TODOshanna}[2][inline,caption={}]
+		{ \todo[color=red!40,#1]{\shanna{} #2} }
+\newcommand{\TODOmeeting}[2][inline,caption={}]
+		{ \todo[color=blue!40,#1]{\meeting{} #2} }
 %\newcommand{\question}[2][]{{ \bf #2 }}
 \newcommand{\question}[2][blue]{\textcolor{#1}{#2}}
 
@@ -41,6 +50,11 @@
 \newcommand{\itm}[2][\\ * ]{#1#2}
 
 \newcommand{\temp}[2][]{#1#2}
+
+% indicate that Shanna made a comment
+\newcommand{\shanna}[1][]{{\bf Comment from Shanna:}\xspace}
+% indicate a comment was introduced at a meeting
+\newcommand{\meeting}[1][]{{\bf Comment from meeting:}\xspace}
 
 
 %% Compile controls
@@ -79,9 +93,10 @@ Not part of the lab for students.
 	\\
 	{\bf More practical considerations}
 	\itm Actually write the warm up problems
-	\itm Replace $\alpha$ with $\pi/2-\theta$, and add $\theta$ to diagrams,
+	\itm Replace $\alpha$ with $90\degree-\theta$, and add $\theta$ to diagrams,
 	in order to emphasize connection to the angle usually 
 	referenced in torque calculations.
+	\itm {{\bf Just tell them the model is linear}}
 	\itm Consider guiding students through derivation of
 	$B$ vs $H$ equation.  
 	(Note that there's a question at the end which almost gets there, 
@@ -124,6 +139,23 @@ Not part of the lab for students.
 	and that we need to figure out how good an approximation our model is.
 }
 
+\TODOshanna{
+	Add these to main text:\\ 
+	``By the end of this lab, you will be able:\\
+1. Describe how torque depends on applied force and distance 
+of force from pivot point.\\
+2. Determine how angle of applied force increases or decreases applied torque\\
+3. Use concepts of torque to understand aspects of human arm.\\
+4. Relate bicep muscle force to weight lifted by hand.\\
+5. Extrapolate linear model to make predictions?\\
+6. Recognize the benefits and limitations of a applying a basic
+physics model to a real-world situation (like a human arm).''\\
+Adjust wording to reflect what was in lab learning outcomes
+document, if possible.
+Only include those that explicitly ask the student to show these
+by answering a question.
+}
+
 \TODO{Some notes on word choice:\\
 	{\bf Still deciding}
 	\itm Experimental parameters
@@ -142,6 +174,13 @@ Not part of the lab for students.
 
 \temp{\pagebreak}
 \section*{Introduction}
+
+\TODOshanna{
+	Recommend emailing students in advance to get them excited. :)
+	Add something like ``Because it generally takes longer to devise your own
+	steps, you will notice this lab has significantly fewer parts.''
+}
+	
 
 This lab will be different from the others you've done so far.
 First, we'll have some warm-up exercises to familiarize yourself 
@@ -168,6 +207,7 @@ We hope you enjoy the process!
 		(though we could relatively easily set them up, 
 		especially in a future quarter)
 }
+\TODOshanna{Mastering physics may have a good activity}
 
 \subsubsection*{Warm up I:  Torque}
 
@@ -195,6 +235,8 @@ We hope you enjoy the process!
 	work for next quarter} -- 
 	depending on the resources already in place.
 }
+\TODO[inline,color=green!40,caption={}]{
+{\bf Outline of some warm-up questions}
 \enumb
 	\item Balancing weights on a ruler atop a fulcrum
 		\enumb[label=\alph*.]
@@ -206,6 +248,7 @@ We hope you enjoy the process!
 	\item Replace arbitrary force with a cable at an angle 
 		(positioned like bicep)
 \enume
+}
 
 \TODO{
 	Need to figure out how to introduce quantitative relations\\
@@ -217,6 +260,7 @@ Ideally, we'd have a simple mini-experiment for them to play with,
 to help this introduction to torque.
 This is almost certainly possible for a future quarter. 
 }
+\TODOshanna{Make two versions of this lab -- for this and next quarter}
 
 \subsubsection*{Warm up II: The apparatus}
 Before we get into equations, take a moment to understand the equipment.  
@@ -230,6 +274,18 @@ Before we get into equations, take a moment to understand the equipment.
 }
 \TODO{
 	Do something similar for extended free body diagram (?)
+}
+\TODOmeeting{
+\itemb
+	\item Have them fill in the same diagram with forces and distances, 
+		given a description of those forces/distances in words.
+		\subitem They'll be given a rectangle with some holes,
+		and diagonal lines to give the appropriate angle for the 
+		upper arm and biceps
+		\subitem Have $W$ on diagram already, mentioning center of mass
+		\subitem Label $\theta$ already
+	\item Fix pivot point in diagram (doesn't currently line up)
+\iteme
 }
 
 \begin{figure}[h!]
@@ -245,7 +301,11 @@ Before we get into equations, take a moment to understand the equipment.
 
 
 \TODO{
-	Question:
+	Potential question for students:
+	\textcolor{purple}{\bf \\
+		\shanna
+		Probably not worth the confusion this will cause.
+		Just tell them how to deal with the scale as is. \\}
 	The biceps force gauge is labeled in kilograms.  
 	Strictly speaking, does this make sense?
 	In particular, would this be correct if we used the gauge on the moon?
@@ -259,10 +319,10 @@ Before we get into equations, take a moment to understand the equipment.
 We wish to investigate some of the forces involved with weight lifting.
 Specifically, we'll examine the situation where you're holding a weight in your
 hand, with your forearm being held horizontal.
-We'll measure the forces experienced the biceps muscle.
+We'll measure the forces exerted by the biceps muscle.
 
 If you'd like, imagine yourself as a 
-physical therapist or prostetic limb designer,
+physical therapist or prosthetic limb designer,
 who wishes to combine physics with some 
 general experimental design skills to determine 
 some of the forces involved in lifting objects.
@@ -279,6 +339,7 @@ to simplify things.}
 
 \question{Start by measuring the biceps force $B$ 
 for some fixed weight $H$ being held in the hand.}
+\TODOshanna{Tell them to record the values.}
 
 Then devise and carry out a procedure for measuring the forces $B$ for
 different weights $H$.  
@@ -291,7 +352,8 @@ After taking several measurements (you can choose a number which seems
 reasonable), use your data to 
 \question{extrapolate a relationship between the biceps
 force $B$ and the weight $H$ in the hand.}
-\question{Write a explicit formula for $B$ as a function of $H$.}
+\TODOshanna[inline,fancyline]{Remind them ``You did this in the XX lab''}
+\question{Write an explicit formula for $B$ as a function of $H$.}
 \emph{Hint:  In case this terminology is a bit unfamiliar, 
 it might help to know that
 $y(t) = \bparen{10\,\mathrm{m}} +\bparen{4.9\,\mathrm{m/s^2}}t^2$ 
@@ -308,6 +370,8 @@ but that you are able to measure.
 Before you measure $B$, 
 \question{use your model to predict the biceps force $B$ 
 for this new value of $H$.}
+\TODOshanna{``Before you make the measurement, 
+have your TA approve your prediction and reasoning.''}
 
 Now use the apparatus to measure $B$ for this value of $H$.  
 \question{How does it compare to the prediction from your model?  }
@@ -334,7 +398,7 @@ answering with ``increases'', ``decreases'',
 \\
 \begin{tabular}{|c||c|c|c|}
 	\hline
-	Parameter change & Effect on $B$ & Effect of slope of graph &
+	Parameter change & Effect on $B$ & Effect on slope of graph &
 	Effect on \yint  of graph \\ \hline \hline
 	$\uparrow R$ 
 	& & & 
@@ -348,6 +412,14 @@ answering with ``increases'', ``decreases'',
 	\\ \hline
 
 \end{tabular}
+\TODOmeeting{
+\itemb
+	\item Replace slope with ``$\Delta B/\Delta H$'' and intercept with
+		``value of $B$ when $H=0$''.
+	\item Ask them whether these quantities correspond to anything on their
+		graph
+\iteme
+}
 \TODO{We're implicitly telling the students here that the data should be linear.
 	This is perhaps not ideal, 
 	but it makes questions like this one much less awkward and
@@ -547,6 +619,14 @@ and the slope and \yint  of your graph?
 		{\bf The key torque concept} your friend forgot was to consider 
 		{\bf the angle at which the force is applied}.  
 		}
+
+\TODOmeeting{
+\itemb
+	\item Don't even need to have them redo the caluclation.
+		Just need them to realize they forgot the angle.
+	\item Let them know this analysis will help them on the test.
+\iteme
+}
 \TODO{Give explicit numerical values for $R,r,W,H$.
 			including a large value of $r$, so $\cos\alpha$ is small.
 		}
@@ -560,6 +640,10 @@ and the slope and \yint  of your graph?
 			all the previous experiments we've performed.}
 		\TODO{Consider changing this into a `Student A says ..., student B says
 			...; which one is more correct?'}
+		\TODOshanna{This type of question is beyond their level of
+		understanding.}
+
+\TODOmeeting{New problem:  Difference between this model and the real world?}
 \iteme
 
 
