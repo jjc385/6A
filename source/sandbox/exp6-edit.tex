@@ -97,21 +97,12 @@ Not part of the lab for students.
 	in order to emphasize connection to the angle usually 
 	referenced in torque calculations.
 	\itm {{\bf Just tell them the model is linear}}
-	\itm Consider guiding students through derivation of
-	$B$ vs $H$ equation.  
-	(Note that there's a question at the end which almost gets there, 
-	and requires students to think critically about the derivation.)
+%	\itm Consider guiding students through derivation of
+%	$B$ vs $H$ equation.  
+%	(Note that there's a question at the end which almost gets there, 
+%	and requires students to think critically about the derivation.)
 	\itm Supplement pictures of apparatus with biological pictures.  Possibly
 	ask students to do fill-in-the-blanks for both sets of pictures.
-	\itm Ask students to estimate the `experimental parameters' associated
-	with their own arms.  Maybe ask how the force compares for someone with a
-	shorter arm.
-	\answer{$R,r,W$ all smaller, $H,\theta$ remain the same.
-		Less torque due to bicep, but also less torque due to hand force
-		and weight of arm.  
-		If $r$ and $R$ decrease in proportion, it takes the smaller person
-		slightly less biceps force to lift the same amount of weight.
-	}
 	\\
 	{\bf More on the meta side}
 	\itm Be careful (and consistent) with word choice.  
@@ -316,7 +307,10 @@ Before we get into equations, take a moment to understand the equipment.
 
 \temp{\clearpage}
 \section*{Procedure}
-We wish to investigate some of the forces involved with weight lifting.
+Every time a person lifts a weight, throws a ball, or turns a page,
+there are forces involved throughout the muscular and skelatal systems.
+We wish to investigate just one example of those forces.
+%We wish to investigate some of the forces involved with weight lifting.
 Specifically, we'll examine the situation where you're holding a weight in your
 hand, with your forearm being held horizontal.
 We'll measure the forces exerted by the biceps muscle.
@@ -327,44 +321,70 @@ who wishes to combine physics with some
 general experimental design skills to determine 
 some of the forces involved in lifting objects.
 
-\TODO{TODO:  Common sense warning about using reasonable values, 
-making sure to keep everything but the thing you're measuring constant, etc.}
 
-%\TODO{ Discussion about which variables are relevant.  
-%Answer -- forces, distances, angles. 
-%Not sure whether to move this elsewhere}
+As we said before, you'll be given quite a bit more freedom in this lab.
+Part of that means you'll have to think critically about 
+which steps you'll be taking, and you'll have to examine your results to 
+check whether they seem reasonable.  
+When you're making decisions like this, think back to some of the things
+you've done in the previous labs -- many of those choices were made 
+for good reasons, and represent good experimental practices.
 
-\TODO{TODO: Make sure to emphasize that we'll keep the forearm horizontal, 
-to simplify things.}
+\begin{enumerate}[series=labproc,label={\bf \arabic*.}]
 
+\item
+{\bf In everything that follows, make sure the forearm bar is horizontal.}
+We're focusing on this case 
+(1) because every experiment needs to focus on specific scenarios in order to 
+make meaningful conclusions,
+and (2) because keeping the forearm horizontal vastly simplifies both the
+measurements and the calculations.
+
+\item
 \question{Start by measuring the biceps force $B$ 
 for some fixed weight $H$ being held in the hand.}
-\TODOshanna{Tell them to record the values.}
+Make sure to record this value (with units).
+Note that the force gauges are labelled with units of mass (kilograms) rather
+than units of force (Newtons).  
+You need to multiply the mass readings by $g=\smans{9.8}{m/s^2}$ 
+to convert the mass values to
+their corresponding \emph{weight} values.  Note that you may wish to first just
+record the mass values, and convert to weight using Excell.
+\eq{
+	B = \bparen{\text{Biceps gauge reading (in kilograms)}}\times g
+}
 
-Then devise and carry out a procedure for measuring the forces $B$ for
-different weights $H$.  
+\item
+Now devise and carry out a procedure for measuring (and recording)
+the force $B$ for different weights $H$.  
 \question{Make sure to explicitly write out the steps of the procedure.}
 If you find you need to modify the procedure as you carry it out,
 that's okay -- but be sure to change the written version to correctly
 reflect the steps you really carried out.
 
+\item
 After taking several measurements (you can choose a number which seems
 reasonable), use your data to 
 \question{extrapolate a relationship between the biceps
-force $B$ and the weight $H$ in the hand.}
-\TODOshanna[inline,fancyline]{Remind them ``You did this in the XX lab''}
-\question{Write an explicit formula for $B$ as a function of $H$.}
+force $B$ and the weight $H$ in the hand}:
+First, argue that your data shows a linear relationship between $B$ and $H$.
+\question{Then, write an explicit formula for $B$ as a function of $H$.}
 \emph{Hint:  In case this terminology is a bit unfamiliar, 
 it might help to know that
 $y(t) = \bparen{10\,\mathrm{m}} +\bparen{4.9\,\mathrm{m/s^2}}t^2$ 
 is an example of an explicit formula 
 for $y$ as a function of $t$ (for a certain physical situation).}
-Make sure you specify the units of the quantities.
+Make sure you specify the units of all quantities involved.
+Hint:  You've performed similar steps in previous labs.
+Think back to any time you graphed your data 
+and fit a trendline to the graph.
+
 \answer{The idea is that they need to realize to make a graph to do this.
 	Then they need to notice that the graph is linear,
 	so the `formula' is just the equation of a line.
 }
 
+\item
 Choose a new value for $H$ -- one that you haven't measured yet,
 but that you are able to measure.  
 Before you measure $B$, 
@@ -373,6 +393,7 @@ for this new value of $H$.}
 \TODOshanna{``Before you make the measurement, 
 have your TA approve your prediction and reasoning.''}
 
+\item
 Now use the apparatus to measure $B$ for this value of $H$.  
 \question{How does it compare to the prediction from your model?  }
 (Calculate the percent deviation.)
@@ -381,11 +402,20 @@ you think this is okay?
 \question{Do you think it tells us our model is wrong?}
 Why or why not?
 
+\end{enumerate}
 
 
 
 \subsubsection*{Varying model parameters}
-\TODO{TODO: Expand this prompt}
+\TODO{TODO: Expand this prompt.  Clarify that they won't be doing an experiment
+for this, and explain why predictions are important.}
+
+Now that you've gained a bit of familiarity with the apparatus
+by taking some measurements, 
+let's take a step back and think a bit more about what's going on.
+
+\begin{enumerate}[labproc]
+\item
 Using a combination of your intuition for how your own arm works,
 and the knowledge of torque you developed in the warm up exercises,
 \question{predict how the biceps force change when we increase 
@@ -398,8 +428,10 @@ answering with ``increases'', ``decreases'',
 \\
 \begin{tabular}{|c||c|c|c|}
 	\hline
-	Parameter change & Effect on $B$ & Effect on slope of graph &
-	Effect on \yint  of graph \\ \hline \hline
+	Parameter change & Effect on $B$ 
+	& Effect on value of $B$ when $H=0$
+	& Effect on $\Delta B/\Delta H$ 
+	\\ \hline \hline
 	$\uparrow R$ 
 	& & & 
 	\\ \hline
@@ -410,56 +442,38 @@ answering with ``increases'', ``decreases'',
 %	$\uparrow \alpha$
 	& & & 
 	\\ \hline
+\end{tabular}\\
 
-\end{tabular}
-\TODOmeeting{
-\itemb
-	\item Replace slope with ``$\Delta B/\Delta H$'' and intercept with
-		``value of $B$ when $H=0$''.
-	\item Ask them whether these quantities correspond to anything on their
-		graph
-\iteme
-}
-\TODO{We're implicitly telling the students here that the data should be linear.
-	This is perhaps not ideal, 
-	but it makes questions like this one much less awkward and
-	much more straightforward.
-	\\
-	Liz pointed out that nonlinear graphs still have slopes and intercepts,
-	so technically we're not giving linearity away completely.
-	At least not yet.
-}
-\TODO{
-	Consider having students come up with their own ideas 
-	of what parameters to vary.  
-	Maybe only provide 3 lines.  
-	Note that they might have trouble
-	coming up with parameters other than $r$.  
-	(Hopefully $r$ will be easy.)
-}
+\question{How do (a) the value of $B$ when $H=0$ 
+and (b) $\Delta B/\Delta H$ 
+relate to the slope and vertical intercept of your graph?}
 
+\item
 The way our apparatus is set up, 
-The easiest of the above parameters to vary is $r$.
+the easiest of the above parameters to vary experimentally is $r$.
 Devise an experiment to 
 \question{determine the effect that increasing $r$
 has on the biceps force $B$ as well as 
 on the slope and the \yint  of the graph.}
+Make sure to record the data that leads you to this conclusion.
+Do your results agree with your prediction above?
+
 \answer{They should choose a new value for $r$, then re-enact their procedure
 	to determine $B(H)$ for this new $r$ value.  
 	{\bf It might be difficult for them
 	to realize that they don't want to find $B(r)$ }
 	-- doing so does answer the first question, 
 	but it doesn't tell them anything about the slope or the \yint.}
-\TODO{
+
+\answer{
 	Subtlety: 
-	Changing $r$ changes $\alpha$ as well.  This might be worth a footnote
-		(or mills), but I won't lose any sleep over it, and it won't 
-		much affect the data.
-	{\bf If we really want to emphasize the importance of the angle
-		at which the force is applied, we probably want to address this more
-	than is already done.}
+	Changing $r$ changes $\alpha$ as well.  
+	It might be worth TAs mentioning this to students, 
+	but note that it shouldn't really affect their answers much,
+	at least for the values of $r$ allowed by the apparatus.
 }
 
+\end{enumerate}
 
 
 
@@ -502,7 +516,8 @@ change this parameter, the coefficients in the formular for $B(H)$ change.
 }}}
 \end{comment}
 
-\subsubsection*{Understanding model parameters}
+%\subsubsection*{Understanding model parameters}
+\subsubsection*{Comparing results to theoretical predictions}
 \TODO{
 Ideally we'd have enough time to guide the students in deriving this formula,
 but this isn't out main goal for the lab.  Hopefully we'll still give them some
@@ -523,33 +538,10 @@ provide you with the formula, which is as follows:
 	B = \paren{ H + \frac{W}{2} }\frac{R}{r\cos\alpha}
 \end{equation*}
 
-\begin{comment}
-{{{
-Given this theoretical model, 
-can you determine what the theory predicts the coefficients appearing in
-your formula for $B$ vs $H$ should be?  
-Hopefully, you noticed your data plot of $B$ vs $H$ was linear.
-It turns out, we can use the theoretical model to predict what the slope and
-\yint  of that graph should be.
-\question{First write your answer in terms of symbols} 
-(i.e., variables) only;
-\question{then, plug in the values for those variables} 
-according to your apparatus, 
-to determine the theoretical model coefficients.
-How do these theoretical coefficients compare to your experimental model
-coefficients?  
-(\question{Calculate the percent difference} 
-and \question{comment on how well they agree}.)
 
-You just used a theoretical model to predict the values of your experimental
-model coefficients.
-Now, we'll look at the predictions the theoretical model makes on your data
-itself.  
-(This may seem similar to the previous step,
-but there's actually a subtle difference.)
-}}}
-\end{comment}
+\begin{enumerate}[labproc]
 
+\item
 %Hopefully, you noticed your data plot of $B$ vs $H$ was linear.
 Now that we have this theoretical model, 
 we can use it to predict what the slope and \yint of your graph should be.
@@ -567,20 +559,17 @@ with the predictions you recorded in the chart above},
 regarding how the biceps force and linear equation parameters change when
 increasing certain apparatus parameters?
 
-\begin{comment}
-You probably noticed some similarities between the previous steps.
-Why do they seem so similar?  
-Is there a relationship between the model parameters
-and the slope and \yint  of your graph?
-\answer{Since this is a linear model, the model parameters are precisely
-	the slope and the \yint  of the graph.}
-\end{comment}
+\end{enumerate}
 
 
 \temp{\pagebreak}
 \section*{Wrapping up}
-\itemb
+\begin{enumerate}[labproc]
 	\item 
+		Note:  This problem involves quite a bit of reading,
+		but it should help you understand the importance of a key
+		concept, which will help you on your homework and exams.
+
 %		Imagine that you suspected the biceps force gauge on
 %		your apparatus were malfunctioning.
 %		The gauge currently reads 2 kilograms,
@@ -588,7 +577,10 @@ and the slope and \yint  of your graph?
 		Imagine you and a friend wanted to predict the biceps force by 
 		directly analyzing the torques involve in the apparatus.
 		You and your friend determine that the experimental parameters for
-		your apparatus are {$R,r,W,H=...$.  ]}.
+		your apparatus are 
+%		{$R,r,W,H=...$.  ]}.
+		$R=\smans{40}{cm}$, $r=\smans{15}{cm}$,
+		$W=\smans{100}{g}$, $H=\smans{200}{g}$.
 		Your friend attempts to use the theoretical model
 		to predict the value of the biceps force.
 		He claims that the torque exerted by the biceps must be equal and 
@@ -609,8 +601,9 @@ and the slope and \yint  of your graph?
 
 		If your prediction is not consistent with the experimental result, 
 		go back and figure out what was wrong with your friend's argument
-		above.  Redo the calculation of the prediction correctly,
-		and verify that it agrees with your experimental result.
+		above.  
+%		Redo the calculation of the prediction correctly,
+%		and verify that it agrees with your experimental result.
 
 		Was there a key torque concept he forgot to take into account?
 		\answer{Your friend forgot to consider the angle at which torque is
@@ -622,29 +615,26 @@ and the slope and \yint  of your graph?
 
 \TODOmeeting{
 \itemb
-	\item Don't even need to have them redo the caluclation.
-		Just need them to realize they forgot the angle.
 	\item Let them know this analysis will help them on the test.
 \iteme
 }
-\TODO{Give explicit numerical values for $R,r,W,H$.
-			including a large value of $r$, so $\cos\alpha$ is small.
-		}
-	\item Why do we bother doing this experiment, 
-		when we have the theory of torques and forces to explain 
-		the experimental situation for us?
-		\answer{Because the theory doesn't account for everything -- it's just
-			an approximation to the real-world situation.  
-			This is especially true for something as complicated as a 
-			human arm, but it also applies to 
-			all the previous experiments we've performed.}
-		\TODO{Consider changing this into a `Student A says ..., student B says
-			...; which one is more correct?'}
-		\TODOshanna{This type of question is beyond their level of
-		understanding.}
+\TODO{Make sure the numerical values make sense.
+		Make sure to have a large value of $r$, so $\cos\alpha$ is small.}
 
 \TODOmeeting{New problem:  Difference between this model and the real world?}
-\iteme
+\TODO{
+	New problem:  
+	Ask students to estimate the `experimental parameters' associated
+	with their own arms.  Maybe ask how the force compares for someone with a
+	shorter arm.
+	\answer{$R,r,W$ all smaller, $H,\theta$ remain the same.
+		Less torque due to bicep, but also less torque due to hand force
+		and weight of arm.  
+		If $r$ and $R$ decrease in proportion, it takes the smaller person
+		slightly less biceps force to lift the same amount of weight.
+	}
+}
+\end{enumerate}
 
 
 \end{document}
