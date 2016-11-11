@@ -51,6 +51,8 @@
 
 \newcommand{\temp}[2][]{#1#2}
 
+\renewcommand{\smans}[2]{#1\,\mathrm{#2}}
+
 % indicate that Shanna made a comment
 \newcommand{\shanna}[1][]{{\bf Comment from Shanna:}\xspace}
 % indicate a comment was introduced at a meeting
@@ -62,10 +64,10 @@
 %%		text features will be turned off.  Questions will be displayed
 %%		in normal font, while answers and todo notes will be turned off.
 
-%\renewcommand{\question}[2][]{#2}
-%\renewcommand{\answer}[2][]{}
-%\renewcommand{\TODO}[2][]{}
-%renewcommand{\temp}[2][]{}
+\renewcommand{\question}[2][]{#2}
+\renewcommand{\answer}[2][]{}
+\renewcommand{\TODO}[2][]{}
+%\renewcommand{\temp}[2][]{}
 
 
 \begin{document}
@@ -90,63 +92,13 @@ Not part of the lab for students.
 
 
 \TODO{Overall TODO list:  (In addition to items scattered throughout the text)
-	\\
-	{\bf More practical considerations}
-	\itm Actually write the warm up problems
-	\itm Replace $\alpha$ with $90\degree-\theta$, and add $\theta$ to diagrams,
-	in order to emphasize connection to the angle usually 
-	referenced in torque calculations.
 	\itm {{\bf Just tell them the model is linear}}
-%	\itm Consider guiding students through derivation of
-%	$B$ vs $H$ equation.  
-%	(Note that there's a question at the end which almost gets there, 
-%	and requires students to think critically about the derivation.)
-	\itm Supplement pictures of apparatus with biological pictures.  Possibly
-	ask students to do fill-in-the-blanks for both sets of pictures.
-	\\
-	{\bf More on the meta side}
-	\itm Be careful (and consistent) with word choice.  
-			E.g.: parameters, models, formulas.
-	\itm Think about specific learning outcomes
-	\itm Think about how well lab accomplishes learning goals/outcomes
-	\itm Make the procedure easier for students to read 
-	-- break into numbered bullet points
-	\itm Consider creating sample sheet on which to write data, or just a list
-	of all the specific tasks the students need to perform.  Note that this list
-	might work well while I'm overseeing this lab, but future TAs will likely
-	want to modify it.
 }
 
-\TODO{(Rough) {\bf Learning goals}
-	-- gain familiarity with/understanding of the following:
-	\itm Basic static torque -- distance and magnitude of force
-	\itm Angle in torque -- make sure to really emphasize this
-	\itm Torque applies to human arm
-	\itm Biceps force is linear in force on hand
-	\itm Emphasis on what a linear model looks like
-	\itm Understad what it's like to apply a theoretical model
-	to a complicated real-world situation (like a human arm).
-	Understand that this will [always] be an approximation, 
-	and that we need to figure out how good an approximation our model is.
-}
 
-\TODOshanna{
-	Add these to main text:\\ 
-	``By the end of this lab, you will be able:\\
-1. Describe how torque depends on applied force and distance 
-of force from pivot point.\\
-2. Determine how angle of applied force increases or decreases applied torque\\
-3. Use concepts of torque to understand aspects of human arm.\\
-4. Relate bicep muscle force to weight lifted by hand.\\
-5. Extrapolate linear model to make predictions?\\
-6. Recognize the benefits and limitations of a applying a basic
-physics model to a real-world situation (like a human arm).''\\
-Adjust wording to reflect what was in lab learning outcomes
-document, if possible.
-Only include those that explicitly ask the student to show these
-by answering a question.
-}
-
+\begin{comment}
+%\TODO{Some notes on word choice:\\
+{{{
 \TODO{Some notes on word choice:\\
 	{\bf Still deciding}
 	\itm Experimental parameters
@@ -161,17 +113,11 @@ by answering a question.
 	and theoretical models
 	\itm Vertical intercept, vs y-interecept or B-interecept
 }
+}}}
+\end{comment}
 
 
-\temp{\pagebreak}
 \section*{Introduction}
-
-\TODOshanna{
-	Recommend emailing students in advance to get them excited. :)
-	Add something like ``Because it generally takes longer to devise your own
-	steps, you will notice this lab has significantly fewer parts.''
-}
-	
 
 This lab will be different from the others you've done so far.
 First, we'll have some warm-up exercises to familiarize yourself 
@@ -185,33 +131,26 @@ It will be something of a challenge to figure out how exactly to accomplish
 each step, but this will be much more like doing science in the real world.
 We hope you enjoy the process!
 
+\subsection*{Learning outcomes}
+By the end of this lab, you will be able to:
+\enumb[label=\roman*.]
+\item Describe how torque depends on applied force and distance 
+of force from pivot point.
+\item Understand that angle at which a force is applied 
+	affects the applied torque.
+\item Use concepts of torque to understand aspects of the human arm.
+\item Relate the biceps muscle force to weight lifted by the hand.
+\item Extrapolate a linear model from experimental data
+\item Use experimental results and critical thinking
+	to make predictions about future results
+%\item Recognize the benefits and limitations of a applying a basic
+%physics model to a real-world situation (like a human arm).
+\enume
 
 \subsection*{Warm up}
-\TODO{
-	{\bf Comments on warm up:}
-	\itm Assume students don't know anything about torque
-		(it's very likely they won't know anything)
-	\itm Give activity which guides them through torque
-	\itm Possibly just take from open source tutorial
-	\itm Ok, open source tutorial requires them to do experiment that we don't
-		have resources set up for 
-		(though we could relatively easily set them up, 
-		especially in a future quarter)
-}
-\TODOshanna{Mastering physics may have a good activity}
 
 \subsubsection*{Warm up I:  Torque}
 
-\TODO{A lot of these problems can be taken with minimal modification
-	from the UMD open source 
-	\href{https://www.dropbox.com/sh/i3iftgdflca6yj0/AAA37zsDuMN591__i-oPnjiSa/Suite\%20II/Instruction/Student_Materials/01_Torque/Tutorial_01_Torque.doc?dl=0}
-		{tutorial on torque} 
-		(and the 
-		\href{https://www.dropbox.com/sh/i3iftgdflca6yj0/AABuUrEqKUU4ZvRvxi_cQLWYa/Suite\%20II/Instruction/Student_Materials/01_Torque/Tutorial_01_Homework.doc?dl=0}
-		{corresponding HW assignment}
-		) [click colored text for links], which focus on static torque ,
-		especially on things like levers
-}
 \TODO[inline]{Note:  These questions would probably work better if
 	the students could actually perform 
 	some of these mini-experiments.
@@ -226,84 +165,112 @@ We hope you enjoy the process!
 	work for next quarter} -- 
 	depending on the resources already in place.
 }
-\TODO[inline,color=green!40,caption={}]{
-{\bf Outline of some warm-up questions}
-\enumb
-	\item Balancing weights on a ruler atop a fulcrum
-		\enumb[label=\alph*.]
-			\item Two equidistant weights on opposite side of pivot
-			\item Double one weight's distance; ask how much weight needs to be
-				added and to which side
-		\enume
-	\item Replace one of the weights with an arbitrary force pointing downward
-	\item Replace arbitrary force with a cable at an angle 
-		(positioned like bicep)
-\enume
-}
 
-\TODO{
-	Need to figure out how to introduce quantitative relations\\
-	* $\tau \sim rF$ (for orthogonal force) \\
-	* $\tau \sim rF\sin\theta$ \\
-}
-\TODO{
-Ideally, we'd have a simple mini-experiment for them to play with,
-to help this introduction to torque.
-This is almost certainly possible for a future quarter. 
-}
-\TODOshanna{Make two versions of this lab -- for this and next quarter}
+Before you start the main portion of the lab, 
+here are some warm up questions to introduce you to the key concept of torque.
+
+\enumb
+\item 
+	%From tutorial (numbers modified)
+	A 60 kilogram parent sits on a seesaw, 1 meter to the right of the pivot.
+	How far to the left should a 30 kilogram child sit in order to balance
+	the seesaw?
+%	Answer using any kind of reasoning you want.
+	If you haven't seen this type of problem before, 
+	try to answer it intuitively.
+	Perhaps you can give a range of possible values?
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]
+		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw.jpg}}
+	\end{figure}
+\item 
+	%From MPhys
+	Now reconsider the previous problem in light of
+	a more formal introduction to torque. 
+	The torque of each person about the pivot point is the product of 
+	the person's weight and the distance of the person 
+	(strictly speaking, the person's center of mass) from the pivot. 
+	The sign of the torque is positive if it would cause 
+	a counterclockwise rotation of the seesaw. 
+%	The distance is measured perpendicular to the line of force 
+%	and is called the moment arm.
+	The net torque is the sum of the individual torques
+	from each person.
+
+%	The concept of torque requires both a force 
+%	and a specification of the pivot point, 
+%	emphasized by the first subscript on the torque.
+	If you didn't use quantitative reasoning in your answer to the previous
+	problem, go back and do so now.
+
+\item
+	Consider now a slightly modified seesaw setup, with a child 
+	of weight $W$ sitting a distance $L$ to the right of the pivot.
+	This time, the seesaw is balanced by an upward force $F$
+	applied at a distance $r$ to the left of the pivot 
+	-- on the same side of the pivot as the child.
+	Express the force $F$ in terms of $W$, $L$, and $r$.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]
+		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_vertical-force.jpg}}
+		\includegraphics[width=0.4\textwidth]
+		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_angled-force.jpg}}
+	\end{figure}
+	
+\item
+	Finally, imagine that the child sitting on the seesaw
+	is balanced by a force acting at an angle,
+	rather than a vertical force.
+	Does the magnitude of this new force $F'$ need to be 
+	larger, smaller, or the same size as the previous (vertical) force $F$?
+%	\begin{figure}[h!]
+%		\centering
+%		\includegraphics[width=0.4\textwidth]
+%		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_angled-force.jpg}}
+%	\end{figure}
+
+\enume
 
 \subsubsection*{Warm up II: The apparatus}
 Before we get into equations, take a moment to understand the equipment.  
-	Fill in the blanks on the diagram below, from among the following choices:
+\enumb
+\item
+	Label the photograph of the apparatus below with the following labels:
 	upper arm (humerus), elbow, forearm, hand, and biceps muscle.
-\TODO{TODO -- Block out the labels in the picture of the apparatus,
-	and replace with blanks -- 
-	similar to a diagram one might fill in for a biology
-	course.  Blanks include 
-	upper arm (humerus), elbow, forearm, hand, and biceps muscle.
-}
-\TODO{
-	Do something similar for extended free body diagram (?)
-}
-\TODOmeeting{
-\itemb
-	\item Have them fill in the same diagram with forces and distances, 
-		given a description of those forces/distances in words.
-		\subitem They'll be given a rectangle with some holes,
-		and diagonal lines to give the appropriate angle for the 
-		upper arm and biceps
-		\subitem Have $W$ on diagram already, mentioning center of mass
-		\subitem Label $\theta$ already
-	\item Fix pivot point in diagram (doesn't currently line up)
-\iteme
-}
+	Be sure to reference the anatomical picture of the arm in case
+	any of these features of the apparatus are unclear.
+\item
+	Label the free body diagram below with the following forces and distances:
+\begin{itemize}
+	\item $r$:  The distance between the elbow 
+		and the point where the biceps muscle attaches to the forearm
+	\item $R$:	The distance between the elbow and the hand
+	\item $B$:	The force the biceps muscle exerts on the forearm
+	\item $W$:  The force due to the weight of the forearm (already labeled on
+		the diagram -- it acts on the center of mass of the forearm)
+\end{itemize}
+
+\enume
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.6\textwidth]
-	{{/imgs/6labs/6Alab/6Aexp6/6a-exp6_fig1_text_fix.jpg}}
+	{{/imgs/6labs/6Alab/6Aexp6/6a-exp6_bicep-pic_text-removed.jpg}}
 \end{figure}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.6\textwidth]
-	{{/imgs/6labs/6Alab/6Aexp6/6A_6_arm.jpg}}
+	{{/imgs/6labs/6Alab/6Aexp6/6A_6_bicep-anatomy-sketch.jpg}}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]
+	{{/imgs/6labs/6Alab/6Aexp6/6A_6_arm_updated.jpg}}
 \end{figure}
 
 
-\TODO{
-	Potential question for students:
-	\textcolor{purple}{\bf \\
-		\shanna
-		Probably not worth the confusion this will cause.
-		Just tell them how to deal with the scale as is. \\}
-	The biceps force gauge is labeled in kilograms.  
-	Strictly speaking, does this make sense?
-	In particular, would this be correct if we used the gauge on the moon?
-	What units should the scale be labeled with instead?
-	Can you think of any reasons why it might be useful to have the scale
-	labeled in kilograms?
-}
 
 \temp{\clearpage}
 \section*{Procedure}
@@ -349,7 +316,7 @@ than units of force (Newtons).
 You need to multiply the mass readings by $g=\smans{9.8}{m/s^2}$ 
 to convert the mass values to
 their corresponding \emph{weight} values.  Note that you may wish to first just
-record the mass values, and convert to weight using Excell.
+record the mass values, and convert to weight using Excel.
 \eq{
 	B = \bparen{\text{Biceps gauge reading (in kilograms)}}\times g
 }
@@ -390,8 +357,9 @@ but that you are able to measure.
 Before you measure $B$, 
 \question{use your model to predict the biceps force $B$ 
 for this new value of $H$.}
-\TODOshanna{``Before you make the measurement, 
-have your TA approve your prediction and reasoning.''}
+
+Before you move on to the next step and make the measurement, 
+have your TA approve your prediction and reasoning.
 
 \item
 Now use the apparatus to measure $B$ for this value of $H$.  
@@ -407,8 +375,6 @@ Why or why not?
 
 
 \subsubsection*{Varying model parameters}
-\TODO{TODO: Expand this prompt.  Clarify that they won't be doing an experiment
-for this, and explain why predictions are important.}
 
 Now that you've gained a bit of familiarity with the apparatus
 by taking some measurements, 
@@ -467,7 +433,7 @@ Do your results agree with your prediction above?
 
 \answer{
 	Subtlety: 
-	Changing $r$ changes $\alpha$ as well.  
+	Changing $r$ changes the angle as well.  
 	It might be worth TAs mentioning this to students, 
 	but note that it shouldn't really affect their answers much,
 	at least for the values of $r$ allowed by the apparatus.
@@ -506,7 +472,8 @@ change this parameter, the coefficients in the formular for $B(H)$ change.
 	(2) parameters which change model parameters, but not the form of the model
 	(3) parameters which ``break'' the model 
 		-- i.e., they change the form of the model.
-	In this case, $r,R,\alpha,W$ are type (2), whereas the angle of the forearm
+	In this case, $r,R,W$, and angle of the bicep force are type (2), 
+	whereas the angle of the forearm
 	to the horizontal is type (3).\\
 
 	We might be able to get this across by giving them an extended worked
@@ -518,11 +485,6 @@ change this parameter, the coefficients in the formular for $B(H)$ change.
 
 %\subsubsection*{Understanding model parameters}
 \subsubsection*{Comparing results to theoretical predictions}
-\TODO{
-Ideally we'd have enough time to guide the students in deriving this formula,
-but this isn't out main goal for the lab.  Hopefully we'll still give them some
-intuition for the formula.
-}
 
 In a previous step above,
 you experimentally determined a formula for the biceps force $B$ as a function
@@ -535,7 +497,7 @@ to do this from the warm up exercises at the beginning of this lab, and we
 encourage you to give it a try!  But in the interest of time, we'll just
 provide you with the formula, which is as follows:
 \begin{equation*}
-	B = \paren{ H + \frac{W}{2} }\frac{R}{r\cos\alpha}
+	B = \paren{ H + \frac{W}{2} }\frac{R}{r\sin\theta}
 \end{equation*}
 
 
@@ -566,7 +528,7 @@ increasing certain apparatus parameters?
 \section*{Wrapping up}
 \begin{enumerate}[labproc]
 	\item 
-		Note:  This problem involves quite a bit of reading,
+		Note:  This problem involves a bit of reading,
 		but it should help you understand the importance of a key
 		concept, which will help you on your homework and exams.
 
@@ -579,8 +541,8 @@ increasing certain apparatus parameters?
 		You and your friend determine that the experimental parameters for
 		your apparatus are 
 %		{$R,r,W,H=...$.  ]}.
-		$R=\smans{40}{cm}$, $r=\smans{15}{cm}$,
-		$W=\smans{100}{g}$, $H=\smans{200}{g}$.
+		$R=\smans{50}{cm}$, $r=\smans{25}{cm}$,
+		$W=\smans{250}{g}$, $H=\smans{250}{g}$.
 		Your friend attempts to use the theoretical model
 		to predict the value of the biceps force.
 		He claims that the torque exerted by the biceps must be equal and 
@@ -593,11 +555,12 @@ increasing certain apparatus parameters?
 		Since the torques must be equal and opposite, we have
 		$Br=HR+WR/2$.
 
-		You read the biceps gauge and find it reads 2 kilograms.
+		You read the biceps gauge and find it reads about 0.85 kilograms.
 		Solve the equation above for $B$, and 
-		\question{plug in the values of your experimental parameters.
+		\question{plug in the values of the experimental parameters
+			given above.
 		Does the resulting value for $B$ agrees 
-		with the measured biceps force.}
+		with the measured biceps force?}
 
 		If your prediction is not consistent with the experimental result, 
 		go back and figure out what was wrong with your friend's argument
@@ -613,14 +576,8 @@ increasing certain apparatus parameters?
 		{\bf the angle at which the force is applied}.  
 		}
 
-\TODOmeeting{
-\itemb
-	\item Let them know this analysis will help them on the test.
-\iteme
-}
-\TODO{Make sure the numerical values make sense.
-		Make sure to have a large value of $r$, so $\cos\alpha$ is small.}
 
+\begin{comment}
 \TODOmeeting{New problem:  Difference between this model and the real world?}
 \TODO{
 	New problem:  
@@ -634,6 +591,7 @@ increasing certain apparatus parameters?
 		slightly less biceps force to lift the same amount of weight.
 	}
 }
+\end{comment}
 \end{enumerate}
 
 
