@@ -171,8 +171,8 @@ of force from pivot point.
 Before you start the main portion of the lab, 
 here are some warm up questions to introduce you to the key concept of torque.
 
-\enumb
-\item 
+\begin{enumerate}[label={\arabic*.},ref=\textcolor{black}{\arabic*}]
+\item \label{q:seesaw1}
 	%From tutorial (numbers modified)
 	A 60 kilogram parent sits on a seesaw, 1 meter to the right of the pivot.
 	How far to the left should a 30 kilogram child sit in order to balance
@@ -185,6 +185,9 @@ here are some warm up questions to introduce you to the key concept of torque.
 		\centering
 		\includegraphics[width=0.4\textwidth]
 		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw.jpg}}
+		\caption{
+			Diagram for warm up problem \ref{q:seesaw1}.
+		}
 	\end{figure}
 \item 
 	%From MPhys
@@ -199,6 +202,8 @@ here are some warm up questions to introduce you to the key concept of torque.
 %	and is called the moment arm.
 	The net torque is the sum of the individual torques
 	from each person.
+	To remain at rest, 
+	an object like this seesaw must have zero net torque acting on it.
 
 %	The concept of torque requires both a force 
 %	and a specification of the pivot point, 
@@ -206,7 +211,7 @@ here are some warm up questions to introduce you to the key concept of torque.
 	If you didn't use quantitative reasoning in your answer to the previous
 	problem, go back and do so now.
 
-\item
+\item \label{q:vert-rope}
 	Consider now a slightly modified seesaw setup, with a child 
 	of weight $W$ sitting a distance $L$ to the right of the pivot.
 %	This time, the seesaw is balanced by an upward force $F$
@@ -225,9 +230,12 @@ here are some warm up questions to introduce you to the key concept of torque.
 		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_vertical-force.jpg}}
 		\includegraphics[width=0.4\textwidth]
 		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_angled-force.jpg}}
+		\caption{Diagrams for warm up problems \ref{q:vert-rope}
+			(left) and \ref{q:angle-rope} (right).
+		}
 	\end{figure}
 	
-\item
+\item \label{q:angle-rope}
 %	Finally, imagine that the child sitting on the seesaw
 %	is balanced by a force acting at an angle,
 %	rather than a vertical force.
@@ -245,14 +253,21 @@ here are some warm up questions to introduce you to the key concept of torque.
 %		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_angled-force.jpg}}
 %	\end{figure}
 
-\enume
+	\end{enumerate}
 
 \subsubsection*{Warm up II: The apparatus}
 Before we get into equations, take a moment to understand the equipment.  
 \enumb
 \item
 	Label the photograph of the apparatus below with the following labels:
-	upper arm (humerus), elbow, forearm, hand, and biceps muscle.
+
+\begin{itemize}
+	\item upper arm (humerus)
+	\item elbow 
+	\item forearm 
+	\item hand
+	\item biceps muscle
+\end{itemize}
 	Be sure to reference the anatomical picture of the arm in case
 	any of these features of the apparatus are unclear.
 \item
@@ -262,21 +277,31 @@ Before we get into equations, take a moment to understand the equipment.
 		and the point where the biceps muscle attaches to the forearm
 	\item $R$:	The distance between the elbow and the hand
 	\item $B$:	The force the biceps muscle exerts on the forearm
-	\item $W$:  The force due to the weight of the forearm (already labeled on
-		the diagram -- it acts on the center of mass of the forearm)
+	\item $W$:  The force due to the weight of the forearm,
+		which acts on the center of mass of the forearm
+		(already labeled on the diagram)
+	\item $\theta$:  The angle between the forearm 
+		and the direction of the bicep force
+		(already labeled on the diagram)
 \end{itemize}
 
 \enume
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.6\textwidth]
+%	\includegraphics[width=0.6\textwidth]
+	\raisebox{-0.5\height}{
+	\includegraphics[width=0.45\textwidth]
 	{{/imgs/6labs/6Alab/6Aexp6/6a-exp6_bicep-pic_text-removed.jpg}}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.6\textwidth]
+	}
+%\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.6\textwidth]
+	\raisebox{-0.5\height}{
+	\includegraphics[width=0.45\textwidth]
 	{{/imgs/6labs/6Alab/6Aexp6/6A_6_bicep-anatomy-sketch.jpg}}
+	}
 \end{figure}
 \begin{figure}[h!]
 	\centering
@@ -311,7 +336,8 @@ When you're making decisions like this, think back to some of the things
 you've done in the previous labs -- many of those choices were made 
 for good reasons, and represent good experimental practices.
 
-\begin{enumerate}[series=labproc,label={\bf \arabic*.}]
+\begin{enumerate}[series=labproc,label={\bf \arabic*.},
+		ref=\textcolor{black}{\arabic*}]
 
 \item
 {\bf In everything that follows, make sure the forearm bar is horizontal.}
@@ -320,6 +346,15 @@ We're focusing on this case
 make meaningful conclusions,
 and (2) because keeping the forearm horizontal vastly simplifies both the
 measurements and the calculations.
+
+\item 
+Before you begin taking data,
+measure the experimental parameters of your apparatus.
+That is, measure and record the values of $r$, $R$, and $W$.
+
+Furthermore, if you ever change any of these values in what follows,
+be sure to measure and record the new value(s).  
+
 
 \item
 \question{Start by measuring the biceps force $B$ 
@@ -361,8 +396,8 @@ Think back to any time you graphed your data
 and fit a trendline to the graph.
 
 \answer{The idea is that they need to realize to make a graph to do this.
-	Then they need to notice that the graph is linear,
-	so the `formula' is just the equation of a line.
+	Then they just need to fit a trendline to the data, and realize
+	the `formula' is just the equation of the line.
 }
 
 \item
@@ -395,48 +430,69 @@ by taking some measurements,
 let's take a step back and think a bit more about what's going on.
 
 \begin{enumerate}[labproc]
-\item
+\item \label{proc:predict-RrW}
 Using a combination of your intuition for how your own arm works,
 and the knowledge of torque you developed in the warm up exercises,
 \question{predict how the biceps force change when we increase 
 each of the following parameters. }
-Fill in your own copy of the chart below, 
+Fill in your own copy of the charts below, 
 answering with ``increases'', ``decreases'', 
 ``stays constant'', or ``something else''.  
 (If you choose something else, explain why you chose that.)
+%\begin{centering}
 \vspace{.5cm}
 \\
+\begin{tabular}{|c||c|}
+	\hline
+	Parameter change & Effect on $B$ 
+%	& Effect on value of $B$ when $H=0$
+%	& Effect on $\Delta B/\Delta H$ 
+	\\ \hline \hline
+	$\uparrow R$ 
+	& % & & 
+	\\ \hline
+%	$\uparrow r$ 
+%	& & & \\ \hline
+	$\uparrow W$ 
+	& % & & 
+	\\ \hline
+\end{tabular}\\
+%\vspace{.5cm}
+\vspace{1cm}
 \begin{tabular}{|c||c|c|c|}
 	\hline
 	Parameter change & Effect on $B$ 
 	& Effect on value of $B$ when $H=0$
 	& Effect on $\Delta B/\Delta H$ 
 	\\ \hline \hline
-	$\uparrow R$ 
-	& & & 
-	\\ \hline
 	$\uparrow r$ 
-	& & & \\ \hline
-	$\uparrow W$ 
-%	& & & \\ \hline
-%	$\uparrow \alpha$
 	& & & 
 	\\ \hline
-\end{tabular}\\
+\end{tabular}
+%\end{centering}
 
-\question{How do (a) the value of $B$ when $H=0$ 
-and (b) $\Delta B/\Delta H$ 
-relate to the slope and vertical intercept of your graph?}
+%\question{How do (a) the value of $B$ when $H=0$ 
+%and (b) $\Delta B/\Delta H$ 
+%relate to the slope and vertical intercept of your graph?}
+Consider two of the quantities above, 
+(a) the value of $B$ when $H=0$ 
+and (b) $\Delta B/\Delta H$.
+\question{
+Do either or both of these quantities
+correspond to the slope and/or vertical intercept of your graph?}
+
 
 \item
 The way our apparatus is set up, 
 the easiest of the above parameters to vary experimentally is $r$.
-Devise an experiment to 
+Devise and carry out an experiment to 
 \question{determine the effect that increasing $r$
 has on the biceps force $B$ as well as 
 on the slope and the \yint  of the graph.}
 Make sure to record the data that leads you to this conclusion.
-Do your results agree with your prediction above?
+Do your results agree with your prediction 
+%above?
+in part \ref{proc:predict-RrW}?
 
 \answer{They should choose a new value for $r$, then re-enact their procedure
 	to determine $B(H)$ for this new $r$ value.  
@@ -486,7 +542,7 @@ change this parameter, the coefficients in the formula for $B(H)$ change.
 	(2) parameters which change model parameters, but not the form of the model
 	(3) parameters which ``break'' the model 
 		-- i.e., they change the form of the model.
-	In this case, $r,R,W$, and angle of the bicep force are type (2), 
+	In this case, $r,R,W$, and angle of the biceps force are type (2), 
 	whereas the angle of the forearm
 	to the horizontal is type (3).\\
 
@@ -497,6 +553,7 @@ change this parameter, the coefficients in the formula for $B(H)$ change.
 }}}
 \end{comment}
 
+%\temp{\pagebreak}
 %\subsubsection*{Understanding model parameters}
 \subsubsection*{Comparing results to theoretical predictions}
 
