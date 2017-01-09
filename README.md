@@ -15,8 +15,8 @@ explaining how to do the experiments more clearly than the manual.
 
 ## TODO list
 
-* Header for all manuals is broken -- there is now some overlapping text.
-* handouts need to be renamed systematically
-* handouts folder currently contains both source and output.  Should move these
+* handouts
+  * handouts need to be renamed systematically
+  * handouts folder currently contains both source and output.  Should move these
   files to the right places
-* handouts are not currently compiled with the compile script.  Fix this.
+  * handouts are not currently compiled with the compile script.  Fix this.
