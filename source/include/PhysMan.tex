@@ -39,6 +39,15 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 %\fancyfoot[C]{\thepage}
+\usepackage[
+%  margin=2.5cm,
+  left=2.5cm, right=2.5cm,
+  top=2cm, bottom=2cm,
+  includefoot,
+  footskip=30pt,
+  headsep=1.25cm % Seperate header and main body by
+		% headsep -- prevents first line from overlaying on top of header
+]{geometry}
 
 \usepackage[noams,squaren,Gray]{SIunits} % Standardizes quantity and SI unit spacing
 \usepackage{soul} % for an underline macro that wraps

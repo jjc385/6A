@@ -15,9 +15,8 @@ explaining how to do the experiments more clearly than the manual.
 
 ## TODO list
 
-* compile script no longer works.  Fix it to work with new directory structure.
-  In particular, put log and aux files in output folder
-* handouts need to be renamed systematically
-* handouts folder currently contains both source and output.  Should move these
+* handouts
+  * handouts need to be renamed systematically
+  * handouts folder currently contains both source and output.  Should move these
   files to the right places
-* handouts are not currently compiled with the compile script.  Fix this.
+  * handouts are not currently compiled with the compile script.  Fix this.
