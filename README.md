@@ -1,7 +1,35 @@
 # 6A
-Lab Manual Project
+Lab Manual Revisions Project
 
-## Directory structure
+## About this project
+This repository houses modifications to the UCLA Physics 6A lab manuals,
+started in Fall 2016.
+
+## About this branch
+
+### Branch info
+Branch: bicep-edit  
+Overhauled version of bicep lab (exp 6)  
+Currently exactly as deployed to several section in Fall 2016
+
+### ChangeLog
+* Overhauled bicep lab (exp 6)
+* Fixed bash compile script and added a Windows script
+* Fixed old tex documents so that they compile with desired formatting
+
+### TODO list
+
+* bicep lab (exp 6)
+  * Fix typos and implement feedback from Fall 2016 implementation
+* handouts
+  * handouts need to be renamed systematically
+  * handouts folder currently contains both source and output.  Should move these
+  files to the right places
+  * handouts are not currently compiled with the compile script.  Fix this.
+
+## About this repository
+
+### Directory structure
 
 This repository is partitioned into several main folders:
 
@@ -13,10 +41,3 @@ This repository is partitioned into several main folders:
 * handouts-6A -- Location of handouts, created by past TAs, 
 explaining how to do the experiments more clearly than the manual.
 
-## TODO list
-
-* handouts
-  * handouts need to be renamed systematically
-  * handouts folder currently contains both source and output.  Should move these
-  files to the right places
-  * handouts are not currently compiled with the compile script.  Fix this.
