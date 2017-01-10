@@ -15,6 +15,9 @@ explaining how to do the experiments more clearly than the manual.
 
 ## TODO list
 
+* lab 5 (impulse)
+  * Take care of some todos
+  * Make sure to update images
 * handouts
   * handouts need to be renamed systematically
   * handouts folder currently contains both source and output.  Should move these
