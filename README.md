@@ -13,11 +13,12 @@ vA-2016-1
 Version "A" of lab manuals  
 As deployed Fall 2016 and before
 
+#### About versions A and B
 Version "A" is more or less the old version (before 2016)
-of the lab manuals, with slight modifications
-
+of the lab manuals, with slight modifications  
 Version "B" is a more radically modified version, 
 starting with Alec and Jared in 2016.
+
 It has so far (in 2016 and early 2017) been the plan 
 to implement both versions A and B in different lab sections,
 in order to compare efficacy of the two versions
