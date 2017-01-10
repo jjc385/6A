@@ -15,6 +15,9 @@ explaining how to do the experiments more clearly than the manual.
 
 ## ChangeLog
 
+* Exp 2 (Acceleration on an incline)
+  * Removed warm-ups involving position and velocity graphs (We found they
+	distract from rather than help with the primary purpose of the lab.)
 * Exp 3 (Newton's second law)
   * Instructed students to tape 3 masses to glider from the start (this was a big point of confusion)
   * Instructed students to start taking data with the airtrack already on.
@@ -26,6 +29,13 @@ explaining how to do the experiments more clearly than the manual.
 
 ## TODO list
 
+* lab 2 (acceleration)
+  * Consider being more pedagogical about linear relationships
+  * Consider asking students to make predictions or telling them what the data
+	shold look like
+  * Consider adding warm-up or challenge questions
+  * Consider changing the part with four different ways to calculate
+	acceleration (maybe make part of it worth mills)
 * lab 5 (impulse)
   * Take care of some todos
   * Make sure to update images
