@@ -13,6 +13,14 @@ This repository is partitioned into several main folders:
 * handouts-6A -- Location of handouts, created by past TAs, 
 explaining how to do the experiments more clearly than the manual.
 
+## ChangeLog
+
+* Exp 3 (Newton's second law)
+  * Instructed students to tape 3 masses to glider from the start (this was a big point of confusion)
+* Exp 5 (Momentum and Impulse)
+  * Removed calibration of force sensor.  Students just use force readings DataStudio provides.
+
+
 ## TODO list
 
 * lab 5 (impulse)
