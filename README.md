@@ -9,9 +9,18 @@ started in Fall 2016.
 
 ### Branch info
 Branch: deployed-2016fall-vB  
-vB-2016-2
+vB-2016-1
 Version "B" of lab manuals  
-As deployed to some sections in fall 2016
+As deployed to some sections in spring and summer 2016  
+Modified by Alec  
+
+Note:  The final pdf version of experiment 6 (bicep lab)
+was not compiled from LaTeX.
+As such, the compile scripts have been disabled with appropriate messages.
+The pdf in the output folder is the correct deployment version;
+however, the tex files in the source folder will not produce it.
+
+
 
 #### About versions A and B
 Version "A" is more or less the old version (before 2016)
@@ -24,14 +33,13 @@ to implement both versions A and B in different lab sections,
 in order to compare efficacy of the two versions
 
 ### ChangeLog
-* Overhauled bicep lab (exp 6)
+* Heavily modified bicep lab, with an emphasis on identifying and improving
+  sources of error
 * Fixed bash compile script and added a Windows script
 * Fixed old tex documents so that they compile with desired formatting
 
 ### TODO list
 
-* bicep lab (exp 6)
-  * Fix typos and implement feedback from Fall 2016 implementation
 * handouts
   * handouts need to be renamed systematically
   * handouts folder currently contains both source and output.  Should move these
