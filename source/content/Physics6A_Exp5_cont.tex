@@ -15,7 +15,7 @@
 \noindent\textit{Not shown in the picture above:}
 \squishlist
 \item Computer and Pasco interface
-\item Set of masses in 50-g increments to 600 g
+%\item Set of masses in 50-g increments to 600 g
 \item Vernier calipers or meter stick to measure glider flag
 \item Scale and weight set
 \squishend
@@ -36,32 +36,18 @@ The right side of Eq.~\ref{6Aexp5_eqn_2} is known as the \textit{impulse}, and t
 
 In this experiment, you will verify Eq.~\ref{6Aexp5_eqn_2} by allowing a glider on an air track to pass through a photogate and strike a force sensor.  The sensor allows you to measure the force on the glider as a function of time.  This time interval is relatively short, so the impulse approximation is valid.  The velocity of the glider is measured when it crosses the photogate, just before and just after the collision.  These two velocity measurements, along with knowledge of the glider's mass, allow you to calculate the change in momentum (i.e., the left side of Eq.~\ref{6Aexp5_eqn_2}).  The sensor generates a force-versus-time curve on the computer, which can be integrated to obtain the impulse (i.e., the right side of Eq.~\ref{6Aexp5_eqn_2}).  The glider has a foam bumper, so its collision with the force sensor is \textit{inelastic}.  In other words, kinetic energy is not conserved during the collision, but the change in momentum is still equal to the impulse.
 
-\subsection*{INITIAL SETUP: CALIBRATING THE FORCE SENSOR}
-
-\begin{enumerate}[label=\arabic*.]
-
-\item Arrange the force sensor so you can hang masses from it.  Set up the sensor in Data Studio, and plug it in.  Double-click  on the force sensor icon in the setup window, click the ``Measurement'' tab, and check the box for ``Voltage''.  The sensor will produce force readings, but we are going to ignore these and do our own calibration of the sensor, so we can convert its voltage readings to forces.  We will hang masses from the sensor, type in the force, and let the computer read the corresponding voltage.  Note that the sensor has two interchangeable end parts: a screw hook for hanging masses in the calibration phase of the experiment, and a rubber bumper for the impulse measurements in the actual experimental runs.  When calibrating the force sensor, use the screw hook, and mount the sensor vertically downward on the horizontal bar of the ring stand.
-
-\item Click ``Sampling Options'' in the setup window tool bar, check the box for ``Keep data values only when commanded'', and type in ``mass'' for a name and ``grams'' for units.  Drag a table to the force sensor, and drag the voltage data and the Keyboard 1 data (the mass values) over to the table, so that you get two columns showing these data.  We will convert the masses to forces later in Excel.
-
-\item Click ``Start''.  The ``Start'' button changes to a keep-and-stop button as shown below:
-\begin{center} \includegraphics*{imgs/6labs/6Alab/6Aexp5/keep_button_fx_2.jpg} \end{center}
-
-Also, you will see in your table the running voltage reading.  With no mass hanging on the force sensor, push the ``Tare'' button on the side of the sensor to zero the reading, and click ``Keep''.  You will be prompted to enter the mass value (zero in this case).  Repeat this five times, so that you obtain five values of the voltage (nearly the same) for the zero-mass case.
-
-\item Now add the 50-gram mass holder.  Repeat five times the procedure of pressing ``Keep'' and entering a mass of 50.  (We are using a minus sign for all the masses, since the glider will push the force sensor in the opposite direction during the actual experimental runs.)  Perform another 50-gram step, and then perform 100-gram steps up to a total of 500 grams, taking five voltage readings for each mass value.  Remember to type in minus signs in front of the mass values.  Click the red ``Stop'' button when you are finished.
-
-\item Your table now contains a column of five voltage readings for each mass.  Call up an Excel worksheet, and copy the voltage column of this table into column A of Excel so you can work on it.  (That is, select the data in the Data Studio column, and paste in the data.)  In column B, copy your mass values form the Data Studio column.  In column C, type in the mass series, just once for each mass value.  In column D, convert these mass values to forces in newtons.  In column E, take the average of the appropriate voltage readings for each mass.  Be sure you average only the voltages that correspond to a given mass.  For example, you can use ``AVERAGE(A4..A8)'' to average the values in cells A4 through A8.  It is easy to make a mistake here, so have your lab partner check you entries in the AVERAGE function.
-
-\item Copy the force values from column D and ``Paste Special'' (the values) into column F, select the data in columns E and F, and graph the force as a function of voltage.  Remember that you need to choose ``XY scatter''.  (If you had not copied column D over to F, you would have obtained a graph of voltage as a function of force.)  Insert a trendline with linear regression, and include its equation on the chart.  This equation gives the required conversion from voltage to force.  Write the equation in the ``Data'' section.
-
-\end{enumerate}
 
 \subsection*{PROCEDURE}
 
 \begin{enumerate}[label=\arabic*.]
 
-\item Level the air track carefully.  Mount the force sensor horizontally on the vertical rod of the ring stand at the end of the track so the glider bumper will strike the sensor as the glider moves down the track.  Replace the screw hook of the force sensor with the rubber bumper.  Set up the photogate so the glider flag clears the gate by a few centimeters before the bumper strikes the sensor.  Refer to the picture below.
+\item Level the air track carefully.  Mount the force sensor horizontally on the vertical rod of the ring stand at the end of the track so the glider bumper will strike the sensor as the glider moves down the track.  
+Set up the photogate so the glider flag clears the gate by a few centimeters before the bumper strikes the sensor.  Refer to the picture below.
+Note that while the sensor has two interchangeable end parts (a screw hook for
+hanging objects from the force sensor, and a rubber bumper
+for the impulse measurements in the actual experimental runs),
+we will only be using the rubber bumper in this experiment.
+
 \begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp5/gif_still.jpg} \end{center}
 The glider then bounces off the sensor and passes through the photogate again.  In an experimental run, you should record the two photogate velocity readings and the force-versus-time curve from the sensor.
 
@@ -102,27 +88,30 @@ The glider then bounces off the sensor and passes through the photogate again.  
 \item Double-click on the force sensor icon.  Set the sampling rate to 2000 Hz.  Note that the computer will then take a force reading every 1/2000, or 0.0005, second.  Drag a table over to the force sensor, and set it to read a column of voltages and a column of velocities (by dragging over the appropriate data).  You do not need the time measurement column and can get rid of it by clicking the clock symbol on the table tool bar.
 
 \item Turn on the air track, and click ``Start''. Push the ``Tare'' button on the side of the force sensor to zero its readings.  Send the glider down the track so it passes through the photogate, strikes and bounces off the force sensor, and crosses the gate again.  Click ``Stop''.  Your table should show a long list of force and voltage readings, as well as the two velocity readings at the top.  You may need to use the scroll bar on the table to see all the readings, particularly the second velocity reading.  The second velocity value is smaller since the collision is inelastic.
+	\todo[inline]{Do we even want to mention the long list of voltage readings?
+		If we do, we should probably explain more carefully in lieu of a
+		calibration step.
+	}
 
-\item Drag a graph to the force sensor on the computer, set it to read the force sensor voltages.  You should see a nice graph of the impulsive force.  Use the ``Scale-to-Fit'' button, if necessary, to locate the impulse.  Use the ``Zoom Select'' button so you can see the impulse clearly.
-\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp5/MI_graph1_fix3.jpg} \end{center}
+\item Drag a graph to the force sensor on the computer, set it to read the
+	force (in Newtons).  You should see a nice graph of the impulsive force.  Use the ``Scale-to-Fit'' button, if necessary, to locate the impulse.  Use the ``Zoom Select'' button so you can see the impulse clearly.
+\begin{center}
+\todo[inline]{Figure~\ref{fig:impulse-curve}, named \protect\url{MI_graph1_fix3.jpg},
+needs to be updated to replace Voltage Ch A with Force Ch A.}
+\includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp5/MI_graph1_fix3.jpg}\label{fig:impulse-curve}\end{center}
 If all is well, you are ready to take data.  If not, check over your steps.
 
 \item Have each lab partner make three measurements with different glider speeds to check the relation \(\Delta\textbf{p} = \int \textbf{F}_{\textrm{net}} \textrm{d}t\).  To calculate the impulse, click on the column of the table with the voltage readings, and select an area of the graph that just covers the impulsive force (i.e., when the graph leaves the base line and returns to the base line, before any oscillations are encountered).  These voltage readings are automatically highlighted in the table and correspond to the area chosen in the graph.  Pull down the ``Edit'' menu to ``Copy'', and paste the selected voltage data on an Excel sheet.  (The time readings may copy over also, but we do not need them.)  The figure below shows the Data Studio graph and table overlying an Excel sheet.  The appropriate area of the graph has been selected, and you can see part of the highlighted table below.  Only one velocity value is shown in the Data Studio table; you would need to scroll it to see the other.
 \begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp5/IMG_002_sm_fx.jpg} \end{center}
 
-\item In the next Excel column, use the force calibration equation determined earlier to convert the voltages to forces.  The impulse is the area under the force-versus-time curve:
+\item You need to perform a sum over your force data to calculate the impulse.
+	The impulse is the area under the force-versus-time curve:
 \begin{align} \int \textbf{F}_{\textrm{net}} \textrm{d}t = \sum \textbf{F}_i \,\Delta t_i = \Delta t \sum F_i, \end{align}
 since the time intervals \(\Delta t_i = 0.0005\) second are all equal.  You can obtain the force sum with an Excel function such as ``=Sum(b3..b147)''.  When you calculate the change in momentum from \(mv_1\) to \(mv_2\), should you add or subtract these two numbers?
 
 \item In the ``Data'' section, record the three values of change in momentum and impulse, as well as the percentage difference between each set of values.
 
 \end{enumerate}
-
-\subsection*{DATA}
-
-Initial Setup, step 6: Write in your voltage-to-force conversion equation:
-
-\ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
 
 \textbf{\textit{Procedure}}
 
