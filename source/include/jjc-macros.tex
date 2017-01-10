@@ -47,7 +47,7 @@
     \newcommand{\limintdf}[5][]{\limint{#2}{#3}\frac{\ud[#1]{#4}}{#5}}
     \newcommand{\limintdff}[6][]{\limint{#2}{#3}\frac{\ud[#1]{#4}#5}{#6}}
 
-    \newcommand{\unit}[1]{\,\widehat{ \boldsymbol{#1} }}
+    \newcommand{\unittemp}[1]{\,\widehat{ \boldsymbol{#1} }}
     \newcommand{\paren}[1]{{\left( #1 \right)}}
     \newcommand{\bparen}[1]{\Bigl( #1 \Bigr)}
     \newcommand{\bbparen}[1]{\Biggl( #1 \Biggr)}
@@ -89,9 +89,9 @@
     \newcommand{\smqty}[2]{\paren{\, #1 \un{#2} }}
     \newcommand{\smans}[2]{\, #1 \un{#2} }
 
-    \newcommand{\basis}[1]{ \,\unit{\mathrm{e}}_{ #1 } }
+    \newcommand{\basis}[1]{ \,\unittemp{\mathrm{e}}_{ #1 } }
     \newcommand{\q}[1]{q_{#1}}
-    \newcommand{\bq}[1]{\,\unit{\mathrm{q}}_{#1}}
+    \newcommand{\bq}[1]{\,\unittemp{\mathrm{q}}_{#1}}
     \newcommand{\be}[1]{\basis{#1}}
     \newcommand{\bbe}[2]{\be{#1}\be{#2}}
     \newcommand{\bep}[1]{\be{#1}'}
