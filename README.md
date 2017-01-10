@@ -8,9 +8,20 @@ started in Fall 2016.
 ## About this branch
 
 ### Branch info
-Branch: bicep-edit  
-Overhauled version of bicep lab (exp 6)  
-Currently exactly as deployed to several section in Fall 2016
+Branch: deployed-2016fall-vB  
+vB-2016-2
+Version "B" of lab manuals  
+As deployed to some sections in fall 2016
+
+Version "A" is more or less the old version (before 2016)
+of the lab manuals, with slight modifications
+
+Version "B" is a more radically modified version, 
+starting with Alec and Jared in 2016.
+
+It has so far (in 2016 and early 2017) been the plan 
+to implement both versions A and B in different lab sections,
+in order to compare efficacy of the two versions
 
 ### ChangeLog
 * Overhauled bicep lab (exp 6)
