@@ -17,6 +17,9 @@ explaining how to do the experiments more clearly than the manual.
 
 * Exp 3 (Newton's second law)
   * Instructed students to tape 3 masses to glider from the start (this was a big point of confusion)
+  * Instructed students to start taking data with the airtrack already on.
+	(Some TAs noticed large amounts of friction while the air track turns on
+	for the less well-performing air tracks.)
 * Exp 5 (Momentum and Impulse)
   * Removed calibration of force sensor.  Students just use force readings DataStudio provides.
 
