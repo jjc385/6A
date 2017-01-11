@@ -22,7 +22,8 @@ with several minor fixes
 ### TODO list
 
 * bicep lab (exp 6)
-  * Fix typos and implement feedback from Fall 2016 implementation
+  * Implement feedback from Fall 2016 implementation
+  * Clean up todonotes macros (consider standardizing across all labs)
 * handouts
   * handouts need to be renamed systematically
   * handouts folder currently contains both source and output.  Should move these
