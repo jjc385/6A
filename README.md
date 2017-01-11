@@ -10,9 +10,11 @@ started in Fall 2016.
 ### Branch info
 Branch: bicep-edit  
 Overhauled version of bicep lab (exp 6)  
-Currently exactly as deployed to several section in Fall 2016
+Currently almost as deployed to several section in Fall 2016,
+with several minor fixes
 
 ### ChangeLog
+* Minor fixes to fall 2016 version (typos and accidental omissions)
 * Overhauled bicep lab (exp 6)
 * Fixed bash compile script and added a Windows script
 * Fixed old tex documents so that they compile with desired formatting
