@@ -10,9 +10,10 @@ started in Fall 2016.
 ### Branch info
 Branch: Master  
 Latest stable version of lab manuals  
-Currently as deployed in Summer 2016 (and before)
+Currently developing manual for winter 2017
 
 ### ChangeLog
+* Updated experiment 1 to capstone
 * Fixed bash compile script and added a Windows script
 * Fixed old tex documents so that they compile with desired formatting
 
