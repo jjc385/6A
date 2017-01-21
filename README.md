@@ -13,6 +13,11 @@ Latest stable version of lab manuals
 Currently developing manual for winter 2017
 
 ### ChangeLog
+* Experiment 2 (acceleration down an incline)
+  * Clarified pendulum mills
+  * Moved x and v vs. t graph warm-ups to mills
+  * Fixed trigonometric inconsistency in procedure step 2
+* Updated experiment 2 to capstone
 * Updated experiment 1 to capstone
 * Fixed bash compile script and added a Windows script
 * Fixed old tex documents so that they compile with desired formatting
