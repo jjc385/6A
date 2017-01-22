@@ -7,15 +7,6 @@ started in Fall 2016.
 
 ## About this branch
 
-### Branch info
-Branch: fix-scripting  
-Branch to improve and automate (not really fix) compile scripts  
-Currently trying to generate filenames to compile programmatically  
-Also would like to allow compile script(s) to take arguments,
-specifying only certain manuals should be compiled.
-
-Not currently a high-priority branch.
-
 ### ChangeLog
 * Added incomplete automated script
 * Fixed bash compile script and added a Windows script
