@@ -7,22 +7,6 @@ started in Fall 2016.
 
 ## About this branch
 
-### Branch info
-Branch: deployed-2017winter-vB  
-vB-2017-1
-Version "B" of lab manuals  
-Preparing to be deployed for some sections in Winter 2017 
-
-#### About versions A and B
-Version "A" is more or less the old version (before 2016)
-of the lab manuals, with slight modifications  
-Version "B" is a more radically modified version, 
-starting with Alec and Jared in 2016.
-
-It has so far (in 2016 and early 2017) been the plan 
-to implement both versions A and B in different lab sections,
-in order to compare efficacy of the two versions
-
 ### ChangeLog
 * Minor fixes to fall 2016 version (typos and accidental omissions)
 * Overhauled bicep lab (exp 6)
