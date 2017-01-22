@@ -7,13 +7,6 @@ started in Fall 2016.
 
 ## About this branch
 
-### Branch info
-Branch: exp3-mills-sandbox  
-Sandbox-type drafts of different possibilities for mills in exp 3 (Newton's
-second law)  
-Modifications are in seperate files, 
-not directly changing output (hence 'sandbox')
-
 ### ChangeLog
 * Added alternative (sandbox) files for exp 3 mills
 * Fixed bash compile script and added a Windows script
