@@ -7,8 +7,6 @@ started in Fall 2016.
 
 ## About this branch
 
-### Branch info
-
 ### ChangeLog
 * Experiment 2 (acceleration down an incline)
   * Clarified pendulum mills
@@ -40,4 +38,18 @@ This repository is partitioned into several main folders:
 * scripts -- Location of bash scripts which compile the .tex files all at once.
 * handouts-6A -- Location of handouts, created by past TAs, 
 explaining how to do the experiments more clearly than the manual.
+
+### About versions A and B
+Version "A" is more or less the old version (before 2016)
+of the lab manuals, with slight modifications  
+Version "B" is a more radically modified version, 
+starting with Alec and Jared in 2016.
+
+It has so far (in 2016 and early 2017) been the plan 
+to implement both versions A and B in different lab sections,
+in order to compare efficacy of the two versions
+
+In Winter 2017, Justin is updating both versions A and B to be compatible with
+the Pasco Capstone software program, updated from the Pasco DataStudio program.
+
 
