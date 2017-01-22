@@ -7,8 +7,6 @@ started in Fall 2016.
 
 ## About this branch
 
-### Branch info
-
 ### ChangeLog
 * Exp 2 (Acceleration on an incline)
   * Removed warm-ups involving position and velocity graphs (We found they
