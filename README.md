@@ -7,12 +7,6 @@ started in Fall 2016.
 
 ## About this branch
 
-### Branch info
-Branch: justin-dev  
-Edits performed by Justin Faber to most experiments, 
-upgrading DataStudio to Pasco software  
-Preparing to be deployed for Winter 2017  
-
 ### ChangeLog
 * Exp 2 (Acceleration on an incline)
   * Removed warm-ups involving position and velocity graphs (We found they
