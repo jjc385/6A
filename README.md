@@ -8,9 +8,6 @@ started in Fall 2016.
 ## About this branch
 
 ### Branch info
-Branch: Master  
-Latest stable version of lab manuals  
-Currently developing manual for winter 2017
 
 ### ChangeLog
 * Experiment 2 (acceleration down an incline)
