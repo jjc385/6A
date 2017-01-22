@@ -8,10 +8,6 @@ started in Fall 2016.
 ## About this branch
 
 ### Branch info
-Branch: overall-edits  
-Minor edits to most or all experiments  
-Preparing to be deployed for Winter 2017  
-Does not include overhaul of bicep experiment (exp 6) -- c.f. branch bicep-edit
 
 ### ChangeLog
 * Exp 2 (Acceleration on an incline)
