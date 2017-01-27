@@ -63,7 +63,7 @@ If we wish to test Newton's Second Law, we might think of using different small 
 
 \item Turn on the signal interface and computer, plug the smart pulley into the interface (inserting the plug into digital channel 1), and call up Data Studio.
 
-\item From the list of sensors, double-click on ``Smart Pulley''.  Then double-click on the icon of the smart pulley connected to the picture of the interface, and under ``Mesurement'', select ``Position'', ``Velocity'', and ``Acceleration'', so that these measurements appear in the data list.
+\item From the list of sensors, double-click on ``Smart Pulley''.  Then double-click on the icon of the smart pulley connected to the picture of the interface, and under ``Measurement'', select ``Position'', ``Velocity'', and ``Acceleration'', so that these measurements appear in the data list.
 
 \item Drag the graph icon to the motion sensor icon now below digital channel 1.  Use your knowledge from the last experiment to set up multiple graphs with separate plots of position, velocity, and acceleration, aligned vertically.  (If necessary, refer to instruction 7 in the ``Initial Setup'' section of Experiment 2.
 
@@ -96,7 +96,7 @@ On this graph, drag a box around a section of data where the slope is approximat
 If you have not used a spreadsheet before, it consists of a sheet of cells labeled by the numbers on the left and the letters on the top.  You can enter numbers or text into the cells; the numbers can be manipulated mathematically later.  To make an entry into a cell, click on the cell, and begin typing.  The text appears on the menu line above, and you can edit it by deleting parts, or by dragging through and typing the corrected material.  There are at least four ways of entering typed material into a cell: clicking on the green check, hitting ``Enter'', pressing an arrow key to move to a nearby cell, or clicking on a new cell.
 
 \item 
-Make sure three 5-gram masses are still attached to the small glider, with only 5-gram mass holder hanging down.
+Make sure three 5-gram masses are still attached to the small glider, with the only 5-gram mass holder hanging down.
 Set the system into motion.  Obtain the acceleration as described in step 5, and record its value in your spreadsheet.  Perform a minimum of three trials.  (As data runs accumulate on your velocity graph, you can select run numbers in the box on the graph and delete them to see the current data more clearly.)
 
 \item Transfer one 5-gram mass from the glider to the mass holder, such that the holder and one 5-gram mass accelerate the glider.  Set the system into motion, obtain the acceleration, and record its value in your spreadsheet.  Perform a minimum of three trials.
@@ -106,6 +106,12 @@ Set the system into motion.  Obtain the acceleration as described in step 5, and
 \item Transfer the final 5-gram mass from the glider to the mass holder, such that the holder and all three 5-gram masses accelerate the glider.  Set the system into motion, obtain the acceleration as before, and record its value in your spreadsheet.  Perform a minimum of three trials.
 
 \item To calculate the average acceleration of the first three trials, in cell B7 of the Excel illustration above, type the material between the quotes, ``=Average(b4..b6)'', and click the green check in the tool bar (or hit ``Enter'').  The equals sign signals Excel to do a calculation.  This operation will average the numbers in cells B4, B5, and B6.  It does not matter that the B's are typed in lower case in the Average function.
+\emph{Note:  If you set up your spreadsheet slightly differently from the one
+	pictured above, the relevant quantities may be in different cells than
+	listed in the preceding lines.  In that case, you need to determine which
+	(a) in which cell to place the average function and (b) which cells to
+	average over, in order to obtain your average accelerations in an
+appropriate place.}
 
 \item Now comes the great virtue of spreadsheets.  You do not need to type the Average function into the cells for the other trials.  Instead, position the cursor at the lower right corner of cell B7 (the one in which you just did the Average calculation), so that it turns into a lopsided square shape.  Now drag over cells C7, D7, and E7.  Excel automatically calculates the averages of the other trials with the proper cell references.  (By the way, if you were now to change one tf the values of the trial accelerations, Excel would automatically and instantly recalculated the average.)  Your spreadsheet should now look something like the illustration below:
 \begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp3/6A_exp3_Excel_Spreadsheet2.png} \end{center}
