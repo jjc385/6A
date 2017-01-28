@@ -8,7 +8,15 @@ started in Fall 2016.
 ## About this branch
 
 ### ChangeLog
+* Experiment 3 (newton's second law)
+  * Clarified that students should keep total mass constant from beginning
+  * Clarified that spreadsheet rows and columns may not coincide with what's
+	written in the manual
+  * Removed ``do the experiment again with a different glider'' mills
+  * Reduced number of mills from picket fence mills part 5 -> 3
 * Experiment 2 (acceleration down an incline)
+  * (After implementation)  Added instructions to increase measurement display
+	precision in Capstone
   * Clarified pendulum mills
   * Moved x and v vs. t graph warm-ups to mills
   * Fixed trigonometric inconsistency in procedure step 2
