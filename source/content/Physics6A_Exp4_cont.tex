@@ -70,33 +70,21 @@ Convince yourself that the slope is \(1/k\) and not \(k\).  Record the value of 
 
 \begin{enumerate}[label=\arabic*.]
 
-\item Unhook the mass hanger string. Hook up the smart pulley physically and virtually, in Data Studio.  Double-click on the smart pulley icon, and check ``Position'', ``Velocity'', and ``Acceleration''.  Arrange a graph to plot the position \(x\), the velocity \(v\), and the acceleration \(a\) as a stack of three plots on a single graph window.  With the air blower on, pull the glider out, click ``Start'', let the glider oscillate several times, and click ``Stop''.  The velocity and acceleration graphs resemble the sinusoidal oscillations of a simple harmonic oscillator, but the position graph consists of a series of S-shaped curves increasing in \(y\) value.  This shape results because the smart pulley does not distinguish between the forward and reverse directions of motion; it merely counts the number of times the spokes block the photosensor and records the result as positive distance.  Thus, each S-shaped curve on the position graph is produced as the oscillator moves from one endpoint of its motion to the other.
+\item Unhook the mass hanger string. Hook up the smart pulley physically and virtually, in Capstone (the sensor is called ``Photogate with Pulley'').  Choose the ``Table \& Graph'' option in Capstone.  Choose ``Position (m)'' for the \(y\)-axis of the graph.  Add another graph by clicking the ``Add new plot area...'' button.  On this new graph, select ``Linear Speed (m/s)'' for the \(y\)-axis.  Add a third graph and plot ``Linear Acceleration ($m/s^2$) on the \(y\)-axis.
 
-\item Now prepare Data Studio to calculate the kinetic energy in real time.  Click the calculator button in the graph tool bar (or in the top tool bar).  In the equation area of the pop-up window, type ``\url{y = 0.5*m*v^2}'' (for \((1/2)mv^2\)).  You will be asked to define the variables \(m\) and \(v\) below.  Here \(m\) is a constant (the measured mass of the glider in kilograms), but \(v\) is a data measurement variable (the velocity, Ch. 1 (m/s)).  When you have finished defining \(m\) and \(v\), click ``Accept'' again.
+\item With the air blower on, pull the glider out, click ``Record'', let the glider oscillate several times, and click ``Stop''.  The velocity and acceleration graphs resemble the sinusoidal oscillations of a simple harmonic oscillator, but the position graph consists of a series of S-shaped curves increasing in \(y\) value.  This shape results because the smart pulley does not distinguish between the forward and reverse directions of motion; it merely counts the number of times the spokes block the photosensor and records the result as positive distance.  Thus, each S-shaped curve on the position graph is produced as the oscillator moves from one endpoint of its motion to the other.
 
-\item The kinetic energy calculation now appears in the ``Data'' column.  Drag it to a graph, and perform a run with the glider oscillating to check that you are obtaining reasonable-looking kinetic energy curves.  (The kinetic energy never quite goes to zero at the end points.)
+\item Now record just half of an oscillation.  Pull the glider back, click ``Rerord'', then release the glider.  Click ``Stop'' as soon as you see the glider start to reverse directions.  Your postion graph should be S-shaped and your velocity graph should look like an upside-down ``U''.
 
-\item Calculating the potential energy with the smart pulley is trickier.  First, as demonstrated above, the pulley does not distinguish between forward and backward motion, so we can look at only the first half-oscillation.  Second, when we pull the glider out and ``Start'' the distance measurement, the software assigns zero to the first distance measurement.  However, we want to assign zero to the equilibrium position.  In other words, we want to calculate \(PE = (1/2)k(x-x_0)^2\), with \(x_0\) the equilibrium position.
+\item Click ``Select Measurement'' in the table and choose ``Position (m)''.  There should be about 25 values in the table.  Copy them over to a column in Excel.  Next, change the selected measurement in your table to ``Linear Speed (m/s)''.  Copy these values to a different column in Excel.
 
-To accomplish this, record one full S-shaped curve of position: Move the glider away from its equilibrium position to a point where the smart-pulley LED just turns OFF.  Wiggle the glider back and forth to locate the ON/OFF transition point as precisely as you can.  If the LED is ON, then move away from equilibrium until the light turns OFF.  The photogate is now unblocked.  Within the first millimeter of motion, it will be blocked by a spoke, and the timing will begin.
+\item Calculate the kinetic energy as a function of time using your velocity measurements.  To do this, set up the Excel formula, KE = \url{0.5*m*v^2}, where m is the mass of the glider and v is the velocity of the glider.  Now plot kinetic energy in Excel.  You should get a curve that looks like an upside-down ``U''.
 
-Have your partner click ``Start''; then release the glider.  Click ``Stop'' just after the glider has reached its maximum position on the other side of equilibrium.  Check your position graph, and repeat the experiment until you have a nice S-shaped curve containing 25 -- 30 data points with a few points from the next S-curve.
+\item Calculating the potential energy with the smart pulley is trickier.  First, as demonstrated above, the pulley does not distinguish between forward and backward motion, so we can look at only the first half-oscillation.  Second, when we pull the glider out and ``Start'' the distance measurement, the software assigns zero to the first distance measurement.  However, we want to assign zero to the equilibrium position.  In other words, we want to calculate \(PE = (1/2)k(x-x_0)^2\), with \(x_0\) the equilibrium position.  Use the average value of position as \(x_0\) and set up another Excel formulua for calculating the potential energy (remember that k is the stiffness of the springs that you measured earlier).  Plot potential energy as a function of time.  It should be somewhat U-shaped.  
 
-\begin{center}
-\begin{tabular}{|p{14cm}|}
-\hline\tstrut
-If you are accumulating too many data runs, cluttering up your data column, set the top of the data column to ``By Run'', instead of ``By Measurement''.  Then delete any unneeded runs.  \bstrut\\
-\hline
-\end{tabular}
-\end{center}
+\item Create an Excel formula that calculates the total energy (kinetic + potential) as a function of time.  Plot all three of these (kinetic, potential and total) on the same graph.  To add a data set to a graph, right click on it and click ``Select Data...'', then click the ``Add'' button.  Clear the ``Series Y values:'' box and then select the column you want to add.  Then click ``OK'' two times.  The new data set should appear in the graph.
 
-\item Layer a graph with position and velocity from your best run.  The velocity first swings through a minimum (near zero when the glider reaches the endpoint opposite where it was released.  Select the position values from \(t=0\) through this endpoint, and have Data Studio calculate the mean value of the position.  This is your \(x_0\) in \(PE = (1/2)k(x-x_0)^2\); record it in the ``Data'' section.
-
-\item Now click ``New'' in the calculator window again, and type in the equation ``\url{y2 = 0.5*k*(x-x0)^2}'', and define its variables \(k\), \(x\), and \(x0\) appropriately.  (You can change the name of the variable \(y2\) if you wish.)  Click ``Accept''.
-
-\item Finally, click ``New'' in the calculator window again, and type in the equation ``\url{y3 = P + K}''.  This is to be the total energy, so define \(P\) as the data measurement variable \(y2\) (the potential energy calculation) and \(K\) as the data measurement variable \(y\) (the kinetic energy calculation).
-
-\item These data calculations all appear in the ``Data'' column.  Get a new layered graph with your variables \(y\), \(y2\), and \(y3\) plotted on the \(y\)-axis, and time on the \(x\)-axis.  Title your graph and show it to your TA before printing it out.  Be prepared to comment to your TA on whether your graphs show reasonable data for the kinetic, potential, and total energies.
+\item Once all three data sets are plotted on the same graph, check that it makes sense physically.  The total energy of the system is constant in theory.  However, you may see a slight reduction in total energy as time passes.  This is because energy is slowly lost due to friction and wind resistance.  Label the axes of your graph and show it to your TA.
 
 \end{enumerate}
 
@@ -119,11 +107,9 @@ This is a harder experiment to do well, requiring more careful experimental tech
 
 Repeat the experiment more carefully.  If necessary, retension the springs so you can get at least 25 points on the S-shaped curve for the half-oscillation, and remeasure \(k\) carefully.
 
-Averaging the distance values to obtain \(x_0\) may not be the best method of determining the true \(x_0\).  From studying your various measurements, what would be another method to obtain a value for \(x_0\)?  Does this agree with the averaging method?  Include this method in you repeat of the experiment, if you think it would improve the measurement of \(x_0\).  Print out the final results.
+Averaging the distance values to obtain \(x_0\) may not be the best method of determining the true \(x_0\).  From studying your various measurements, what would be another method to obtain a value for \(x_0\)?  Does this agree with the averaging method?  Include this method in you repeat of the experiment, if you think it would improve the measurement of \(x_0\).
 
-Full additional credit for this assignment requires obtaining good \(PE\), \(KE\), and total \(E\) curves without significant assistance from your TA.  The total energy curve should be a nearly-level line, decreasing slightly through the motion owing to frictional losses.  Label your curves as in the illustration below.  Include an explanation of any improvements you made in the measuring techniques.
-
-\begin{center} \includegraphics*[width=0.7\textwidth]{imgs/6labs/6Alab/6Aexp4/exp4_last.png} \end{center}
+Full additional credit for this assignment requires obtaining good \(PE\), \(KE\), and total \(E\) curves without significant assistance from your TA.  The total energy curve should be a nearly-level line, decreasing slightly through the motion owing to frictional losses.  Include an explanation of any improvements you made in the measuring techniques.
 
 \subsection*{ADDITIONAL CREDIT PART 2 (2 mills)}
 
