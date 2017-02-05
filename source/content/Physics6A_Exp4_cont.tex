@@ -78,7 +78,17 @@ Convince yourself that the slope is \(1/k\) and not \(k\).  Record the value of 
 
 \item Click ``Select Measurement'' in the table and choose ``Position (m)''.  There should be about 25 values in the table.  Copy them over to a column in Excel.  Next, change the selected measurement in your table to ``Linear Speed (m/s)''.  Copy these values to a different column in Excel.
 
-\item Calculate the kinetic energy as a function of time using your velocity measurements.  To do this, set up the Excel formula, KE = \url{0.5*m*v^2}, where m is the mass of the glider and v is the velocity of the glider.  Now plot kinetic energy in Excel.  You should get a curve that looks like an upside-down ``U''.
+\item 
+	Calculate the kinetic energy as a function of time using your velocity
+	measurements, by setting up a formula in Excel.
+%	You'll need to figure out how to calculate this by setting up a formula in excel.
+	Recall that the kinetic energy of an object with mass $m$ and speed $v$
+%	is $\text{KE}=\frac{1}{2}mv^2$.
+	is $KE=(1/2)mv^2$.
+%	To do this, set up the Excel formula, KE = \url{0.5*m*v^2}, 
+%	where m is the mass of the glider and v is the velocity of the glider.  
+	Now plot kinetic energy in Excel.  
+	You should get a curve that looks like an upside-down ``U''.
 
 \item Calculating the potential energy with the smart pulley is trickier.  First, as demonstrated above, the pulley does not distinguish between forward and backward motion, so we can look at only the first half-oscillation.  Second, when we pull the glider out and ``Start'' the distance measurement, the software assigns zero to the first distance measurement.  However, we want to assign zero to the equilibrium position.  In other words, we want to calculate \(PE = (1/2)k(x-x_0)^2\), with \(x_0\) the equilibrium position.  Use the average value of position as \(x_0\) and set up another Excel formula for calculating the potential energy (remember that k is the stiffness of the springs that you measured earlier).  Plot potential energy as a function of time.  It should be somewhat U-shaped.  
 
