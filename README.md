@@ -9,7 +9,10 @@ started in Fall 2016.
 
 ### ChangeLog
 
+#### Winter 2017 Changelog
+
 * Experiment 3 (newton's second law)
+  * (After implementation) Clarified slope is 1/mTotal rather than 1/m
   * Clarified that students should keep total mass constant from beginning
   * Clarified that spreadsheet rows and columns may not coincide with what's
 	written in the manual
