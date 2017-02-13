@@ -74,7 +74,9 @@ Convince yourself that the slope is \(1/k\) and not \(k\).  Record the value of 
 
 \item With the air blower on, pull the glider out, click ``Record'', let the glider oscillate several times, and click ``Stop''.  The velocity and acceleration graphs resemble the sinusoidal oscillations of a simple harmonic oscillator, but the position graph consists of a series of S-shaped curves increasing in \(y\) value.  This shape results because the smart pulley does not distinguish between the forward and reverse directions of motion; it merely counts the number of times the spokes block the photosensor and records the result as positive distance.  Thus, each S-shaped curve on the position graph is produced as the oscillator moves from one endpoint of its motion to the other.
 
-\item Now record just half of an oscillation.  Pull the glider back, click ``Record'', then release the glider.  Click ``Stop'' as soon as you see the glider start to reverse directions.  Your postion graph should be S-shaped and your velocity graph should look like an upside-down ``U''.
+\item Now record just half of an oscillation.  Pull the glider back, click ``Record'', then release the glider.  
+\textbf{Make sure to click ``Record'' at least a second or two before releasing the glider.}
+Click ``Stop'' as soon as you see the glider start to reverse directions, making sure not to stop it too early.  Your postion graph should be S-shaped and your velocity graph should look like an upside-down ``U''.
 
 \item Click ``Select Measurement'' in the table and choose ``Position (m)''.  There should be about 25 values in the table.  Copy them over to a column in Excel.  Next, change the selected measurement in your table to ``Linear Speed (m/s)''.  Copy these values to a different column in Excel.
 
@@ -95,6 +97,8 @@ Convince yourself that the slope is \(1/k\) and not \(k\).  Record the value of 
 \item Create an Excel formula that calculates the total energy (kinetic + potential) as a function of time.  Plot all three of these (kinetic, potential and total) on the same graph.  To add a data set to a graph, right click on it and click ``Select Data...'', then click the ``Add'' button.  Clear the ``Series Y values:'' box and then select the column you want to add.  Then click ``OK'' two times.  The new data set should appear in the graph.
 
 \item Once all three data sets are plotted on the same graph, check that it makes sense physically.  The total energy of the system is constant in theory.  However, you may see a slight reduction in total energy as time passes.  This is because energy is slowly lost due to friction and wind resistance.  Label the axes of your graph and show it to your TA.
+Your graph should look something like the figure below:
+\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp4/excel-graph.png} \end{center}
 
 \end{enumerate}
 
@@ -111,19 +115,14 @@ Convince yourself that the slope is \(1/k\) and not \(k\).  Record the value of 
 
 \squishend
 
-\subsection*{ADDITIONAL CREDIT PART 1 (5 mills)}
+\subsection*{ADDITIONAL CREDIT (3 mills)}
 
-This is a harder experiment to do well, requiring more careful experimental technique.  After you started, you may have found that you had not tensioned the springs enough to get 25 points on the S-shaped curve without compressing one of the springs.  Changing the spring tension may require remeasuring \(k\).  (Should \(k\) change significantly?)
+The glider-spring system is a simple harmonic oscillator.  You will study the physics of such systems later in the course. 
+A crucial feature of such systems is that their motion is cyclic,
+repeating itself with a certain frequency.
 
-Repeat the experiment more carefully.  If necessary, retension the springs so you can get at least 25 points on the S-shaped curve for the half-oscillation, and remeasure \(k\) carefully.
+First devise a method and obtain the frequency of oscillation from your Capstone measurements (or make new measurements).
+Next use your values of \(k\) and \(m\) to check your result against the following formula for the frequency of oscillation:
+\begin{align*} f = \frac{1}{2\pi} \sqrt{k/m}. \end{align*}
 
-Averaging the distance values to obtain \(x_0\) may not be the best method of determining the true \(x_0\).  From studying your various measurements, what would be another method to obtain a value for \(x_0\)?  Does this agree with the averaging method?  Include this method in you repeat of the experiment, if you think it would improve the measurement of \(x_0\).
-
-Full additional credit for this assignment requires obtaining good \(PE\), \(KE\), and total \(E\) curves without significant assistance from your TA.  The total energy curve should be a nearly-level line, decreasing slightly through the motion owing to frictional losses.  Include an explanation of any improvements you made in the measuring techniques.
-
-\subsection*{ADDITIONAL CREDIT PART 2 (2 mills)}
-
-The glider-spring system is a simple harmonic oscillator.  You will study the physics of such systems later in the course.   The frequency of oscillation is given by
-%\begin{align} f = (1/2\pi)\sqrt{k/m}. \end{align}
-\begin{align} f = \frac{1}{2}\pi \sqrt{k/m}. \end{align}
-Devise a way to obtain the frequency of oscillation from your Data Studio measurements (or make new measurements), and use your values of \(k\) and \(m\) to check this formula.  Report the results with experimental error.
+Report the results with experimental error.
