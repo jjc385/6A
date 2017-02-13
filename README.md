@@ -11,6 +11,12 @@ started in Fall 2016.
 
 #### Winter 2017 Changelog
 
+* Experiment 4 (conservation of energy)
+  * Clarified that students should start recording 1-2 seconds before releasing
+    the glider
+  * Removed mills part I (redo the experiment)
+  * Clarified/reworded mills part II (compare theoretical/experimental
+	frequency)
 * Experiment 3 (newton's second law)
   * (After implementation) Clarified slope is 1/mTotal rather than 1/m
   * Clarified that students should keep total mass constant from beginning
@@ -24,6 +30,7 @@ started in Fall 2016.
   * Clarified pendulum mills
   * Moved x and v vs. t graph warm-ups to mills
   * Fixed trigonometric inconsistency in procedure step 2
+* Updated experiment 4 to capstone
 * Updated experiment 3 to capstone
 * Updated experiment 2 to capstone
 * Updated experiment 1 to capstone
