@@ -71,15 +71,7 @@ The glider then bounces off the sensor and passes through the photogate again.  
 \item Zoom in on the part of the graph where the glider hit the force sensor.  Your data should look something like that of the image below.
 
 
-	\todo[inline]{Do we even want to mention the long list of voltage readings?
-		If we do, we should probably explain more carefully in lieu of a
-		calibration step.
-	}
-
-
 \begin{center}
-\todo[inline]{Figure~\ref{fig:impulse-curve}, named \protect\url{MI_graph1_fix3.jpg},
-needs to be updated to replace Voltage Ch A with Force Ch A.}
 \includegraphics*[width=0.9\textwidth]{imgs/6labs/6Alab/6Aexp5/impulse.png}\label{fig:impulse-curve}\end{center}
 
 \item Use the ``Display are under active data'' button to calculate the area under the curve.  Use the ``Highlight range of points...'' button to select only the data of interest.
@@ -93,7 +85,7 @@ needs to be updated to replace Voltage Ch A with Force Ch A.}
 
 \end{enumerate}
 
-\textbf{\textit{Procedure}}
+\subsection*{DATA}
 
 \begin{enumerate}[start=2]
 
@@ -107,7 +99,15 @@ needs to be updated to replace Voltage Ch A with Force Ch A.}
 
 \subsection*{ADDITIONAL CREDIT (5 mills)}
 
-Capstone performs a summation algorithm to calculate the area under a curve.  You can do this same technique using Excel.  In this experiment, you need to perform a sum over your force data to calculate the impulse.
-	The impulse is the area under the force-versus-time curve.  It can be approximated using a Riemann sum:
-\begin{align} \int \textbf{F}_{\textrm{net}} \textrm{d}t = \sum \textbf{F}_i \,\Delta t_i = \Delta t \sum F_i, \end{align}
-since the time intervals \(\Delta t_i = 0.0005\) second are all equal.  You can obtain the force sum with an Excel function such as ``=Sum(b3..b147)''.  Perform this calculation on one of your data sets and compare to the results from Capstone.  You will need to make a table of force measurements and copy it over to Excel.
+In this experiment, you need to perform an integral over your force data to calculate the impulse.
+Capstone performs a summation algorithm to calculate the area under a curve.  You can do this same technique using Excel.  
+
+The impulse is the area under the force-versus-time curve.  
+Like any integral, it can be approximated using a Riemann sum:
+\begin{align*} \textrm{Impulse}=\int \textbf{F}_{\textrm{net}} \textrm{d}t = \sum \textbf{F}_i \,\Delta t_i = \Delta t \sum F_i, \end{align*}
+where we were able to pull out the $\Delta t$ in the last step 
+because the time intervals \(\Delta t_i = 0.0005\) second are all equal.  
+
+You can obtain the force sum with an Excel function such as ``=Sum(b3..b147)''.  Perform this calculation on one of your data sets and compare to the results from Capstone.  You will need to make a table of force measurements and copy it over to Excel.  
+
+Finally, use this force sum to calculate the impulse.  As in the main part of the lab, compate this value to the glider's change in momentum and calculate the percent error.
