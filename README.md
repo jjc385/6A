@@ -11,7 +11,13 @@ started in Fall 2016.
 
 #### Winter 2017 Changelog
 
+* Experiment 5 (momentum and impulse)
+  * Had the students find impulse via capstone in the procedure and via excel
+	in the mills (used to be the other way around)
+  * Removed force sensor calibration
 * Experiment 4 (conservation of energy)
+  * (After implementation) Clarified f=1/T in the mills
+  * (After implementation) Minor clarifications
   * Clarified that students should start recording 1-2 seconds before releasing
     the glider
   * Removed mills part I (redo the experiment)
@@ -30,6 +36,7 @@ started in Fall 2016.
   * Clarified pendulum mills
   * Moved x and v vs. t graph warm-ups to mills
   * Fixed trigonometric inconsistency in procedure step 2
+* Updated experiment 5 to capstone
 * Updated experiment 4 to capstone
 * Updated experiment 3 to capstone
 * Updated experiment 2 to capstone
