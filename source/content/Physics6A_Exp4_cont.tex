@@ -50,7 +50,7 @@ Consider a glider of mass \(M\) on a nearly frictionless air track.  As the glid
 
 \item Our first task is to measure \(k\), the force constant in \(F = -kx\) of a Hooke's Law spring.  Call up a blank Excel worksheet and prepare three columns to record the total mass in the hanger (including the mass of the hanger itself) in grams, its weight in newtons, and the position of the glider in meters.  In the mass column, type ``0'' and ``10'' in the first two cells.  Select these two cells, position the cursor at the lower left corner of the bottom cell until it turns into a lopsided square, and drag down the column to fill it with a series up to 60 grams.  The running yellow box shows how far the series continues.
 
-\item Fill down the next column with the force values.  Remember how to do this?  Type ``\url{=A3*9.8/1000}'' in the cell next to the mass value of zero, being sure to use the correct cell designation corresponding to your spreadsheet (where we typed ``\url{A3}'' above).  Then fill down the forces next to the masses.
+\item Fill down the next column with the force values.  Remember how to do this?  Type ``\url{=A3*9.8/1000}'' in the cell next to the mass value of zero, \emph{being sure to use the correct cell designation corresponding to your spreadsheet} (where we typed ``\url{A3}'' above, you should type the cell containing the first value in the mass column).  Then fill down the forces next to the masses.
 
 \item Now make the measurements.  Turn on the air blower, and help the glider come to equilibrium.  Add mases to the mass hanger, one at a time, and read the distance (in meters!) from the scale on the air track aligned with one corner of the glider.  On your spreadsheet, record the distance corresponding to the addition of each mass in the mass hanger.  Be sure that you use values corresponding to the entries in the mass column (including the mass of the hanger itself).  If you need to use different masses, change the mass entries; the forces will be recalculated instantly.
 
@@ -78,7 +78,9 @@ Convince yourself that the slope is \(1/k\) and not \(k\).  Record the value of 
 \textbf{Make sure to click ``Record'' at least a second or two before releasing the glider.}
 Click ``Stop'' as soon as you see the glider start to reverse directions, making sure not to stop it too early.  Your postion graph should be S-shaped and your velocity graph should look like an upside-down ``U''.
 
-\item Click ``Select Measurement'' in the table and choose ``Position (m)''.  There should be about 25 values in the table.  Copy them over to a column in Excel.  Next, change the selected measurement in your table to ``Linear Speed (m/s)''.  Copy these values to a different column in Excel.
+\item Click ``Select Measurement'' in the table and choose ``Position (m)''.  
+%There should be about 25 values in the table.  
+Copy the values over to a column in Excel.  Next, change the selected measurement in your table to ``Linear Speed (m/s)''.  Copy these values to a different column in Excel.
 
 \item 
 	Calculate the kinetic energy as a function of time using your velocity
@@ -107,7 +109,7 @@ Your graph should look something like the figure below:
 \vphantom{.}
 \squishlist
 
-\item (Initial Setup, step 2) Mass of glider = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
+\item (Initial Setup, step 2) Mass of glider \(m\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
 
 \item (Procedure Part 1, step 4) Spring constant \(k\) = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
 
@@ -119,10 +121,16 @@ Your graph should look something like the figure below:
 
 The glider-spring system is a simple harmonic oscillator.  You will study the physics of such systems later in the course. 
 A crucial feature of such systems is that their motion is cyclic,
-repeating itself with a certain frequency.
+repeating itself with a certain frequency.  Your task is to determine this frequency.
+
+An object's motion is cyclic only if the motion repeats itself after a given time interval.
+The time the motion takes to repeat itself is called the \textit{period} of the motion.
+The frequency $f$ of the cycle is then defined as the number of cycles per unit time,
+and is related to the period by
+\begin{align*} f_\text{experimental} = 1/T \end{align*}
 
 First devise a method and obtain the frequency of oscillation from your Capstone measurements (or make new measurements).
 Next use your values of \(k\) and \(m\) to check your result against the following formula for the frequency of oscillation:
-\begin{align*} f = \frac{1}{2\pi} \sqrt{k/m}. \end{align*}
+\begin{align*} f_\text{theoretical} = \frac{1}{2\pi} \sqrt{k/m}. \end{align*}
 
 Report the results with experimental error.
