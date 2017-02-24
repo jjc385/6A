@@ -249,3 +249,9 @@
 	    \end{center}\end{figure}
     }
 
+	\newenvironment{mycolorenv}[1]{%
+    	\leavevmode\color{#1}\ignorespaces%
+	}{%
+	}%
+\newcommand{\mycolor}[2]{\begin{mycolorenv}{#1}#2\end{mycolorenv}}
+

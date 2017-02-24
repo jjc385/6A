@@ -17,11 +17,11 @@
 \newcommand{\TODOmeeting}[2][inline,caption={}]
 		{ \todo[color=blue!40,#1]{\meeting{} #2} }
 %\newcommand{\question}[2][]{{ \bf #2 }}
-\newcommand{\question}[2][blue]{\textcolor{#1}{#2}}
+\newcommand{\question}[2][blue]{\mycolor{#1}{#2}}
 
 %\newcommand{\qq}[2][]{{ \question }}
 
-\newcommand{\answer}[2][red]{\textcolor{#1}{#2}}
+\newcommand{\answer}[2][red]{\mycolor{#1}{#2}}
 
 \newcommand{\action}[2][]{ #2 }
 
@@ -150,6 +150,10 @@ of force from pivot point.
 
 \subsubsection*{Warm up I:  Torque}
 
+\begin{comment}
+	% Notes on the desirability of having the students do mini-experiments
+	%	on static torque as part of the warmups
+}}}
 \TODO[inline]{Note:  These questions would probably work better if
 	the students could actually perform 
 	some of these mini-experiments.
@@ -165,9 +169,34 @@ of force from pivot point.
 	work for next quarter} -- 
 	depending on the resources already in place.
 }
+}}}
+\end{comment}
 
 Before you start the main portion of the lab, 
 here are some warm up questions to introduce you to the key concept of torque.
+
+\answer{Note to TAs:  These warmups are designed to be 
+	completely by students with minimal prior exposure to torque.
+	I recommend giving a \textbf{very minimal} introduction to torque before
+	having the students complete the warmups,
+	give them 10-15 minutes to complete them (let them move on to labeling the
+	diagrams if they finish early)
+	and then go over the torque warmups as a class.
+	During/ after this, give a more thorough introduction to torque.
+
+	Before the students start the warmup, 
+	I recommend \textbf{briefly} saying something like the following:  
+	``We use torque to talk about how much much an object will
+	rotate about a pivot.  The torque will depend on (1) forces applied to the
+	object, (2) the distance between the forces and the pivot point, 
+	and (3) the angle at which the forces are applied.''
+
+	While going over the warmups, I recommend focusing on
+	the fact that orque depends on force and distance (with examples)
+	I do not recommend quantifying the dependence on the angle, 
+	but rather simply mentioning that it has an effect.
+}
+
 
 \begin{enumerate}[label={\arabic*.},ref=\textcolor{black}{\arabic*}]
 \item \label{q:seesaw1}
