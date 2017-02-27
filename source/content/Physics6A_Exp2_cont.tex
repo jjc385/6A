@@ -94,13 +94,13 @@ Practice the attitude that you are going to make the experiment work well and pr
 \end{tabular}
 \end{center}
 
-\item Using the Vernier caliper (see instructions below), measure the height \(h\) of the block which tilts the track and the distance \(D\) between the track supports.  The sine of the tilt angle \(\alpha\) is equal to \(h/D\); knowledge of \(h\) and \(D\) allows you to determine \(\alpha\).  As the glider moves along the track, Newton's Second Law predicts that its acceleration should be constant and equal in magnitude to \(g\sin\alpha\).  Calculate the value of this acceleration.  This is your theoretical prediction for the acceleration of the cart.
+\item Use the Vernier caliper (see instructions below) to measure the height \(h\) of the block which tilts the track, and use the ruler built into the track to measure the distance \(D\) along the track between the track supports.  The sine of the tilt angle \(\alpha\) is equal to \(h/D\); knowledge of \(h\) and \(D\) allows you to determine \(\alpha\).  As the glider moves along the track, Newton's Second Law predicts that its acceleration should be constant and equal in magnitude to \(g\sin\alpha\).  Calculate the value of this acceleration.  This is your theoretical prediction for the acceleration of the cart.
 
 \item Acceleration graphs often look ragged, as small errors accumulate when the software takes the second derivative of the position data.  We will use the method of linear regression to determine the the acceleration of the cart.  Notice the linearly increasing portion of your velocity graph.  Select this region of interest by first clicking on the velocity graph then clicking on the ``Highlight range of points in active data'' tool.  A rectangle will appear.  Drag and extend this rectangle over the linearly increasing portion of your data.  Click inside the rectangle to highlight the data.
 
 \item Click the drop-down arrow of the ``Apply selected curve fits to active...'' tool and choose ``Linear''.  Click this tool again to bring up a display box.  You should see a best-fit line appear on top your selected data and a box should pop up that tells you the slope and  \(y\)-intercept of this best-fit line.  The slope of this line is your experimentally measured acceleration of the cart.  Write this value down for your analysis. 
 
-\item Another way to measure the acceleration is by looking at the acceleratin graph.  In general your graph should be flat (and possibly a a bit ragged).  We want to find the average of these data points.  To do this, select the data points of interest using the ``Highlight range of points in active data'' tool.  Click the ``Display selected statistics for active...'' tool.  This will display the mean value of the points you selected.  Compare this to the value you obtained by making a best-fit line.
+\item Another way to measure the acceleration is by looking at the acceleration graph.  In general your graph should be flat (and possibly a a bit ragged).  We want to find the average of these data points.  To do this, select the data points of interest using the ``Highlight range of points in active data'' tool.  Click the ``Display selected statistics for active...'' tool.  This will display the mean value of the points you selected.  Compare this to the value you obtained by making a best-fit line.
 
 Note:  By default, Capstone gives only one digit of precision for acceleration
 measurements and calculations performed using them.  
@@ -112,9 +112,9 @@ Next click the blue gear icon (settings),
 open the ``Numerical Format'' dropdown menu, 
 and modify the ``Number of Decimal Places'' as desired.
 
-\item Calculate the percentage error between the experimental results \(r_{\textrm{exp}}\) obtained in steps 4 and 5, and the theoretical value \(r_{\textrm{th}}\) determined in step 2:
+\item Calculate the percentage error between the experimental results \(a_{\textrm{exp}}\) obtained in steps 4 and 5, and the theoretical value \(a_{\textrm{th}}\) determined in step 2:
 
-percentage error = \( (100\%) \times \left(\mid r_{\textrm{exp}} - r_{\textrm{th}} \mid\right) / r_{\textrm{th}} . \)
+percentage error = \( (100\%) \times \left(\mid a_{\textrm{exp}} - a_{\textrm{th}} \mid\right) / a_{\textrm{th}} . \)
 
 The absolute value is taken because we are not interested in the sign of the difference.  Typical experimental accuracies in an undergraduate lab range from 3 -- 5\%, although some quantities can be measured much more accurately (and some much less!).
 
@@ -188,7 +188,6 @@ Always record units with your results.  \bstrut\\
 
 Percentage error for slope of velocity graph (best-fit line) = \ul{~~~~~~~~~~~~~~~}
 
-
 \end{enumerate}
 
 \subsection*{QUESTIONS}
@@ -201,6 +200,46 @@ Percentage error for slope of velocity graph (best-fit line) = \ul{~~~~~~~~~~~~~
 
 \end{enumerate}
 
+
+\subsection*{ADDITIONAL CREDIT: Kinematics Graphs (3 mills)}
+In the steps below, you will need to move in a straight line away from the
+motion sensor for a distance of roughly 2 meters.  
+Begin by removing any objects that may hamper your motion or otherwise reflect the signal from the sensor.  Arrange the computer monitor so you can see the screen while traveling backward, and be sure your path is clear.  
+%Obtain a graph on the screen that shows only the position data.  (If necessary, delete your graph from above, start with a new graph, and drag over the position data.)
+
+\begin{enumerate}[label=\arabic*.]
+
+\item 
+	While holding a book facing the sensor, 
+	move in such a way that you qualitatively reproduce the 
+	position-versus-time graph pictured below.
+	(That is, move in such a way that you produce a
+	computer graph shaped roughly like the one below.  
+	However, don't worry about getting any of the numbers to match up -- we're
+	only interested in reproducing the shape here.)
+\begin{center} \includegraphics*{imgs/6labs/6Alab/6Aexp2/exp_2_fig2_fx.jpg} \end{center}
+
+\item 
+	Now move in such a way that you produce a computer graph described 
+	qualitatively by the velocity-versus-time graph shown below.  
+	You may find the velocity graph more difficult to reproduce than the position graph.  Have each lab partner attempt the motion a few times, and display the best result.  If you are not able to obtain the approximate shape, ask your TA to demonstrate, and try to repeat the motion.
+\begin{center} \includegraphics*{imgs/6labs/6Alab/6Aexp2/exp2_fig3_fx.jpg} \end{center}
+
+\end{enumerate}
+
+
 \subsection*{ADDITIONAL CREDIT: PENDULUM MOTION (3 mills)}
 
-Arrange the motion sensor to track a swinging pendulum.  For a pendulum bob, use a block with a flat side facing the sensor.  Set the pendulum into motion with small-amplitude oscillations, carefully positioning and aligning the sensor so it tracks this motion and produces smooth curves.  Display a graph showing position, velocity, and acceleration.  Be prepared to discuss which mathematical function describes each graph, as well as how the graphs are related, and ask the TA to check your work.
+Arrange the motion sensor to track a swinging pendulum.  For a pendulum bob,
+use a block with a flat side facing the sensor.  Set the pendulum into motion
+with small-amplitude oscillations (so the pendulum swings only a few inches), 
+carefully positioning and aligning the sensor so it tracks this motion and produces smooth curves.  
+Display a graph showing position, velocity, and acceleration.  Be prepared to discuss which mathematical function describes each graph, as well as how the graphs are related, and ask the TA to check your work.
+
+Note:  It is very common for students doing this experiment to position the
+motion sensor in such a way that the pendulum is out of view of the motion
+sensor for at least part of the motion.  
+As stated above, the pendulum should move in a \emph{smooth} curve -- 
+if your curve is mostly smooth but has spikes or bumps at the uppermost or
+lowermost points, then you likely need to reposition the sensor.
+
