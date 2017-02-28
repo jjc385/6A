@@ -50,9 +50,9 @@
 %%		in normal font, while answers and todo notes will be turned off.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\renewcommand{\question}[2][]{#2}
-%\renewcommand{\answer}[2][]{}
-%\renewcommand{\TODO}[2][]{}
+\renewcommand{\question}[2][]{#2}
+\renewcommand{\answer}[2][]{}
+\renewcommand{\TODO}[2][]{}
 %\renewcommand{\temp}[2][]{}
 
 
@@ -487,9 +487,10 @@ you think this is okay?
 \question{Do you think it tells us our model is wrong?}
 Why or why not?
 
-\TODO{New question:  If your formula for $B(H)$ consistent with 
-	the concepts of torque explored in the warmup probelms? 
-	Why or why not?}
+\item
+Is your formula for $B$ as a function of $H$ consistent with 
+the concepts of torque explored in the warmup probelms? 
+Why or why not?
 
 \end{enumerate}
 
@@ -523,14 +524,19 @@ answering with ``increases'', ``decreases'',
 	\\ \hline \hline
 	$\uparrow R$ 
 	& % & & 
+	\hphantom{Here is some text that is a bit long}
 	\\ \hline
 %	$\uparrow r$ 
 %	& & & \\ \hline
 	$\uparrow W$ 
 	& % & & 
 	\\ \hline
+	$\uparrow r$
+	&
+	\\ \hline
 \end{tabular}\\
 %\vspace{.5cm}
+\begin{comment}
 \vspace{1cm}
 \begin{tabular}{|c||c|c|c|}
 	\hline
@@ -542,11 +548,13 @@ answering with ``increases'', ``decreases'',
 	& & & 
 	\\ \hline
 \end{tabular}
+\end{comment}
 %\end{centering}
 
 %\question{How do (a) the value of $B$ when $H=0$ 
 %and (b) $\Delta B/\Delta H$ 
 %relate to the slope and vertical intercept of your graph?}
+\begin{comment}
 Consider two of the quantities above, 
 (a) the value of $B$ when $H=0$ 
 and (b) $\Delta B/\Delta H$.
@@ -556,6 +564,7 @@ correspond to the slope and/or vertical intercept of your graph?}
 
 \TODO{Students get far too confused about which slope they're measuring.
 This struggle probably doesn't do much to advance our learning outcomes.}
+\end{comment}
 \TODO{Consider swapping the order of 'varying model parameters' and 
 'theoretical predictions' sections}
 
@@ -565,19 +574,19 @@ The way our apparatus is set up,
 the easiest of the above parameters to vary experimentally is $r$.
 Devise and carry out an experiment to 
 \question{determine the effect that increasing $r$
-has on the biceps force $B$ as well as 
-on the slope and the \yint  of the graph.}
+has on the biceps force $B$.}
+%as well as on the slope and the \yint  of the graph.}
 Make sure to record the data that leads you to this conclusion.
 Do your results agree with your prediction 
 %above?
 in part \ref{proc:predict-RrW}?
 
 \answer{They should choose a new value for $r$, then re-enact their procedure
-	to determine $B(H)$ for this new $r$ value.  
-	{\bf It might be difficult for them
-	to realize that they don't want to find $B(r)$ }
-	-- doing so does answer the first question, 
-	but it doesn't tell them anything about the slope or the \yint.}
+to determine $B(H)$ for this new $r$ value.  }
+%	{\bf It might be difficult for them
+%	to realize that they don't want to find $B(r)$ }
+%	-- doing so does answer the first question, 
+%	but it doesn't tell them anything about the slope or the \yint.}
 
 \answer{
 	Subtlety: 
@@ -655,7 +664,8 @@ provide you with the formula, which is as follows:
 \item
 %Hopefully, you noticed your data plot of $B$ vs $H$ was linear.
 Now that we have this theoretical model, 
-we can use it to predict what the slope and \yint of your graph should be.
+we can use it to predict what the slope and \yint of your graph 
+of $B$ vs $H$ should be.
 First, use the theoretical model to 
 \question{predict the slope and \yint  
 of your graph in terms of symbols} (i.e., variables) only.
@@ -665,15 +675,28 @@ to get a numerical value for these theoretical coefficients (with units!).
 \question{How does this prediction compare 
 with your actual slope and \yint ?}
 
-\question{Do the theoretical predictions above agree 
-with the predictions you recorded in the chart above},
-regarding how the biceps force and linear equation parameters change when
-increasing certain apparatus parameters?
+\item
+%\question{Do the theoretical predictions above agree 
+%with the predictions you recorded in the chart above},
+%regarding how the biceps force changes when
+%increasing certain apparatus parameters?
+Using the formula above for $B$ as a function of $H$, 
+revist your predictions from part \ref{proc:predict-RrW}.
+That is, \question{argue whether the formula given to you above
+agrees or disagrees with the predictions you made before}.
+
 
 \end{enumerate}
 
+A note on the angle $\theta$:
 
-\temp{\pagebreak}
+If you need to measure the angle $\theta$,
+you can do so by measuring two sides of the right triangle formed 
+by the upper arm, the forearm, and the biceps muscle.
+You can then use the appropriate inverse trig function to find $\theta$.
+
+
+%\temp{\pagebreak}
 \section*{Wrapping up}
 \begin{enumerate}[labproc]
 	\item 
@@ -717,7 +740,8 @@ increasing certain apparatus parameters?
 %		Redo the calculation of the prediction correctly,
 %		and verify that it agrees with your experimental result.
 
-		Was there a key torque concept he forgot to take into account?
+		Was there a key torque concept 
+		your friend forgot to take into account?
 		\answer{Your friend forgot to consider the angle at which torque is
 			applied.  Note:  I predict some students will try to replace $r$
 		with $r/2$, since that's what it might look like is done for $W$.
