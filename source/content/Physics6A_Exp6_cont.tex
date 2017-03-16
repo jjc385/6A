@@ -1,385 +1,769 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Setup for todonote comments and otherwise
+%%		Needs to be cleaned up
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\newcommand{\TODO}[2][inline,color=green!40]{{ \todo[#1]{#2} }}
+\newcommand{\TODO}[2][inline,color=green!40,caption={}]{{ \todo[#1]{#2} }}
+%\newcommand{\TODOdefaultNotColor}{inline,caption={}}
+%\newcommand{\TODOdefaultColor}{color=green!40}
+%\newcommand{\TODO}[2][\TODOdefaultNotColor,color=green!40]
+%	{{\todo[#1]{#2}}}
+%\newcommand{\TODOg}[2][\TODOdefaultNotColor]{ \todo[color=green!40,#1]{#2} }
+\newcommand{\TODOg}[2][inline,caption={}]{ \todo[color=green!40,#1]{#2} }
+\newcommand{\TODOshanna}[2][inline,caption={}]
+		{ \todo[color=red!40,#1]{\shanna{} #2} }
+\newcommand{\TODOmeeting}[2][inline,caption={}]
+		{ \todo[color=blue!40,#1]{\meeting{} #2} }
+%\newcommand{\question}[2][]{{ \bf #2 }}
+\newcommand{\question}[2][blue]{\mycolor{#1}{#2}}
+
+%\newcommand{\qq}[2][]{{ \question }}
+
+\newcommand{\answer}[2][red]{\mycolor{#1}{#2}}
+
+\newcommand{\action}[2][]{ #2 }
+
+%%	Decide whether to refer to vertical intercept (a) as such; 
+%%		(b) as $y$-intercept; or (c) as $B$-intercept.
+%\newcommand{\yint}[1][B]{$#1$-intercept }
+%\newcommand{\yint}[1][y]{$#1$-intercept }
+\newcommand{\yint}[1][]{vertical intercept\xspace}
+
+\newcommand{\itm}[2][\\ * ]{#1#2}
+
+\newcommand{\temp}[2][]{#1#2}
+
+\renewcommand{\smans}[2]{#1\,\mathrm{#2}}
+
+% indicate that Shanna made a comment
+\newcommand{\shanna}[1][]{{\bf Comment from Shanna:}\xspace}
+% indicate a comment was introduced at a meeting
+\newcommand{\meeting}[1][]{{\bf Comment from meeting:}\xspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Compile controls
+%%		If the following lines are uncommented, the corresponding 
+%%		text features will be turned off.  Questions will be displayed
+%%		in normal font, while answers and todo notes will be turned off.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\question}[2][]{#2}
+\renewcommand{\answer}[2][]{}
+\renewcommand{\TODO}[2][]{}
+%\renewcommand{\temp}[2][]{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \fancyhead[C]{Physics 6A Lab \rule[-1ex]{0pt}{0pt}\(\mid\) Experiment 6}
 
-\vspace{-5ex}\part*{Biceps Muscle Model}
+\vspace{-5ex}
+\part*{Biceps Muscle Model}
 
-\subsection*{APPARATUS}
+\TODO{
+	LEGEND:\\
+	* [Black text] -- Regular text \\
+	* \question{Question or action the students need to take
+		(Mostly for ease of instructor understanding)} \\
+	* \answer{Tip for TAs or answer to student question.  
+	Will be removed from student version of the lab.}
+	\\
+	* [These green or orange boxes]
+	-- comments on what needs to be done, etc.  
+Not part of the lab for students.
 
-\vspace{-0.5ex}
-\vphantom{.}
-\squishlist
-\item Biceps model
-\item Large mass hanger with four 1-kg masses
-\item Small mass hanger for ``hand'' end of forearm bar with five 100-g masses
-\item Meter stick
-\item Centimeter ruler
-\item Weighing scales
-\squishend
+FYI, comments written in second person are directed at Jared (who is revising
+the lab), not TAs implementing it.
+}
 
-\subsection*{INTRODUCTION}
 
-In this experiment, you will use a mechanical model to measure the force exerted by the biceps muscle on a human forearm, as well as the force of compression on the upper-arm (humerus) bone when the arm lifts a weight.
-\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/6a-exp6_fig1_text_fix.jpg} \end{center}
+\TODO{Overall TODO list:  (In addition to items scattered throughout the text)
+%	\itm {{\bf Just tell them the model is linear}}
+	\itm {{\bf Don't be afraid to tell them the model is linear
+		in the instructions for the sake of clarity.
+		They'll be expecting it to be linear anyway.}}
+	\itm That being said, don't give it away too explicitly,
+		especially before they have to extract a `formula' from their data.
+	\itm Include some instructions about how to measure the angle,
+		even if it's just an adendum.
+}
 
-Two tension-compression gauges are employed to determine the compression of the humerus bone and the tension in the biceps muscle as various weights are placed in the ``hand'' (i.e., hung from the end of the forearm).  The point at which the biceps muscle connects to the forearm can be changed, and the effects arising from different attachment points can be studied.
 
-Note that the gauge readings are in kilograms or pounds.  In the metric system, a kilogram is a unit of mass, not of force.  Nevertheless, many force scales (such as the gauges in this experiment and the metric scales for weighing people) read in kilograms.  Near the Earth's surface, force in newtons is equal to mass in kilograms multiplied by the gravitational acceleration \(g\) = 9.8 m/s\(^{2}\).  \ul{In this experiment, we ignore the distinction between force and mass, and record ``force'' in kilograms.}
+\begin{comment}
+%\TODO{Some notes on word choice:\\
+{{{
+\TODO{Some notes on word choice:\\
+	{\bf Still deciding}
+	\itm Experimental parameters
+	\itm Parameters vs coefficients in equations
+	\itm Formula vs equation vs function
+	\itm Apparatus vs experimental setup
+	\itm Real world situation vs application vs ?
+	\\
+	{\bf Decided upon (though subject to discussion)}
+	\itm `Model' will always refer to a mathematical model.
+	Distinguish between experimental models [experimentally determined models]
+	and theoretical models
+	\itm Vertical intercept, vs y-intercept or B-intercept
+}
+}}}
+\end{comment}
 
-\subsection*{THEORY}
 
-Below is a free-body diagram showing all the forces exerted on the forearm bar.  According to the Laws of Statics (i.e., Newton's First Law and the lever rule), the net force on the stationary bar must be zero, and the net torque on the bar must also be zero.  The ``hand'' end of the bar can be moved up and down, compressing and extending the gauges.  Before taking measurements, always adjust the elbow attachment point on the upper-arm gauge so the bar is horizontal.  This makes the ensuing analysis simple.
-\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/6A_6_arm.jpg} \end{center}
+\section*{Introduction}
 
-The forces acting on the forearm are its weight \(W\) (which points downward and may be assumed to act on the forearm's center-of-gravity), the weight of the ``hand'' \(H\) (which points downward), the force from the biceps muscle \(B\) (which pulls upward on the forearm at a small angle \(\alpha\) with respect to the \ul{vertical}), and the force from the humerus bone \(A\) (which pushes downward on the elbow).  Since the biceps force has a small horizontal component of magnitude \(B\sin\alpha\) directed toward the elbow, the upper-arm gauge must push back in the opposite direction with a horizontal force of magnitude \(P\), so that the net force in the horizontal direction is zero:
-\begin{align} \sum F_x = B \sin \alpha - P = 0.  \end{align}
-Furthermore, since the net force in the vertical direction is zero, Newton's First Law can be written as
-\begin{align} \sum F_y = B\cos\alpha - H - W - A = 0 \end{align}
-or
-\begin{align} B\cos\alpha = H + W + A. \label{6Aexp6_eqn_1} \end{align}
+This lab will begin with some warm-up exercises to familiarize yourself 
+with the theory, as well as the experimental setup.
+Then you'll move on to the experiment itself.
 
-If we choose the elbow joint as the pivot about which torques are calculated, then the forces \(A\) and \(P\) do not contribute to the torque about this pivot because their moment arms are zero.  (In other words, the lines of action for \(A\) and \(P\) pass through the elbow joint.)  The force \(H\) acts at a perpendicular distance \(R\) from the pivot, so its moment arm is \(R\).  The force \(W\) acts at a perpendicular distance \(R/2\) from the pivot, so its moment arm is \(R/2\).  The component of \(B\) \ul{perpendicular to the forearm} --- \(B\cos\alpha\) --- acts at a perpendicular distance \(r\) from the pivot, so its moment arm is \(r\).  Since the net torque about the elbow joint is zero, the lever rule can be written as
-\begin{align} \sum\tau = (H)(R)  + (W)(R/2) - (B\cos\alpha) (r)  = 0  \end{align}
-or
-\begin{align} B \cos \alpha = (H + W/2) R/r. \label{6Aexp6_eqn_2} \end{align}
-Thus, the magnitude of the biceps force is
-\begin{align} B = (H + W/2) R/(r\cos\alpha). \label{6Aexp6_eqn_3} \end{align}
-Note that if we plot \(B\) as a function of \(H\) while keeping \(R\), \(r\), and \(\alpha\) constant, then we will obtain a linear graph.  On the other hand, if we keep \(H\) constant while varying \(r\), then we must plot \(B\) as a function of \(R/(r\cos\alpha)\) to obtain a linear graph.
+Rather than giving you explicit steps to follow at every stage,
+at times we'll provide you with a problem to investigate
+and some hints on how to proceed.  
+It will be something of a challenge to figure out how exactly to accomplish
+each step, but this will be much more like doing science in the real world.
+We hope you enjoy the process!
 
-The magnitude of the humerus force can now be obtained from Eqs. \ref{6Aexp6_eqn_1} and \ref{6Aexp6_eqn_2}:
-\begin{align} A = B\cos\alpha - H - W  \\
-                      = (H + W/2) R/r - H - W  \\
-                      = (R/r-1)H + (R/2r-1)W.  \label{6Aexp6_eqn_4} \end{align}
+\subsection*{Learning outcomes}
+By the end of this lab, you will be able to:
+\enumb[label=\roman*.]
+\item Describe how torque depends on applied force and distance 
+of force from pivot point.
+\item Understand that angle at which a force is applied 
+	affects the applied torque.
+\item Use concepts of torque to understand aspects of the human arm.
+\item Relate the biceps muscle force to weight lifted by the hand.
+\item Extrapolate a linear model from experimental data
+\item Use experimental results and critical thinking
+	to make predictions about future results
+%\item Recognize the benefits and limitations of a applying a basic
+%physics model to a real-world situation (like a human arm).
+\enume
 
-\subsection*{PROCEDURE}
+\pagebreak
 
-\begin{enumerate}[label=\arabic*.]
+\subsection*{Warm up exercises}
 
-\item Remove the forearm bar completely.  The biceps tension-compression gauge is now suspended vertically so you can hang masses from it.  Use the small keeper ring with the thumbscrew on the short right-angle section to prevent the masses from falling off.  Notice that you can zero the scale by rotating the knurled ring at the top of the gauge.
-\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/6A-EXP6_knurled_ring_web_1.jpg} \end{center}
+\subsubsection*{Warm up I:  Torque}
 
-\item Hang one to four 1-kg masses from the gauge in increments of 1 kg.  How accurately could the scale be read if there were no friction in the gauge?  Record this estimate in the ``Data'' section.
+\begin{comment}
+	% Notes on the desirability of having the students do mini-experiments
+	%	on static torque as part of the warmups
+}}}
+\TODO[inline]{Note:  These questions would probably work better if
+	the students could actually perform 
+	some of these mini-experiments.
+	I'm planning to talk to those in charge (not Marty, but others)
+	to ask whether we have the materials needed to investigate 
+	the balance of torques on a simple lever-fulcrum system
+	(like the one in the 
+%	\href{https://www.dropbox.com/sh/i3iftgdflca6yj0/AAA37zsDuMN591__i-oPnjiSa/Suite\%20II/Instruction/Student_Materials/01_Torque/Tutorial_01_Torque.doc?dl=0}
+	\protect\url{https://www.dropbox.com/sh/i3iftgdflca6yj0/AAA37zsDuMN591__i-oPnjiSa/Suite\%20II/Instruction/Student_Materials/01_Torque/Tutorial_01_Torque.doc?dl=0}
+	{open source tutorial activity}
+	).
+	{\bf Such an apparatus will not be available this quarter, but it may
+	work for next quarter} -- 
+	depending on the resources already in place.
+}
+}}}
+\end{comment}
 
-\item With the heavier masses, there may be some friction in the gauge which brings it to rest over a small interval of readings.  Move the mass hanger up and down near its equilibrium position, and record the maximum and minimum readings at which the pointer sticks.  The average of these two values is a good estimate of the ``true'' mass, and their difference is a good estimate of the experimental error.  Record the actual mass, maximum mass, minimum mass, average (``true'') mass, and difference in mass (``error'') in the ``Data'' section.  State whether you observe any systematic error in the scale (i.e., whether the scale is off by a constant ratio).
+Before you start the main portion of the lab, 
+here are some warm up questions to introduce you to the key concept of torque.
 
-\item Repeat parts 2 and 3 with the upper-arm tension-compression gauge.  Notice that the upper-arm gauge has a stiffer spring and a different scale than the biceps gauge.  To hang masses from this gauge, you will need to invert the apparatus in its holding clamps.  You may also need to rotate the gauge in the clamps so you can see its readings.  Have your lab partner hold the biceps gauge out of the way, or tie it back with a piece of string.  Adjust the knurled ring on the upper-arm gauge so the scale reads zero.  Perform the same set of measurements as in parts 2 and 3, and record your results in the ``Data'' section.
+\answer{Note to TAs:  These warmups are designed to be 
+	completely by students with minimal prior exposure to torque.
+	I recommend giving a \textbf{very minimal} introduction to torque before
+	having the students complete the warmups,
+	give them 10-15 minutes to complete them (let them move on to labeling the
+	diagrams if they finish early)
+	and then go over the torque warmups as a class.
+	During/ after this, give a more thorough introduction to torque.
 
-\item Measure the distance between the elbow hole and each of the five biceps attachment holes, as well as the distance between the elbow hole and the mass hanger hole at the ``hand'' end of the forearm bar.  Record these values in the ``Data'' section.
+	Before the students start the warmup, 
+	I recommend \textbf{briefly} saying something like the following:  
+	``We use torque to talk about how much much an object will
+	rotate about a pivot.  The torque will depend on (1) forces applied to the
+	object, (2) the distance between the forces and the pivot point, 
+	and (3) the angle at which the forces are applied.''
 
-\item Measure the mass of the forearm bar without the upper-arm attachment piece, and record this value in the ``Data'' section.
+	While going over the warmups, I recommend focusing on
+	the fact that orque depends on force and distance (with examples)
+	I do not recommend quantifying the dependence on the angle, 
+	but rather simply mentioning that it has an effect.
+}
 
-\item Adjust the knurled rings of the gauges so they read zero with no weight attached.  Arrange the apparatus as shown in Figure 1, with the biceps gauge attached to the farthest hole from the elbow, which is approximately 12 cm from the hole through which the upper-arm gauge passes.  When clamping the forearm gauge, make sure the pointer can move freely through its range and is not obstructed by the clamp jaws.  Use the small keeper ring with the thumbscrew on the short right-angle section to retain the biceps gauge in position.  Attaching the 50-g mass hanger to the end of the forearm bar, add masses in increments of 100 g up to 550 g, and record the readings of the two gauges in the ``Data'' section.  As you change the masses in the ``hand,'' adjust the position of the upper-arm attachment point at the ``elbow'' so the bar comes to rest in a horizontal position.  You may need to push up forcefully on the bar when using the heavier masses, compressing the upper-arm gauge before tightening the attachment.
 
-If you find that there seems to be an unusual amount of friction in your scale readings, check that the scales are not twisted in their clamps.  All persons doing experiments in the real world soon realize that nature can be difficult, and not everything works as it is supposed to or according to the simple instructions.  This principle has been canonized in variations of Murphy's Law: ``If anything can go wrong, it will,'' ``Nature sides with the hidden flaw,'' etc.  Throughout this lab series, you will often need to use common sense and resort to your own ingenuity to get through the parts that don't seem to work quite right.  Ask your TA for assistance when necessary, but first try to solve the problem yourself.  Gradually, you will learn to proceed with confidence that you are doing to make the experiments work and yield good data.
+\begin{enumerate}[label={\arabic*.},ref=\textcolor{black}{\arabic*}]
+\item \label{q:seesaw1}
+	%From tutorial (numbers modified)
+	A 60 kilogram parent sits on a seesaw, 1 meter to the right of the pivot
+	(as pictured in figure~\ref{fig:seesaw-simple}).
+	How far to the left should a 30 kilogram child sit in order to balance
+	the seesaw?
+%	Answer using any kind of reasoning you want.
 
-\item With a total mass of 150 g hanging from the end of the forearm bar, take readings with the biceps gauge attached to the various holes, which are approximately 3, 4, 6, 8, and 12 cm from the elbow.  Each time you adjust to a new position, make sure the bar is horizontal.  For certain biceps attachment positions (e.g., 3 and 4 cm from the elbow), you may find it necessary to move the elbow attachment point a considerable distance along the upper-arm gauge rod, forcefully compressing the gauge to keep the bar horizontal.
+	If you're unsure how to approach this problem,
+	try to answer it intuitively.
+	Perhaps you can give a range of possible values?
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]
+		{{imgs/6labs/6Alab/6Aexp6/6A_6_seesaw-mod.jpg}}
+		\caption{
+			Diagram for warm up problem \ref{q:seesaw1}.
+		}
+		\label{fig:seesaw-simple}
+	\end{figure}
+\item 
+	%From MPhys
+	Now reconsider the previous problem in light of
+	a more formal introduction to torque:
 
-\item Make a neat graph of the biceps force \(B\) as a function of the hand weight \(H\) in the ``Data'' section.  Label the axes with units.  Add error bars (which show the uncertainty associated with any measurement, as depicted below), and construct the straight line predicted by Eq.~\ref{6Aexp6_eqn_3}.  Also, make a neat graph of the humerus force \(A\) as a function of the hand weight \(H\).  You may plot this data on the same graph.  Add error bars, and construct the straight line predicted by Eq.~\ref{6Aexp6_eqn_4}.  Labels the two curves, and title the graph.
-\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/Error_bar_fixed.jpg} \end{center}
+	The torque of each person about the pivot point is the product of 
+	the person's weight and the distance of the person 
+	(strictly speaking, the person's center of mass) from the pivot. 
+	The sign of the torque is positive if it would cause 
+	a counterclockwise rotation of the seesaw. 
+%	The distance is measured perpendicular to the line of force 
+%	and is called the moment arm.
+	The net torque is the sum of the individual torques
+	from each person.
+	To remain at rest, 
+	an object like this seesaw must have zero net torque acting on it.
 
-\item Make a neat graph of the biceps force \(B\) as a function of \(R/(r\cos\alpha)\) for the various hole positions \(r\) in the ``Data'' section.  Obtain the angle \(\alpha\) from \(\tan\alpha = x/y\) (you already know the value of \(x\), but will need to extend the lines of the gauge rods to determine the value of \(y\)).  Note that the variables \(B\) and \(R/(r\cos\alpha)\) are chosen so the plot will be linear.  Label the vertical axis with units, and note that the horizontal axis is dimensionless.  Add error bars, and construct the straight line predicted by Eq.~\ref{6Aexp6_eqn_3}.
-\begin{center} \includegraphics*[width=0.6\textwidth]{imgs/6labs/6Alab/6Aexp6/6a_6_7_DIAGRAM_fixalpha.jpg} \end{center}
+%	The concept of torque requires both a force 
+%	and a specification of the pivot point, 
+%	emphasized by the first subscript on the torque.
+	If you didn't use quantitative reasoning in your answer to the previous
+	problem, go back and do so now.
+
+\item \label{q:vert-rope}
+	Consider now a slightly modified seesaw setup 
+	(pictured in figure~\ref{fig:seesaw-vert-force}), 
+	with a child 
+	of weight $W$ sitting a distance $L$ to the left of the pivot.
+%	This time, the seesaw is balanced by an upward force $F$
+%	applied at a distance $r$ to the left of the pivot 
+%	-- on the same side of the pivot as the child.
+%	Express the force $F$ in terms of $W$, $L$, and $r$.
+	This time, the seesaw is balanced by 
+	the pull from a vertical rope, attached
+	at a distance $r$ to the \emph{left} of the pivot.
+	Assume that $r<L$, meaning the rope is attached between the child and the
+	pivot.
+%	-- on the same side of the pivot as the child.
+
+	\begin{enumerate}
+	\item Before doing any calculations, make a prediction.
+		Do you think the force $F$ will be 
+		larger, smaller, or the same as the child's weight $W$?
+	\item Now do the calculation:
+	Express the upward force $F$ exerted by the rope
+	in terms of $W$, $L$, and $r$.
+	\item Finally, evaluate your prediction in light of the previous result.
+	Remember that $r$ is always smaller than $L$.  
+	Was your prediction correct?
+	If not, are you surprised by this result?
+
+	\end{enumerate}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]
+		{{imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_vertical-force.jpg}}
+		\includegraphics[width=0.4\textwidth]
+		{{imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_angled-force.jpg}}
+		\caption{Diagrams for warm up problems \ref{q:vert-rope}
+			(left) and \ref{q:angle-rope} (right).
+		}
+		\label{fig:seesaw-vert-force}
+		\label{fig:seesaw-angle-force}
+	\end{figure}
+	
+\item \label{q:angle-rope}
+%	Finally, imagine that the child sitting on the seesaw
+%	is balanced by a force acting at an angle,
+%	rather than a vertical force.
+%	Does the magnitude of this new force $F'$ need to be 
+%	larger, smaller, or the same size as the previous (vertical) force $F$?
+	Finally, imagine that the rope balancing the seesaw
+	is at an angle, rather than being vertical
+	(pictured in figure~\ref{fig:seesaw-angle-force}).
+	Does the magnitude of this new force $F'$ need to be 
+	larger, smaller, or the same size as the previous (vertical) force $F$
+	in order to balance the seesaw?
+
+	\emph{Hint:}  
+	Remember that the force $F'$ acts along the direction of the rope.
+%	\begin{figure}[h!]
+%		\centering
+%		\includegraphics[width=0.4\textwidth]
+%		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_angled-force.jpg}}
+%	\end{figure}
+
+	\end{enumerate}
+
+\subsubsection*{Warm up II: The apparatus}
+Before we get into equations, take a moment to understand the equipment.  
+\enumb
+\item
+\enumb
+\item
+	Label \textbf{both} the photograph of the experimental apparatus below 
+	and the anatomical drawing of the arm beside it with the following labels:
+
+\begin{itemize}
+	\item upper arm (humerus)
+	\item elbow 
+	\item forearm 
+	\item hand
+	\item biceps muscle
+\end{itemize}
+\item
+%	Be sure to reference the anatomical picture of the arm in case
+%	any of these features of the apparatus are unclear.
+	Now compare the photograph of the apparatus with the anatomical drawing.
+	How are they similar and different?  
+	Do you think the experimental apparatus does a good job 
+	approximating the features of the human arm and biceps muscle?
+	(Be sure to record your group's response to this question,
+	realizing that there's no right or wrong answer.)
+\enume
+\item
+	Label the free body diagram below with the following forces and distances:
+\begin{itemize}
+	\item $r$:  The distance between the elbow 
+		and the point where the biceps muscle attaches to the forearm
+	\item $R$:	The distance between the elbow and the hand
+	\item $H$:  The force the hand (and anything it's holding) 
+		exerts on the forearm
+	\item $B$:	The force the biceps muscle exerts on the forearm
+	\item $W$:  The force due to the weight of the forearm,
+		which acts on the center of mass of the forearm
+		(already labeled on the diagram)
+	\item $\theta$:  The angle between the forearm 
+		and the direction of the bicep force
+		(already labeled on the diagram)
+\end{itemize}
+
+\enume
+
+\begin{figure}[h!]
+	\centering
+%	\includegraphics[width=0.6\textwidth]
+	\raisebox{-0.5\height}{
+	\includegraphics[width=0.45\textwidth]
+	{{imgs/6labs/6Alab/6Aexp6/6a-exp6_bicep-pic_text-removed.jpg}}
+	}
+%\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.6\textwidth]
+	\raisebox{-0.5\height}{
+	\includegraphics[width=0.45\textwidth]
+	{{imgs/6labs/6Alab/6Aexp6/6A_6_bicep-anatomy-sketch.jpg}}
+	}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]
+	{{imgs/6labs/6Alab/6Aexp6/6a_6_forearm-fbd-redo-relabeled.jpg}}
+\end{figure}
+
+
+
+\temp{\clearpage}
+\section*{Procedure}
+Every time a person lifts a weight, throws a ball, or turns a page,
+there are forces involved throughout the muscular and skeletal systems.
+We wish to investigate just one example of those forces.
+%We wish to investigate some of the forces involved with weight lifting.
+Specifically, we'll examine the situation where you're holding a weight in your
+hand, with your forearm being held horizontal.
+We'll measure the forces exerted by the biceps muscle.
+
+If you'd like, imagine yourself as a 
+physical therapist or prosthetic limb designer,
+who wishes to combine physics with some 
+general experimental design skills to determine 
+some of the forces involved in lifting objects.
+
+
+As we said before, you'll be given quite a bit more freedom in this lab.
+Part of that means you'll have to think critically about 
+which steps you'll be taking, and you'll have to examine your results to 
+check whether they seem reasonable.  
+When you're making decisions like this, think back to some of the things
+you've done in the previous labs -- many of those choices were made 
+for good reasons, and represent good experimental practices.
+
+\begin{enumerate}[series=labproc,label={\bf \arabic*.},
+		ref=\textcolor{black}{\arabic*}]
+
+\item
+{\bf In everything that follows, make sure the forearm bar is horizontal.}
+We're focusing on this case 
+(1) because every experiment needs to focus on specific scenarios in order to 
+make meaningful conclusions,
+and (2) because keeping the forearm horizontal vastly simplifies both the
+measurements and the calculations.
+
+\item 
+Before you begin taking data,
+measure the experimental parameters of your apparatus.
+That is, measure and record the values of $r$, $R$, and $W$.
+
+Furthermore, if you ever change any of these values in what follows,
+be sure to measure and record the new value(s).  
+
+
+\item
+\question{Start by measuring the biceps force $B$ 
+for some fixed weight $H$ being held in the hand.}
+Make sure to record this value (with units).
+Note that the force gauges are labelled with units of mass (kilograms) rather
+than units of force (Newtons).  
+You need to multiply the mass readings by $g=\smans{9.8}{m/s^2}$ 
+to convert the mass values to
+their corresponding \emph{weight} values.  Note that you may wish to first just
+record the mass values, and convert to weight using Excel.
+\eq{
+	B = \bparen{\text{Biceps gauge reading (in kilograms)}}\times g
+}
+After doing this, $B$ and $H$ should both be recorded in units of force.
+
+\item
+Now devise and carry out a procedure for measuring (and recording)
+the force $B$ for different weights $H$.  
+\question{Make sure to explicitly write out the steps of the procedure.}
+If you find you need to modify the procedure as you carry it out,
+that's okay -- but be sure to change the written version to correctly
+reflect the steps you really carried out.
+
+\item
+After taking several measurements (you can choose a number which seems
+reasonable), use your data to 
+\question{extrapolate a relationship between the biceps
+force $B$ and the weight $H$ in the hand}:
+First, argue that your data shows a linear relationship between $B$ and $H$.
+\question{Then, write an explicit formula for $B$ as a function of $H$.}
+\emph{Hint:  In case this terminology is a bit unfamiliar, 
+it might help to know that
+$y(t) = \bparen{10\,\mathrm{m}} -\bparen{4.9\,\mathrm{m/s^2}}t^2$ 
+is an example of an explicit formula 
+for $y$ as a function of $t$ (for a certain physical situation).}
+Make sure you specify the units of all quantities involved.
+Hint:  You've performed similar steps in previous labs.
+Think back to any time you graphed your data 
+and fit a trendline to the graph.
+
+\answer{The idea is that they need to realize to make a graph to do this.
+	Then they just need to fit a trendline to the data, and realize
+	the `formula' is just the equation of the line.
+}
+
+\item
+Choose a new value for $H$ -- one that you haven't measured yet,
+but that you are able to measure.  
+Before you measure $B$, 
+\question{use your model to predict the biceps force $B$ 
+for this new value of $H$.}
+
+%Before you move on to the next step and make the measurement, 
+%have your TA approve your prediction and reasoning.
+
+\item
+Now use the apparatus to measure $B$ for this value of $H$.  
+\question{How does it compare to the prediction from your model?  }
+(Calculate the percent deviation.)
+If the two values don't exactly agree, do
+you think this is okay?  
+\question{Do you think it tells us our model is wrong?}
+Why or why not?
+
+\item
+Is your formula for $B$ as a function of $H$ consistent with 
+the concepts of torque explored in the warmup problems? 
+Why or why not?
 
 \end{enumerate}
 
-\subsection*{DATA}
 
-\begin{enumerate}[label=\arabic*.]
 
-\item Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\item \ul{Biceps tension-compression gauge with one 1-kg mass}
-
-Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Biceps tension-compression gauge with two 1-kg masses}
-
-Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Biceps tension-compression gauge with three 1-kg masses}
-
-Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Biceps tension-compression gauge with four 1-kg masses}
-
-Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\item \ul{Upper-arm tension-compression gauge with one 1-kg mass}
-
-Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Upper-arm tension-compression gauge with two 1-kg masses}
-
-Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Upper-arm tension-compression gauge with three 1-kg masses}
-
-Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Upper-arm tension-compression gauge with four 1-kg masses}
-
-Estimated error in scale reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Actual mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Maximum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in mass = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\item Distance between elbow hole and:
-
-First biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Second biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Third biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Fourth biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Fifth biceps attachment hole = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Mass hanger hole at ``hand'' end = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\item Mass of forearm bar = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\item \ul{Biceps attached 12 cm from elbow, with total mass of 150 g}
-
-Biceps tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Upper-arm tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Biceps attached 12 cm from elbow, with total mass of 250 g}
-
-Biceps tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Upper-arm tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Biceps attached 12 cm from elbow, with total mass of 350 g}
-
-Biceps tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Upper-arm tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Biceps attached 12 cm from elbow, with total mass of 450 g}
-
-Biceps tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Upper-arm tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\ul{Biceps attached 12 cm from elbow, with total mass of 550 g}
-
-Biceps tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Upper-arm tension-compression gauge:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\item \ul{Total mass of 150 g in ``hand''}
-
-Biceps attached 3 cm from elbow:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Biceps attached 4 cm from elbow:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Biceps attached 6 cm from elbow:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Biceps attached 8 cm from elbow:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Biceps attached 12 cm from elbow:
-
-Maximum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Minimum reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Average reading = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-Difference in readings = \ul{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}
-
-\item Plot the graph of the biceps force B as a function of the hand weight \(H\), as well as the graph of the humerus force \(A\) as a function of the hand weight \(H\), using one page of graph paper at the end of this workbook.  Remember to label the curves, title the graphs, and add error bars to your data points.
-
-\item Plot the graph of the biceps force \(B\) as a function of \(R/(r\cos\alpha)\) using one page of graph paper at the end of this workbook.  Remember to label the curve, title the graph, and add error bars to your data points.
+\subsubsection*{Varying model parameters}
+
+Now that you've gained a bit of familiarity with the apparatus
+by taking some measurements, 
+let's take a step back and think a bit more about what's going on.
+
+\begin{enumerate}[labproc]
+\item \label{proc:predict-RrW}
+Using a combination of your intuition for how your own arm works,
+and the knowledge of torque you developed in the warm up exercises,
+\question{predict how the biceps force change when we increase 
+each of the following parameters. }
+
+Fill in your own copy of the charts below, 
+answering with ``increases'', ``decreases'', 
+``stays constant'', or ``something else''.  
+(If you choose something else, explain why you chose that.)
+%\begin{centering}
+\vspace{.5cm}
+\\
+\begin{tabular}{|c||c|}
+	\hline
+	Parameter change & Effect on $B$ 
+%	& Effect on value of $B$ when $H=0$
+%	& Effect on $\Delta B/\Delta H$ 
+	\\ \hline \hline
+	$\uparrow R$ 
+	& % & & 
+	\hphantom{Here is some text that is a bit long}
+	\\ \hline
+%	$\uparrow r$ 
+%	& & & \\ \hline
+	$\uparrow W$ 
+	& % & & 
+	\\ \hline
+	$\uparrow r$
+	&
+	\\ \hline
+\end{tabular}\\
+%\vspace{.5cm}
+\begin{comment}
+\vspace{1cm}
+\begin{tabular}{|c||c|c|c|}
+	\hline
+	Parameter change & Effect on $B$ 
+	& Effect on value of $B$ when $H=0$
+	& Effect on $\Delta B/\Delta H$ 
+	\\ \hline \hline
+	$\uparrow r$ 
+	& & & 
+	\\ \hline
+\end{tabular}
+\end{comment}
+%\end{centering}
+
+%\question{How do (a) the value of $B$ when $H=0$ 
+%and (b) $\Delta B/\Delta H$ 
+%relate to the slope and vertical intercept of your graph?}
+\begin{comment}
+Consider two of the quantities above, 
+(a) the value of $B$ when $H=0$ 
+and (b) $\Delta B/\Delta H$.
+\question{
+Do either or both of these quantities
+correspond to the slope and/or vertical intercept of your graph?}
+
+\TODO{Students get far too confused about which slope they're measuring.
+This struggle probably doesn't do much to advance our learning outcomes.}
+\end{comment}
+\TODO{Consider swapping the order of 'varying model parameters' and 
+'theoretical predictions' sections}
+
+
+\item
+The way our apparatus is set up, 
+the easiest of the above parameters to vary experimentally is $r$.
+Devise and carry out an experiment to 
+\question{determine the effect that increasing $r$
+has on the biceps force $B$.}
+%as well as on the slope and the \yint  of the graph.}
+Make sure to record the data that leads you to this conclusion.
+Do your results agree with your prediction 
+%above?
+in part \ref{proc:predict-RrW}?
+
+\answer{They should choose a new value for $r$, then re-enact their procedure
+to determine $B(H)$ for this new $r$ value.  }
+%	{\bf It might be difficult for them
+%	to realize that they don't want to find $B(r)$ }
+%	-- doing so does answer the first question, 
+%	but it doesn't tell them anything about the slope or the \yint.}
+
+\answer{
+	Subtlety: 
+	Changing $r$ changes the angle as well.  
+	It might be worth TAs mentioning this to students, 
+	but note that it shouldn't really affect their answers much,
+	at least for the values of $r$ allowed by the apparatus.
+}
 
 \end{enumerate}
 
-QUESTIONS
 
-\begin{enumerate}[label=\alph*.]
 
-\item What is the largest value of \(P\) (the horizontal force exerted by the upper-arm tension-compression gauge) that would have arisen in your measurements?
+\begin{comment}
+%% Section talking somewhat abstractly about models and asking for predictions.
+	%% Likely difficult for students to comprehend, and likely will take too
+	%% given the time constraints.
+{{{
+\subsubsection*{Extrapolate further}
+The model you extrapolated from your data is a good description of the 
+force $B$ on this apparatus for this setup.  But what if you change the
+apparatus somehow?  For example, consider an apparatus which
+is the same as yours, except the forearm bar is longer.
+For the same value of the weight $H$ in the hand, 
+would the corresponding biceps force $B$ change? 
+In fact, it does: $B$ is larger for a larger value of $R$ 
+(assuming all other parameters are left the same).
+\TODO{Ideally ask them a question, to make sure they pay attention to
+this part.}
 
-\item People who ``work out'' regularly with weights can ``curl'' 25 to 50 or more pounds with one hand (i.e., they can take the weight in one hand held horizontally and raise it to their shoulder).  The actual biceps muscle attachment point is approximately 5 cm from the elbow.  How large a force would the biceps muscle be exerting when one ``curls'' 50 pounds?
+In reality, you probably want a model of the biceps force that is valid 
+beyond your specific apparatus.  
+To do this, we'll try to determine the coefficients in your formula for 
+$B(H)$ in terms of various parameters of your apparatus -- that is, in terms of
+things you can actually measure!  
+For example, one such parameter is the length of the forearm bar -- if you
+change this parameter, the coefficients in the formula for $B(H)$ change.
+\TODO{Subtelty -- three types of experimental parameters:  
+	(1) independent/dependent variables, 
+	(2) parameters which change model parameters, but not the form of the model
+	(3) parameters which ``break'' the model 
+		-- i.e., they change the form of the model.
+	In this case, $r,R,W$, and angle of the biceps force are type (2), 
+	whereas the angle of the forearm
+	to the horizontal is type (3).\\
+
+	We might be able to get this across by giving them an extended worked
+	example of another model -- for example, a simple static torque problem,
+	like in the warm up.
+}
+}}}
+\end{comment}
+
+%\temp{\pagebreak}
+%\subsubsection*{Understanding model parameters}
+\subsubsection*{Comparing results to theoretical predictions}
+
+In a previous step above,
+you experimentally determined a formula for the biceps force $B$ as a function
+of the weight $H$ in the hand.  
+Now we'll compare this model to the one the theory predicts.
+
+It turns out that we can analyze the torques acting on the forearm
+to determine a formula for $B$ vs $H$.  You actually have all the tools needed
+to do this from the warm up exercises at the beginning of this lab, and we
+encourage you to give it a try!  But in the interest of time, we'll just
+provide you with the formula, which is as follows:
+\begin{equation*}
+	B = \paren{ H + \frac{W}{2} }\frac{R}{r\sin\theta}
+\end{equation*}
+
+
+\begin{enumerate}[labproc]
+
+\item
+%Hopefully, you noticed your data plot of $B$ vs $H$ was linear.
+Now that we have this theoretical model, 
+we can use it to predict what the slope and \yint of your graph 
+of $B$ vs $H$ should be.
+First, use the theoretical model to 
+\question{predict the slope and \yint  
+of your graph in terms of symbols} (i.e., variables) only.
+Next, \question{plug in the actual parameter values 
+that correspond to your experimental apparatus}
+to get a numerical value for these theoretical coefficients (with units!).
+\question{How does this prediction compare 
+with your actual slope and \yint ?}
+
+\item
+%\question{Do the theoretical predictions above agree 
+%with the predictions you recorded in the chart above},
+%regarding how the biceps force changes when
+%increasing certain apparatus parameters?
+Using the formula above for $B$ as a function of $H$, 
+revist your predictions from part \ref{proc:predict-RrW}.
+That is, \question{argue whether the formula given to you above
+agrees or disagrees with the predictions you made before}.
+
 
 \end{enumerate}
+
+A note on the angle $\theta$:
+
+If you need to measure the angle $\theta$,
+you can do so by measuring two sides of the right triangle formed 
+by the upper arm, the forearm, and the biceps muscle.
+You can then use the appropriate inverse trig function to find $\theta$.
+
+
+%\temp{\pagebreak}
+\section*{Wrapping up}
+\begin{enumerate}[labproc]
+	\item 
+		Note:  This problem involves a bit of reading,
+		but it should help you understand the importance of a key
+		concept, which will help you on your homework and exams.
+
+%		Imagine that you suspected the biceps force gauge on
+%		your apparatus were malfunctioning.
+%		The gauge currently reads 2 kilograms,
+%		and you want to check whether that value makes sense.
+		Imagine you and a friend wanted to predict the biceps force by 
+		directly analyzing the torques involve in the apparatus.
+		You and your friend determine that the experimental parameters for
+		your apparatus are 
+%		{$R,r,W,H=...$.  ]}.
+		$R=\smans{50}{cm}$, $r=\smans{25}{cm}$,
+		$W=\smans{250}{g}$, $H=\smans{250}{g}$.
+		Your friend attempts to use the theoretical model
+		to predict the value of the biceps force.
+		He claims that the torque exerted by the biceps must be equal and 
+		opposite to the torque exerted by the weight in the hand
+		plus the weight of the arm itself, 
+		which is equal to $H R + W R/2$, in the counter clockwise direction.
+		Furthermore, your friend claims that the torque due to
+		the biceps is $B r$, in the clockwise direction.
+%		Thus, we must have $B=\paren{H+W/2}R/r$.
+		Since the torques must be equal and opposite, we have
+		$Br=HR+WR/2$.
+
+		You read the biceps gauge and find it reads about 0.85 kilograms.
+		Solve the equation above for $B$, and 
+		\question{plug in the values of the experimental parameters
+			given above.
+		Does the resulting value for $B$ agrees 
+		with the measured biceps force?}
+
+		If your prediction is not consistent with the experimental result, 
+		go back and figure out what was wrong with your friend's argument
+		above.  
+%		Redo the calculation of the prediction correctly,
+%		and verify that it agrees with your experimental result.
+
+		Was there a key torque concept 
+		your friend forgot to take into account?
+		\answer{Your friend forgot to consider the angle at which torque is
+			applied.  Note:  I predict some students will try to replace $r$
+		with $r/2$, since that's what it might look like is done for $W$.
+		{\bf The key torque concept} your friend forgot was to consider 
+		{\bf the angle at which the force is applied}.  
+		}
+
+
+\begin{comment}
+\TODOmeeting{New problem:  Difference between this model and the real world?}
+\TODO{
+	New problem:  
+	Ask students to estimate the `experimental parameters' associated
+	with their own arms.  Maybe ask how the force compares for someone with a
+	shorter arm.
+	\answer{$R,r,W$ all smaller, $H,\theta$ remain the same.
+		Less torque due to bicep, but also less torque due to hand force
+		and weight of arm.  
+		If $r$ and $R$ decrease in proportion, it takes the smaller person
+		slightly less biceps force to lift the same amount of weight.
+	}
+}
+\end{comment}
+\end{enumerate}
+
