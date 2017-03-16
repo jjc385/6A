@@ -1,34 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Setup for todonote comments and otherwise
-%%		Needs to be cleaned up
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%\newcommand{\TODO}[2][inline,color=green!40]{{ \todo[#1]{#2} }}
 \newcommand{\TODO}[2][inline,color=green!40,caption={}]{{ \todo[#1]{#2} }}
-%\newcommand{\TODOdefaultNotColor}{inline,caption={}}
-%\newcommand{\TODOdefaultColor}{color=green!40}
-%\newcommand{\TODO}[2][\TODOdefaultNotColor,color=green!40]
-%	{{\todo[#1]{#2}}}
-%\newcommand{\TODOg}[2][\TODOdefaultNotColor]{ \todo[color=green!40,#1]{#2} }
-\newcommand{\TODOg}[2][inline,caption={}]{ \todo[color=green!40,#1]{#2} }
-\newcommand{\TODOshanna}[2][inline,caption={}]
-		{ \todo[color=red!40,#1]{\shanna{} #2} }
-\newcommand{\TODOmeeting}[2][inline,caption={}]
-		{ \todo[color=blue!40,#1]{\meeting{} #2} }
-%\newcommand{\question}[2][]{{ \bf #2 }}
+
 \newcommand{\question}[2][blue]{\mycolor{#1}{#2}}
-
-%\newcommand{\qq}[2][]{{ \question }}
-
 \newcommand{\answer}[2][red]{\mycolor{#1}{#2}}
 
-\newcommand{\action}[2][]{ #2 }
-
-%%	Decide whether to refer to vertical intercept (a) as such; 
-%%		(b) as $y$-intercept; or (c) as $B$-intercept.
-%\newcommand{\yint}[1][B]{$#1$-intercept }
-%\newcommand{\yint}[1][y]{$#1$-intercept }
 \newcommand{\yint}[1][]{vertical intercept\xspace}
 
 \newcommand{\itm}[2][\\ * ]{#1#2}
@@ -36,11 +15,6 @@
 \newcommand{\temp}[2][]{#1#2}
 
 \renewcommand{\smans}[2]{#1\,\mathrm{#2}}
-
-% indicate that Shanna made a comment
-\newcommand{\shanna}[1][]{{\bf Comment from Shanna:}\xspace}
-% indicate a comment was introduced at a meeting
-\newcommand{\meeting}[1][]{{\bf Comment from meeting:}\xspace}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,7 +27,6 @@
 \renewcommand{\question}[2][]{#2}
 \renewcommand{\answer}[2][]{}
 \renewcommand{\TODO}[2][]{}
-%\renewcommand{\temp}[2][]{}
 
 
 
@@ -84,38 +57,6 @@ the lab), not TAs implementing it.
 }
 
 
-\TODO{Overall TODO list:  (In addition to items scattered throughout the text)
-%	\itm {{\bf Just tell them the model is linear}}
-	\itm {{\bf Don't be afraid to tell them the model is linear
-		in the instructions for the sake of clarity.
-		They'll be expecting it to be linear anyway.}}
-	\itm That being said, don't give it away too explicitly,
-		especially before they have to extract a `formula' from their data.
-	\itm Include some instructions about how to measure the angle,
-		even if it's just an adendum.
-}
-
-
-\begin{comment}
-%\TODO{Some notes on word choice:\\
-{{{
-\TODO{Some notes on word choice:\\
-	{\bf Still deciding}
-	\itm Experimental parameters
-	\itm Parameters vs coefficients in equations
-	\itm Formula vs equation vs function
-	\itm Apparatus vs experimental setup
-	\itm Real world situation vs application vs ?
-	\\
-	{\bf Decided upon (though subject to discussion)}
-	\itm `Model' will always refer to a mathematical model.
-	Distinguish between experimental models [experimentally determined models]
-	and theoretical models
-	\itm Vertical intercept, vs y-intercept or B-intercept
-}
-}}}
-\end{comment}
-
 
 \section*{Introduction}
 
@@ -142,8 +83,6 @@ of force from pivot point.
 \item Extrapolate a linear model from experimental data
 \item Use experimental results and critical thinking
 	to make predictions about future results
-%\item Recognize the benefits and limitations of a applying a basic
-%physics model to a real-world situation (like a human arm).
 \enume
 
 \pagebreak
@@ -163,7 +102,6 @@ of force from pivot point.
 	to ask whether we have the materials needed to investigate 
 	the balance of torques on a simple lever-fulcrum system
 	(like the one in the 
-%	\href{https://www.dropbox.com/sh/i3iftgdflca6yj0/AAA37zsDuMN591__i-oPnjiSa/Suite\%20II/Instruction/Student_Materials/01_Torque/Tutorial_01_Torque.doc?dl=0}
 	\protect\url{https://www.dropbox.com/sh/i3iftgdflca6yj0/AAA37zsDuMN591__i-oPnjiSa/Suite\%20II/Instruction/Student_Materials/01_Torque/Tutorial_01_Torque.doc?dl=0}
 	{open source tutorial activity}
 	).
@@ -202,12 +140,10 @@ here are some warm up questions to introduce you to the key concept of torque.
 
 \begin{enumerate}[label={\arabic*.},ref=\textcolor{black}{\arabic*}]
 \item \label{q:seesaw1}
-	%From tutorial (numbers modified)
 	A 60 kilogram parent sits on a seesaw, 1 meter to the right of the pivot
 	(as pictured in figure~\ref{fig:seesaw-simple}).
 	How far to the left should a 30 kilogram child sit in order to balance
 	the seesaw?
-%	Answer using any kind of reasoning you want.
 
 	If you're unsure how to approach this problem,
 	try to answer it intuitively.
@@ -222,7 +158,6 @@ here are some warm up questions to introduce you to the key concept of torque.
 		\label{fig:seesaw-simple}
 	\end{figure}
 \item 
-	%From MPhys
 	Now reconsider the previous problem in light of
 	a more formal introduction to torque:
 
@@ -231,16 +166,11 @@ here are some warm up questions to introduce you to the key concept of torque.
 	(strictly speaking, the person's center of mass) from the pivot. 
 	The sign of the torque is positive if it would cause 
 	a counterclockwise rotation of the seesaw. 
-%	The distance is measured perpendicular to the line of force 
-%	and is called the moment arm.
 	The net torque is the sum of the individual torques
 	from each person.
 	To remain at rest, 
 	an object like this seesaw must have zero net torque acting on it.
 
-%	The concept of torque requires both a force 
-%	and a specification of the pivot point, 
-%	emphasized by the first subscript on the torque.
 	If you didn't use quantitative reasoning in your answer to the previous
 	problem, go back and do so now.
 
@@ -249,16 +179,11 @@ here are some warm up questions to introduce you to the key concept of torque.
 	(pictured in figure~\ref{fig:seesaw-vert-force}), 
 	with a child 
 	of weight $W$ sitting a distance $L$ to the left of the pivot.
-%	This time, the seesaw is balanced by an upward force $F$
-%	applied at a distance $r$ to the left of the pivot 
-%	-- on the same side of the pivot as the child.
-%	Express the force $F$ in terms of $W$, $L$, and $r$.
 	This time, the seesaw is balanced by 
 	the pull from a vertical rope, attached
 	at a distance $r$ to the \emph{left} of the pivot.
 	Assume that $r<L$, meaning the rope is attached between the child and the
 	pivot.
-%	-- on the same side of the pivot as the child.
 
 	\begin{enumerate}
 	\item Before doing any calculations, make a prediction.
@@ -287,11 +212,6 @@ here are some warm up questions to introduce you to the key concept of torque.
 	\end{figure}
 	
 \item \label{q:angle-rope}
-%	Finally, imagine that the child sitting on the seesaw
-%	is balanced by a force acting at an angle,
-%	rather than a vertical force.
-%	Does the magnitude of this new force $F'$ need to be 
-%	larger, smaller, or the same size as the previous (vertical) force $F$?
 	Finally, imagine that the rope balancing the seesaw
 	is at an angle, rather than being vertical
 	(pictured in figure~\ref{fig:seesaw-angle-force}).
@@ -301,11 +221,6 @@ here are some warm up questions to introduce you to the key concept of torque.
 
 	\emph{Hint:}  
 	Remember that the force $F'$ acts along the direction of the rope.
-%	\begin{figure}[h!]
-%		\centering
-%		\includegraphics[width=0.4\textwidth]
-%		{{/imgs/6labs/6Alab/6Aexp6/6A_6_seesaw_angled-force.jpg}}
-%	\end{figure}
 
 	\end{enumerate}
 
@@ -325,9 +240,11 @@ Before we get into equations, take a moment to understand the equipment.
 	\item hand
 	\item biceps muscle
 \end{itemize}
+
+Hint:  If you're confused where to start, know that the horizontal bar
+on the apparatus models the forearm.
+
 \item
-%	Be sure to reference the anatomical picture of the arm in case
-%	any of these features of the apparatus are unclear.
 	Now compare the photograph of the apparatus with the anatomical drawing.
 	How are they similar and different?  
 	Do you think the experimental apparatus does a good job 
@@ -356,15 +273,10 @@ Before we get into equations, take a moment to understand the equipment.
 
 \begin{figure}[h!]
 	\centering
-%	\includegraphics[width=0.6\textwidth]
 	\raisebox{-0.5\height}{
 	\includegraphics[width=0.45\textwidth]
 	{{imgs/6labs/6Alab/6Aexp6/6a-exp6_bicep-pic_text-removed.jpg}}
 	}
-%\end{figure}
-%\begin{figure}[h!]
-%	\centering
-%	\includegraphics[width=0.6\textwidth]
 	\raisebox{-0.5\height}{
 	\includegraphics[width=0.45\textwidth]
 	{{imgs/6labs/6Alab/6Aexp6/6A_6_bicep-anatomy-sketch.jpg}}
@@ -377,13 +289,31 @@ Before we get into equations, take a moment to understand the equipment.
 \end{figure}
 
 
+\section*{Initial Setup}
 
-\temp{\clearpage}
+Before we begin the experiment, 
+we need to ensure the biceps muscle scale is correctly calibrated,
+as it is common for the scale to become miscalibrated
+after several lab sections.
+\begin{enumerate}[label={\bf \arabic*.}]
+	\item Remove the forearm bar from the apparatus,
+		so nothing is hanging from the biceps muscle scale.
+	\item Hang a $\smans{1}{kg}$ mass from the biceps muscle scale
+		(making sure to use the keeper ring to prevent the mass from falling
+		off).
+
+		If the scale does not read $\smans{1}{kg}$,
+		you need to recalibrate it.
+		Do so by turning the `knurled ring` at the top of the force scale,
+		in the direction that increases or decreases the force reading as
+		needed, until the scale reads $\smans{1}{kg}$.
+	\item Do not adjust the knurled ring for the remainder of the experiment.
+\end{enumerate}
+
 \section*{Procedure}
 Every time a person lifts a weight, throws a ball, or turns a page,
 there are forces involved throughout the muscular and skeletal systems.
 We wish to investigate just one example of those forces.
-%We wish to investigate some of the forces involved with weight lifting.
 Specifically, we'll examine the situation where you're holding a weight in your
 hand, with your forearm being held horizontal.
 We'll measure the forces exerted by the biceps muscle.
@@ -422,6 +352,10 @@ That is, measure and record the values of $r$, $R$, and $W$.
 Furthermore, if you ever change any of these values in what follows,
 be sure to measure and record the new value(s).  
 
+Note that for the first several steps, you'll be keeping $r$ fixed.
+It's up to you to choose whichever initial value for $r$ you'd like,
+but we recommend starting with a fairly large $r$.
+
 
 \item
 \question{Start by measuring the biceps force $B$ 
@@ -437,6 +371,12 @@ record the mass values, and convert to weight using Excel.
 	B = \bparen{\text{Biceps gauge reading (in kilograms)}}\times g
 }
 After doing this, $B$ and $H$ should both be recorded in units of force.
+
+Note:  $H$ corresponds to the weight held by the hand -- 
+that is, the weight hanging off the forearm bar.  
+It does \emph{not} include the weight of the forearm, 
+which is separately accounted for in $W$.  
+($W$, in turn, does not include the weight held by the hand.)
 
 \item
 Now devise and carry out a procedure for measuring (and recording)
@@ -475,8 +415,6 @@ Before you measure $B$,
 \question{use your model to predict the biceps force $B$ 
 for this new value of $H$.}
 
-%Before you move on to the next step and make the measurement, 
-%have your TA approve your prediction and reasoning.
 
 \item
 Now use the apparatus to measure $B$ for this value of $H$.  
@@ -513,58 +451,24 @@ Fill in your own copy of the charts below,
 answering with ``increases'', ``decreases'', 
 ``stays constant'', or ``something else''.  
 (If you choose something else, explain why you chose that.)
-%\begin{centering}
 \vspace{.5cm}
 \\
 \begin{tabular}{|c||c|}
 	\hline
 	Parameter change & Effect on $B$ 
-%	& Effect on value of $B$ when $H=0$
-%	& Effect on $\Delta B/\Delta H$ 
 	\\ \hline \hline
 	$\uparrow R$ 
-	& % & & 
+	& 
 	\hphantom{Here is some text that is a bit long}
 	\\ \hline
-%	$\uparrow r$ 
-%	& & & \\ \hline
 	$\uparrow W$ 
-	& % & & 
+	& 
 	\\ \hline
 	$\uparrow r$
 	&
 	\\ \hline
 \end{tabular}\\
-%\vspace{.5cm}
-\begin{comment}
-\vspace{1cm}
-\begin{tabular}{|c||c|c|c|}
-	\hline
-	Parameter change & Effect on $B$ 
-	& Effect on value of $B$ when $H=0$
-	& Effect on $\Delta B/\Delta H$ 
-	\\ \hline \hline
-	$\uparrow r$ 
-	& & & 
-	\\ \hline
-\end{tabular}
-\end{comment}
-%\end{centering}
 
-%\question{How do (a) the value of $B$ when $H=0$ 
-%and (b) $\Delta B/\Delta H$ 
-%relate to the slope and vertical intercept of your graph?}
-\begin{comment}
-Consider two of the quantities above, 
-(a) the value of $B$ when $H=0$ 
-and (b) $\Delta B/\Delta H$.
-\question{
-Do either or both of these quantities
-correspond to the slope and/or vertical intercept of your graph?}
-
-\TODO{Students get far too confused about which slope they're measuring.
-This struggle probably doesn't do much to advance our learning outcomes.}
-\end{comment}
 \TODO{Consider swapping the order of 'varying model parameters' and 
 'theoretical predictions' sections}
 
@@ -575,18 +479,12 @@ the easiest of the above parameters to vary experimentally is $r$.
 Devise and carry out an experiment to 
 \question{determine the effect that increasing $r$
 has on the biceps force $B$.}
-%as well as on the slope and the \yint  of the graph.}
 Make sure to record the data that leads you to this conclusion.
 Do your results agree with your prediction 
-%above?
 in part \ref{proc:predict-RrW}?
 
 \answer{They should choose a new value for $r$, then re-enact their procedure
 to determine $B(H)$ for this new $r$ value.  }
-%	{\bf It might be difficult for them
-%	to realize that they don't want to find $B(r)$ }
-%	-- doing so does answer the first question, 
-%	but it doesn't tell them anything about the slope or the \yint.}
 
 \answer{
 	Subtlety: 
@@ -600,48 +498,6 @@ to determine $B(H)$ for this new $r$ value.  }
 
 
 
-\begin{comment}
-%% Section talking somewhat abstractly about models and asking for predictions.
-	%% Likely difficult for students to comprehend, and likely will take too
-	%% given the time constraints.
-{{{
-\subsubsection*{Extrapolate further}
-The model you extrapolated from your data is a good description of the 
-force $B$ on this apparatus for this setup.  But what if you change the
-apparatus somehow?  For example, consider an apparatus which
-is the same as yours, except the forearm bar is longer.
-For the same value of the weight $H$ in the hand, 
-would the corresponding biceps force $B$ change? 
-In fact, it does: $B$ is larger for a larger value of $R$ 
-(assuming all other parameters are left the same).
-\TODO{Ideally ask them a question, to make sure they pay attention to
-this part.}
-
-In reality, you probably want a model of the biceps force that is valid 
-beyond your specific apparatus.  
-To do this, we'll try to determine the coefficients in your formula for 
-$B(H)$ in terms of various parameters of your apparatus -- that is, in terms of
-things you can actually measure!  
-For example, one such parameter is the length of the forearm bar -- if you
-change this parameter, the coefficients in the formula for $B(H)$ change.
-\TODO{Subtelty -- three types of experimental parameters:  
-	(1) independent/dependent variables, 
-	(2) parameters which change model parameters, but not the form of the model
-	(3) parameters which ``break'' the model 
-		-- i.e., they change the form of the model.
-	In this case, $r,R,W$, and angle of the biceps force are type (2), 
-	whereas the angle of the forearm
-	to the horizontal is type (3).\\
-
-	We might be able to get this across by giving them an extended worked
-	example of another model -- for example, a simple static torque problem,
-	like in the warm up.
-}
-}}}
-\end{comment}
-
-%\temp{\pagebreak}
-%\subsubsection*{Understanding model parameters}
 \subsubsection*{Comparing results to theoretical predictions}
 
 In a previous step above,
@@ -662,7 +518,6 @@ provide you with the formula, which is as follows:
 \begin{enumerate}[labproc]
 
 \item
-%Hopefully, you noticed your data plot of $B$ vs $H$ was linear.
 Now that we have this theoretical model, 
 we can use it to predict what the slope and \yint of your graph 
 of $B$ vs $H$ should be.
@@ -675,11 +530,13 @@ to get a numerical value for these theoretical coefficients (with units!).
 \question{How does this prediction compare 
 with your actual slope and \yint ?}
 
+Note:  
+If you need to find the angle $\theta$,
+you can do so by measuring two sides of the right triangle formed 
+by the upper arm, the forearm, and the biceps muscle.
+You can then use the appropriate inverse trig function to find $\theta$.
+
 \item
-%\question{Do the theoretical predictions above agree 
-%with the predictions you recorded in the chart above},
-%regarding how the biceps force changes when
-%increasing certain apparatus parameters?
 Using the formula above for $B$ as a function of $H$, 
 revist your predictions from part \ref{proc:predict-RrW}.
 That is, \question{argue whether the formula given to you above
@@ -688,15 +545,7 @@ agrees or disagrees with the predictions you made before}.
 
 \end{enumerate}
 
-A note on the angle $\theta$:
 
-If you need to measure the angle $\theta$,
-you can do so by measuring two sides of the right triangle formed 
-by the upper arm, the forearm, and the biceps muscle.
-You can then use the appropriate inverse trig function to find $\theta$.
-
-
-%\temp{\pagebreak}
 \section*{Wrapping up}
 \begin{enumerate}[labproc]
 	\item 
@@ -704,17 +553,12 @@ You can then use the appropriate inverse trig function to find $\theta$.
 		but it should help you understand the importance of a key
 		concept, which will help you on your homework and exams.
 
-%		Imagine that you suspected the biceps force gauge on
-%		your apparatus were malfunctioning.
-%		The gauge currently reads 2 kilograms,
-%		and you want to check whether that value makes sense.
 		Imagine you and a friend wanted to predict the biceps force by 
 		directly analyzing the torques involve in the apparatus.
 		You and your friend determine that the experimental parameters for
 		your apparatus are 
-%		{$R,r,W,H=...$.  ]}.
 		$R=\smans{50}{cm}$, $r=\smans{25}{cm}$,
-		$W=\smans{250}{g}$, $H=\smans{250}{g}$.
+		$W=\smans{2.5}{N}$, $H=\smans{2.5}{N}$.
 		Your friend attempts to use the theoretical model
 		to predict the value of the biceps force.
 		He claims that the torque exerted by the biceps must be equal and 
@@ -723,7 +567,6 @@ You can then use the appropriate inverse trig function to find $\theta$.
 		which is equal to $H R + W R/2$, in the counter clockwise direction.
 		Furthermore, your friend claims that the torque due to
 		the biceps is $B r$, in the clockwise direction.
-%		Thus, we must have $B=\paren{H+W/2}R/r$.
 		Since the torques must be equal and opposite, we have
 		$Br=HR+WR/2$.
 
@@ -737,8 +580,6 @@ You can then use the appropriate inverse trig function to find $\theta$.
 		If your prediction is not consistent with the experimental result, 
 		go back and figure out what was wrong with your friend's argument
 		above.  
-%		Redo the calculation of the prediction correctly,
-%		and verify that it agrees with your experimental result.
 
 		Was there a key torque concept 
 		your friend forgot to take into account?
@@ -750,20 +591,5 @@ You can then use the appropriate inverse trig function to find $\theta$.
 		}
 
 
-\begin{comment}
-\TODOmeeting{New problem:  Difference between this model and the real world?}
-\TODO{
-	New problem:  
-	Ask students to estimate the `experimental parameters' associated
-	with their own arms.  Maybe ask how the force compares for someone with a
-	shorter arm.
-	\answer{$R,r,W$ all smaller, $H,\theta$ remain the same.
-		Less torque due to bicep, but also less torque due to hand force
-		and weight of arm.  
-		If $r$ and $R$ decrease in proportion, it takes the smaller person
-		slightly less biceps force to lift the same amount of weight.
-	}
-}
-\end{comment}
 \end{enumerate}
 
