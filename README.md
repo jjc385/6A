@@ -11,6 +11,15 @@ started in Fall 2016.
 
 #### Winter 2017 Changelog
 
+* Experiment 7 (dynamic torque and rotation)
+  * No changes to pedagogy
+  * As has been the case in recent years, 
+  	we do not recommend completing the gyroscope and precession section
+* Experiment 6 (biceps muscle model)
+  * Replaced old version with Jared's revised version
+    * Includes warm-up exercises introducing torque
+	* Much more inquiry-based than old version
+	* Received positive feedback from TAs during 2016Fall and 2017Winter
 * Experiment 5 (momentum and impulse)
   * Had the students find impulse via capstone in the procedure and via excel
 	in the mills (used to be the other way around)
@@ -36,6 +45,8 @@ started in Fall 2016.
   * Clarified pendulum mills
   * Moved x and v vs. t graph warm-ups to mills
   * Fixed trigonometric inconsistency in procedure step 2
+* Updated experiment 7 to capstone
+* Updated experiment 6 to capstone (no action required)
 * Updated experiment 5 to capstone
 * Updated experiment 4 to capstone
 * Updated experiment 3 to capstone
